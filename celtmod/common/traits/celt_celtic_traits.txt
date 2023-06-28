@@ -1,0 +1,31 @@
+#Celtic
+like_king_arthur = {
+	diplomacy = 1
+	martial = 1
+
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.1
+	
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+	}	
+
+	customizer = no
+	random = no
+	
+}
+knight_of_the_round_table = {
+	martial = 1
+
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.09
+	
+	command_modifier = {
+		morale_offence = 0.02
+		morale_defence = 0.02
+	}	
+
+	customizer = no
+	random = no
+}

@@ -1,0 +1,66 @@
+religion_celtic_christian_trigger = 
+{
+	OR = 
+	{
+		religion = insular
+		religion = pelagianism
+	}
+}
+is_gaelic_trigger = 
+{
+	OR = 
+	{
+		culture = irish
+		culture = scottish
+		culture = gaelic
+		culture = manx
+		culture = norsegael
+	}
+}
+is_brythonic_trigger =
+{
+	OR =
+	{
+		culture = briton
+		culture = welsh
+		culture = breton
+		culture = cornish
+		culture = cumbric
+		culture = pictish
+		culture = gallic
+	}
+}
+has_gaelic_blood_trigger = 
+{
+	any_owned_bloodline = { has_bloodline_flag = bloodline_gael }
+}
+has_brythonic_blood_trigger =
+{
+	any_owned_bloodline = { has_bloodline_flag = bloodline_bry }
+}
+panceltic_trigger = 
+{
+	OR = 
+	{
+		AND = 
+		{
+			is_gaelic_trigger = yes
+			has_brythonic_blood_trigger = yes
+		}
+		AND = 
+		{
+			is_brythonic_trigger = yes
+			has_gaelic_blood_trigger = yes
+		}
+		
+	}
+}
+is_high_king_trigger =
+{
+	OR =
+	{
+		has_landed_title = d_king_of_tara
+		has_landed_title = d_high_kingdom_of_ireland
+		has_landed_title = k_high_kingdom_of_ireland
+	}
+}
