@@ -1,0 +1,11 @@
+lion = {
+	monthly_character_prestige = 1000
+	monthly_character_piety = 1000
+	vassal_opinion = 100
+	combat_rating = 999
+	bloodline_effect_one_invasion = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline bloodline_princely_elective_bonus }
+}

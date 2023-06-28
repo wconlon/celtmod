@@ -1,0 +1,242 @@
+on_startup =
+{
+	events =
+	{
+		celt.30 #Authority for holding one of the fifths of ireland
+		celt.31 #Authority for holding Tara
+	}
+}
+
+# ROOT is the creating character
+# FROM is the title
+on_create_title = {
+	events = {
+		celt.9 # Pendragon nick
+		celt.10
+		celt.11
+		celt.30 #Authority for holding one of the fifths of ireland
+		celt.31 #Authority for holding Tara
+		celt.37 #Authority for other dynasty members when taking the High Kingship
+		celt.47 #Adds the rule at peace flag if k_high_kingdom_of_ireland is recreated
+		celt.2009 #Mathgamain creates kingdom of Munster
+		celt.2022 #Brian Boru becomes High King
+	}
+}
+
+# ROOT is the character
+# FROM is the title
+# FROMFROM is the old holder
+on_new_holder = {
+	events = {
+		celt.9 # Pendragon nick
+		celt.10
+		celt.11
+		celt.30 #Authority for holding one of the fifths of ireland
+		celt.31 #Authority for holding Tara
+		celt.37 #Authority for other dynasty members when taking the High Kingship
+		celt.47 #Adds the rule at peace flag if k_high_kingdom_of_ireland is recreated
+		celt.2008 #Mathgamain becomes king of Munster through some unknown mechanism (faction?)
+		celt.2020 #Brian becomes king of Munster
+		celt.2022 #Brian Boru becomes High King
+	}
+}
+
+on_new_holder_inheritance =
+{
+	events =
+	{
+		celt.30 #Authority for holding one of the fifths of ireland
+		celt.31 #Authority for holding Tara
+		celt.38 #Authority from inheriting High Kingship uncontested
+		celt.47 #Adds the rule at peace flag if k_high_kingdom_of_ireland is inherited
+		celt.2008 #Mathgamain becomes king of Munster through weird succession law
+		celt.2020 #Brian becomes king of Munster
+		celt.2022 #Brian Boru becomes High King
+	}
+}
+
+on_new_holder_usurpation =
+{
+	events =
+	{
+		celt.29 #Tributaries break free when High King title is usurped
+		celt.30 #Authority for holding one of the fifths of ireland
+		celt.31 #Authority for holding Tara
+		celt.37 #Authority for other dynasty members when taking the High Kingship
+		celt.47 #Adds the rule at peace flag if k_high_kingdom_of_ireland is usurped
+		celt.2008 #Mathgamain usurps the kingship of Munster
+		celt.2020 #Brian becomes king of Munster
+		celt.2022 #Brian Boru becomes High King
+	}
+}
+
+on_yearly_pulse =
+{
+	events =
+	{
+		celt.32
+		celt.33
+		celt.34
+		celt.35
+		celt.36
+		celt.48 #notifies players when they've ruled at peace for 10 years
+		celt.52 #return of Ys
+		celt.56 #Cumbric culture reemerges
+		celt.57 #Cornish culture reemerges
+		celt.60 #Blood of heroes
+		celt.2021 #Brian unites Munster
+		celt.2023 #Brian Boru unites Ireland but isn't independant
+		celt.2024 #Brian Boru unites Ireland and is independant
+		celt.2025 #Brian Boru is independant and has already united Ireland
+		celt.2032 #Traitor decided to make his move against Brian
+		celt.2038 #Brian has ruled Ireland at peace for 10 years
+		celt.2039 #Brian sets his sights on Scandinavia
+	}
+}
+
+on_decade_pulse = {
+	events = {
+	}
+	
+	random_events = {
+		forged_bloodlines = {
+			15 = celt.0 # Chance for Arthur blood and empire title
+			5000 = 0
+		}
+	}
+}
+
+# When the religion changes in a county
+on_county_religion_change = {
+	events = {
+		celt.12 # Celtic mercs convert when last pagan province converts
+	}
+}
+
+on_death =
+{
+	events =
+	{
+		celt.18 #destroy flagged title on death
+		#celt.38 #give authority to bloodline members when high king dies
+		celt.2006 #Brian's dad dies
+		celt.2007 #Brian's brother dies without being king of Munster
+		celt.2010 #Brain's brother's killer dies early, pick a new one
+		celt.2035 #Brian death events
+		celt.2036 #
+		celt.2037 #/Brian death events
+	}
+}
+
+on_war_started =
+{
+	events =
+	{
+		celt.46 #Removes rule_at_peace flag
+	}
+}
+#FROM is the attacker ROOT is the defender
+on_war_ended_victory =
+{
+	events =
+	{
+		celt.28 #clear the flag to lose tributaries
+		celt.47 #adds rule_at_peace_flag
+		celt.2002 #When Brian's dad wins the war for thomond
+		celt.2025 #Brian Boru is independant and has already united Ireland
+	}
+}
+on_war_ended_defeat =
+{
+	events =
+	{
+		celt.27 #loses tributaries on loss then clears flag
+		celt.43 #lose authority
+		celt.47 #adds rule_at_peace_flag
+		celt.2003 #Delete Dal gCais if Brian's dad doesn't win war
+	}
+}
+on_war_ended_invalid =
+{
+	events =
+	{
+		celt.47 #adds rule_at_peace_flag
+		celt.2003 #Delete Dal gCais if Brian's dad doesn't win war
+	}
+}
+on_war_ended_whitepeace =
+{
+	events =
+	{
+		celt.47 #adds rule_at_peace_flag
+		celt.2003 #Delete Dal gCais if Brian's dad doesn't win war
+	}
+}
+on_major_battle_won_leader =
+{
+	events =
+	{
+		celt.39
+		celt.2033 #Battle of Clontarf - Brian leading troops
+	}
+}
+
+on_major_battle_won =
+{
+	events =
+	{
+		celt.39
+		celt.2033 #Battle of Clontarf - Brian leading troops
+	}
+}
+
+on_major_battle_lost_leader =
+{
+	events = 
+	{
+		celt.43
+		celt.2033 #Battle of Clontarf - Brian leading troops
+	}
+}
+
+on_major_battle_lost =
+{
+	events =
+	{
+		celt.2033 #Battle of Clontarf - Brian leading troops
+	}
+}
+
+on_battle_won_owner =
+{
+	events =
+	{
+		celt.2034 #Battle of Clontarf - Brian not leading troops
+	}
+}
+
+on_battle_lost_owner =
+{
+	events =
+	{
+		celt.2034 #Battle of Clontarf - Brian not leading troops
+	}
+}
+
+on_loot_province =
+{
+	events =
+	{
+		celt.2004
+	}
+}
+
+#ROOT is prisoner FROM is imprisoner
+on_become_imprisoned_any_reason =
+{
+	events =
+	{
+		celt.40
+		celt.43
+	}
+}

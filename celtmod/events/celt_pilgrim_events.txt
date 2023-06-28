@@ -1,0 +1,145 @@
+###############################
+# Christian Pilgrimage Events
+#
+# WtWSMSsoa.1 -> WtWSMSsoa.5
+###############################
+
+namespace = WtWSMSsoa
+
+# Insular - Chose destination
+character_event = {
+	id = WtWSMSsoa.3
+	desc = EVTDESC_SoA_5011
+	picture = GFX_evt_cathedral
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTDESC_WtWSMSsoa_3
+		set_character_flag = pilgrimage_to_st_albans
+		hidden_tooltip = { character_event = { id = WtWSMSsoa.4 days = 15 } }
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_ST_ALBANS
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_SoA_5020
+		ai_chance = { factor = 50 }
+		set_character_flag = pilgrimage_to_jerusalem
+		hidden_tooltip = {
+			character_event = { id = SoA.5022 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_JERUSALEM
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_SoA_5019
+		ai_chance = { factor = 50 }
+		set_character_flag = pilgrimage_to_santiago
+		hidden_tooltip = { character_event = { id = SoA.5025 days = 15 } }
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_SANTIAGO
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_SOA_5018   #Find a Saintly Burial Site to visit
+		trigger = {
+			has_dlc = "Holy Fury"
+		}
+		hidden_tooltip = { character_event = { id = HF.41300  days = 15} }
+	}
+}
+
+# Insular - Setting out for St Albans (also selects events for road)
+character_event = {
+	id = WtWSMSsoa.4
+	desc = EVTDESC_WtWSMSsoa_4
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = WtWSMSsoa.5 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 69	# Bedford
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+						OR = {
+							is_title_active = d_knights_templar
+							is_title_active = d_knights_hospitaler
+						}
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Arrived at St Albans
+narrative_event = {
+	id = WtWSMSsoa.5
+	title = EVTNAME_WtWSMSsoa_5
+	desc = EVTDESC_WtWSMSsoa_5
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5050
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}

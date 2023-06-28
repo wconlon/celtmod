@@ -1,0 +1,15 @@
+#############################################
+# CHARACTER NICKNAMES
+# Independent dukes, kings and emperors only
+#
+# 'factor' is the percentage per year of 
+# gaining the nickname
+#
+#############################################
+
+# TRIGGERED ONLY
+################
+nick_boruma = {}
+nick_mab_darogan = {}
+nick_nine_hostages = {}
+nick_august = {}

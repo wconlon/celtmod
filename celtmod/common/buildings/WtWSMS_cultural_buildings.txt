@@ -1,0 +1,284 @@
+castle = {
+	
+	#Armorican Isbeilor Camp
+	ca_culture_armorican_1 = {
+		desc = ca_culture_armorican_1_desc
+		potential = {
+			FROM = {
+				culture = armorican
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_cavalry = 50
+		light_cavalry_defensive = 0.12
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_armorican_2 = {
+		desc = ca_culture_armorican_1_desc
+		potential = {
+			FROM = {
+				culture = armorican
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_culture_armorican_1
+		gold_cost = 300
+		build_time = 1095
+		light_cavalry = 75
+		light_cavalry_defensive = 0.12
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_armorican_3 = {
+		desc = ca_culture_armorican_1_desc
+		potential = {
+			FROM = {
+				culture = armorican
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_culture_armorican_2
+		gold_cost = 400
+		build_time = 2190
+		light_cavalry = 110
+		light_cavalry_defensive = 0.18
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_armorican_4 = {
+		desc = ca_culture_armorican_1_desc
+		potential = {
+			FROM = {
+				culture = armorican
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_culture_armorican_3
+		gold_cost = 500
+		build_time = 2190
+		light_cavalry = 130
+		light_cavalry_defensive = 0.18
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	#Brito Bellatorum
+	# ca_culture_group_britrom_1 = {
+		# desc = ca_culture_group_britrom_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cornish
+					# culture = romano_british
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		# prerequisites = { ca_wall_2 }
+		# gold_cost = 200
+		# build_time = 730
+		# light_infantry = 30
+		# light_infantry_morale = 0.17
+		# heavy_infantry = 20
+		# heavy_infantry_morale = 0.17
+		# fort_level = 0.5
+		# levy_size = 0.03
+		# tax_income = 0.15
+		# ai_creation_factor = 101
+
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_group_britrom_2 = {
+		# desc = ca_culture_group_britrom_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cornish
+					# culture = romano_british
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		# upgrades_from = ca_culture_group_britrom_1
+		# gold_cost = 300
+		# build_time = 1095
+		# light_infantry = 50
+		# light_infantry_morale = 0.17
+		# heavy_infantry = 25
+		# heavy_infantry_morale = 0.17
+		# fort_level = 0.5
+		# levy_size = 0.03
+		# tax_income = 0.15
+		# ai_creation_factor = 100
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_group_britrom_3 = {
+		# desc = ca_culture_group_britrom_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cornish
+					# culture = romano_british
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		# upgrades_from = ca_culture_group_britrom_2
+		# gold_cost = 450
+		# build_time = 2190
+		# light_infantry = 65
+		# light_infantry_morale = 0.2
+		# heavy_infantry = 40
+		# heavy_infantry_morale = 0.2
+		# fort_level = 1.0
+		# levy_size = 0.05
+		# tax_income = 0.2
+		# ai_creation_factor = 99
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_group_britrom_4 = {
+		# desc = ca_culture_group_britrom_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cornish
+					# culture = romano_british
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		# upgrades_from = ca_culture_group_britrom_3
+		# gold_cost = 585
+		# build_time = 2190
+		# light_infantry = 90
+		# heavy_infantry = 60
+		# fort_level = 1.0
+		# levy_size = 0.05
+		# tax_income = 0.2
+		# light_infantry_morale = 0.25
+		# heavy_infantry_morale = 0.25
+		# ai_creation_factor = 98
+		
+		# extra_tech_building_start = 0.8
+	# }
+	
+	# # Old Celtic Infantry
+	# ca_culture_group_ocelt_1 = {
+		# desc = ca_culture_group_ocelt_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {			
+					# culture = cumbric
+					# culture = briton
+					# AND =
+					# {
+						# culture_group = continental_celtic
+						# NOT = { culture = gaulish }
+					# }
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		# prerequisites = { ca_wall_2 }
+		# gold_cost = 200
+		# build_time = 730
+		# light_infantry = 85
+		# archers = 35
+		# light_infantry_morale = 0.13
+		# archers_morale = 0.13
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_group_ocelt_2 = {
+		# desc = ca_culture_group_ocelt_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cumbric
+					# culture = briton
+					# AND =
+					# {
+						# culture_group = continental_celtic
+						# NOT = { culture = gaulish }
+					# }
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		# upgrades_from = ca_culture_group_ocelt_1
+		# gold_cost = 300
+		# build_time = 1095
+		# light_infantry = 95
+		# archers = 45
+		# light_infantry_morale = 0.13
+		# archers_morale = 0.13
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_group_ocelt_3 = {
+		# desc = ca_culture_group_ocelt_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cumbric
+					# culture = briton
+					# AND =
+					# {
+						# culture_group = continental_celtic
+						# NOT = { culture = gaulish }
+					# }
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		# upgrades_from = ca_culture_group_ocelt_2
+		# gold_cost = 400
+		# build_time = 2190
+		# light_infantry = 105
+		# archers = 55
+		# light_infantry_morale = 0.13
+		# archers_morale = 0.13
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_group_ocelt_4 = {
+		# desc = ca_culture_group_ocelt_1_desc
+		# potential = {
+			# FROM = {
+				# OR = {
+					# culture = cumbric
+					# culture = briton
+					# AND =
+					# {
+						# culture_group = continental_celtic
+						# NOT = { culture = gaulish }
+					# }
+				# }
+			# }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		# upgrades_from = ca_culture_group_ocelt_3
+		# gold_cost = 500
+		# build_time = 2190
+		# light_infantry = 115
+		# archers = 65
+		# light_infantry_morale = 0.13
+		# archers_morale = 0.13
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+}

@@ -1,0 +1,9 @@
+opinion_increased_high_king_authority = 
+{
+	opinion = -15
+}
+
+opinion_increased_high_king_authority_minor = 
+{
+	opinion = -5
+}

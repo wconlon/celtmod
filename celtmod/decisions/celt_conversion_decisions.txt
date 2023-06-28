@@ -1,0 +1,660 @@
+#Decisions for converting culture
+targetted_decisions =
+{
+	# North German character may convert to Norse Gael if on British Isles (of if Augustus of Northwestern Europe decision has been taken)
+	convert_to_norsegael = 
+	{
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = 
+		{
+			is_playable = yes
+			OR =
+			{
+				culture_group = north_germanic
+				culture_group = celtic
+			}
+			OR =
+			{
+				AND =
+				{
+					capital_scope = 
+					{
+						region = world_europe_west_brittania
+					}
+					NOT =
+					{
+						culture_group = celtic
+					}
+				}
+				AND =
+				{
+					has_global_flag = augustus_of_northwestern_europe
+					capital_scope =
+					{
+						OR =
+						{
+							region = custom_swedish
+							region = custom_norwegian
+							region = custom_danish
+						}
+					}
+				}
+			}
+			any_demesne_province = 
+			{
+				culture = norsegael
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = 
+			{
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = 
+		{
+			OR =
+			{
+				culture_group = north_germanic
+				culture_group = celtic
+			}
+		}
+		effect = 
+		{
+			culture = norsegael
+			any_courtier = 
+			{
+				limit = 
+				{
+					culture_group = north_germanic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = norsegael
+			}
+		}
+		revoke_allowed = 
+		{
+			always = no
+		}
+		ai_will_do = 
+		{
+			factor = 1
+			
+			modifier = 
+			{
+				factor = 0.5 # Slow it down a bit
+			}
+			
+			modifier = 
+			{
+				factor = 0.01
+				capital_scope = 
+				{
+					NOT = { culture = norsegael }
+				}
+			}
+			modifier = 
+			{
+				factor = 2.0
+				liege = { culture = norsegael }
+			}
+			modifier = 
+			{
+				factor = 2.0
+				has_global_flag = augustus_of_northwestern_europe
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 2
+					culture = norsegael
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 4
+					culture = norsegael
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 6
+					culture = norsegael
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 8
+					culture = norsegael
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 10
+					culture = norsegael
+				}
+			}
+		}
+	}
+	
+	# Breton character may convert to Cornish if on British Isles
+	convert_to_cornish = 
+	{
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = 
+		{
+			is_playable = yes
+			culture = breton
+			capital_scope = 
+			{
+				region = world_europe_west_brittania
+			}
+			any_demesne_province = 
+			{
+				culture = cornish
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = 
+			{
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = 
+		{
+			culture = breton
+		}
+		effect = 
+		{
+			culture = cornish
+			any_courtier = 
+			{
+				limit = 
+				{
+					culture = breton
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = cornish
+			}
+		}
+		revoke_allowed = 
+		{
+			always = no
+		}
+		ai_will_do = 
+		{
+			factor = 1
+			
+			modifier = 
+			{
+				factor = 0.5 # Slow it down a bit
+			}
+			
+			modifier = 
+			{
+				factor = 0.01
+				capital_scope = 
+				{
+					NOT = { culture = cornish }
+				}
+			}
+			modifier = 
+			{
+				factor = 2.0
+				liege = { culture = cornish }
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 2
+					culture = cornish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 4
+					culture = cornish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 6
+					culture = cornish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 8
+					culture = cornish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 10
+					culture = cornish
+				}
+			}
+		}
+	}
+	
+	# Welsh character may convert to Cumbric if in northern Britain
+	convert_to_cumbric = 
+	{
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = 
+		{
+			is_playable = yes
+			culture = welsh
+			capital_scope = 
+			{
+				region = custom_hen_ogledd
+			}
+			any_demesne_province = 
+			{
+				culture = cumbric
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = 
+			{
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = 
+		{
+			culture = welsh
+		}
+		effect = 
+		{
+			set_character_flag = that_just_happened
+			culture = cumbric
+			any_courtier = 
+			{
+				limit = 
+				{
+					culture = welsh
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = cumbric
+			}
+		}
+		revoke_allowed = 
+		{
+			always = no
+		}
+		ai_will_do = 
+		{
+			factor = 1
+			
+			modifier = 
+			{
+				factor = 0.5 # Slow it down a bit
+			}
+			
+			modifier = 
+			{
+				factor = 0.01
+				capital_scope = 
+				{
+					NOT = { culture = cumbric }
+				}
+			}
+			modifier = 
+			{
+				factor = 2.0
+				liege = { culture = cumbric }
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 2
+					culture = cumbric
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 4
+					culture = cumbric
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 6
+					culture = cumbric
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 8
+					culture = cumbric
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 10
+					culture = cumbric
+				}
+			}
+		}
+	}
+	
+	# Celtic and North Germanic character may convert to Manx if they have a Manx province
+	convert_to_manx = 
+	{
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = 
+		{
+			is_playable = yes
+			OR =
+			{
+				culture_group = celtic
+				culture_group = north_germanic
+			}
+			any_demesne_province = 
+			{
+				culture = manx
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = 
+			{
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = 
+		{
+			OR =
+			{
+				culture_group = celtic
+				culture_group = north_germanic
+			}
+		}
+		effect = 
+		{
+			culture = manx
+			any_courtier = 
+			{
+				limit = 
+				{
+					OR =
+					{
+						culture_group = celtic
+						culture_group = north_germanic
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = manx
+			}
+		}
+		revoke_allowed = 
+		{
+			always = no
+		}
+		ai_will_do = 
+		{
+			factor = 1
+			
+			modifier = 
+			{
+				factor = 0.5 # Slow it down a bit
+			}
+			
+			modifier = 
+			{
+				factor = 0.01
+				capital_scope = 
+				{
+					NOT = { culture = manx }
+				}
+			}
+			modifier = 
+			{
+				factor = 2.0
+				liege = { culture = manx }
+			}
+			modifier =
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 2
+					culture = manx
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 4
+					culture = manx
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 6
+					culture = manx
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 8
+					culture = manx
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 10
+					culture = manx
+				}
+			}
+		}
+	}
+	# French, Occitan and Norman can convert to Gaulish after Gaul is reformed
+	convert_to_gaulish = 
+	{
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+	
+		potential = 
+		{
+			is_playable = yes
+			OR =
+			{
+				culture = frankish
+				culture = occitan
+				culture = old_frankish
+				culture = norman
+			}
+			capital_scope = 
+			{
+				region = world_europe_west_francia
+			}
+			any_realm_province = 
+			{
+				culture = gaulish
+			}
+			NOT = { government = chinese_imperial_government }
+			NOT = 
+			{
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = 
+		{
+			OR =
+			{
+				culture = frankish
+				culture = occitan
+				culture = old_frankish
+				culture = norman
+			}
+		}
+		effect = 
+		{
+			culture = gaulish
+			any_courtier = 
+			{
+				limit = 
+				{
+					OR =
+					{
+						culture = frankish
+						culture = occitan
+						culture = old_frankish
+						culture = norman
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = gaulish
+			}
+		}
+		revoke_allowed = 
+		{
+			always = no
+		}
+		ai_will_do = 
+		{
+			factor = 1
+			
+			modifier = 
+			{
+				factor = 0.5 # Slow it down a bit
+			}
+			
+			modifier = 
+			{
+				factor = 0.01
+				capital_scope = 
+				{
+					NOT = { culture = gaulish }
+				}
+			}
+			modifier = 
+			{
+				factor = 2.0
+				liege = { culture_group = celtic }
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 2
+					culture = gaulish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 4
+					culture = gaulish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 6
+					culture = gaulish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 8
+					culture = gaulish
+				}
+			}
+			modifier = 
+			{
+				factor = 1.1
+				num_culture_realm_provs = 
+				{
+					value = 10
+					culture = gaulish
+				}
+			}
+		}
+	}
+}

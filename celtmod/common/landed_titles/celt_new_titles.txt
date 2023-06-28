@@ -1,0 +1,230 @@
+e_uther_britannia =
+{
+	color={ 172 22 22 }
+	color2={ 255 255 255 }
+	culture = briton
+	capital = 32 #londain
+
+	briton = Prydain
+	welsh = Prydain
+	cumbric = Prydain
+	cornish = Prydain
+	irish = Alba
+	gaelic = Alba
+	scottish = Alba
+	manx = Alba
+	norsegael = Alba
+	pictish = Alba
+	breton = Prydain
+
+	title = "pendragon_title"
+	title_female = "pendragon_title_female"
+	foa = "pendragon_foa"
+
+	# allow =
+	# {
+		# always = no
+	# }
+}
+
+e_celtic_pagan = 
+{
+	color={ 89 151 89 }
+	color2={ 0.7 0.7 0.3 }
+	short_name = yes
+
+	capital = 112 # Paris
+
+	dignity = 100 # Counted as having this many more counties than it does
+
+	allow = 
+	{
+		always = no
+	}
+}
+e_greater_scotia =
+{
+	color={ 6 244 2 }
+	color2={ 255 255 255 }
+	
+	culture = irish
+	capital = 1951 # Meath
+	
+	irish = "Ghaelainn Mhór"
+	gaelic = "Ghaelainn Mhór"
+	manx = "Ghaelainn Mhór"
+	
+	#allow = { always = no }
+}
+e_gaul = 
+{
+	color={ 0 100 30 }
+	
+	capital = 112 # Paris
+
+	culture = gaulish
+	
+	irish = Ghaill
+	gaelic = Ghaill
+	manx = Ghaill
+	norsegael = Ghaill
+	welsh = Gâl
+	breton = Galia
+	pictish = Gâl
+	briton = Gâl
+	cumbric = Gâl
+	cornish = Gâl
+	roman = Gallia
+
+	#allow = { always = no }
+}
+k_high_kingdom_of_ireland =
+{
+	color={ 49 249 72 }
+	color2={ 255 255 255 }
+	
+	culture = irish
+	capital = 1951 # Meath
+
+	title = "high_king_title"
+	title_female = "high_king_title_female"
+	foa = "high_king_foa"
+	title_prefix = "high_kingdom_prefix"
+	
+	norse = Irland
+	swedish = Irland
+	danish = Irland
+	norwegian = Irland
+	irish = Éire
+	gaelic = Éire
+	manx = Nerin
+	norsegael = Éirlandh
+	pictish = Iuerthon
+	briton = Iwerddon
+	welsh = Iwerddon
+	cumbric = Iwerddon
+	cornish = Wordhen
+	breton = Iwerzhon
+	roman = Hibernia
+
+	#short_name = yes
+
+	dynasty_title_names = no
+	assimilate = no
+	
+	allow = { always = no } #by decision only
+}
+
+d_high_kingdom_of_ireland =
+{
+	color={ 49 249 72 }
+	color2={ 255 255 255 }
+	
+	culture = irish
+	capital = 1951 # Meath
+
+	title = "high_king_title"
+	title_female = "high_king_title_female"
+	foa = "high_king_foa"
+	title_prefix = "high_kingdom_prefix"
+	
+	norse = Irland
+	swedish = Irland
+	danish = Irland
+	norwegian = Irland
+	irish = Éire
+	gaelic = Éire
+	manx = Nerin
+	norsegael = Éirlandh
+	pictish = Iuerthon
+	briton = Iwerddon
+	welsh = Iwerddon
+	cumbric = Iwerddon
+	cornish = Wordhen
+	breton = Iwerzhon
+	roman = Hibernia
+
+	#short_name = yes
+
+	dynasty_title_names = no
+	assimilate = no
+	
+	allow = { always = no } #by decision only
+}
+
+d_king_of_tara =
+{
+	color={ 49 249 72 }
+	color2={ 255 255 255 }
+	
+	culture = irish
+	capital = 1951 # Meath
+
+	title = "high_king_title"
+	title_female = "high_king_title_female"
+	foa = "high_king_foa"
+	title_prefix = "high_kingdom_prefix"
+	
+	norse = Irland
+	swedish = Irland
+	danish = Irland
+	norwegian = Irland
+	irish = Éire
+	gaelic = Éire
+	manx = Nerin
+	norsegael = Éirlandh
+	pictish = Iuerthon
+	briton = Iwerddon
+	welsh = Iwerddon
+	cumbric = Iwerddon
+	cornish = Wordhen
+	breton = Iwerzhon
+	roman = Hibernia
+
+	#short_name = yes
+
+	primary = yes
+	dynasty_title_names = no
+	assimilate = no
+	
+	allow = { always = no } #by decision only
+}
+
+k_mann =
+{
+	color={ 10 48 243 }
+	color2={ 255 255 255 }
+	
+	capital = 54 # Isle of Man
+	culture = manx
+	
+	manx = "Mannin"
+	briton = Manaw
+	welsh = Manaw
+	breton = Manaw
+	cumbric = Manaw
+	cornish = Manow
+	norwegian = "Mann"
+	danish = "Mann"
+	swedish = "Mann"
+	norse = "Mann"
+	pictish = "Manu"
+	irish = "Mhannin"
+	gaelic = "Mhanainn"
+	scottish = "Mhanainn"
+	norsegael = "Mhann"
+	
+	#allow = { always = no }
+}
+
+k_rheged = 
+{
+	color = { 70 140 115 }
+	color2 = { 255 255 255 }
+	
+	capital = 53 # Cumberland
+	
+	culture = cumbric
+	
+	#allow = { always = no }
+}

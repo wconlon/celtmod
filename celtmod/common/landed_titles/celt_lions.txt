@@ -1,0 +1,905 @@
+e_lions = {
+	color={ 172 22 22 }
+	color2={ 255 255 255 }
+	
+	capital = 190 # Leon
+	
+	culture = italian
+	
+	allow = {
+		conditional_tooltip = {
+			has_landed_title = e_bulgaria
+		}
+		conditional_tooltip = {
+			has_landed_title = e_carpathia
+		}
+		conditional_tooltip = {
+			has_landed_title = e_cordoba
+		}
+		conditional_tooltip = {
+			has_landed_title = e_lechczechrus
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_abyssinia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			any_realm_lord = {
+				has_landed_title = k_abyssinia
+			}
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_africa = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_africa
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_alania = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_alania
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_andalusia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_andalusia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_aquitaine = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_aquitaine
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_arabia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_arabia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_armenia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_armenia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_badajoz = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_badajoz
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_bohemia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_bohemia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_bulgaria = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_bulgaria
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_burgundy = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_burgundy
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_cyprus = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_cyprus
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_dacia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_dacia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_denmark = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_denmark
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_england = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_england
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_epirus = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_epirus
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_estonia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_estonia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_finland = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_finland
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_galicia-volhynia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_galicia-volhynia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_kosala = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_kosala
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_lanka = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_lanka
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_leon = {
+					#is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_leon
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_mauretania = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_mauretania
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_norway = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_norway
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_orissa = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_orissa
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_persia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_persia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_scotland = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_scotland
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_swabia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_swabia
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_swabia_otto = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_swabia_otto
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_thuringia_otto = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_thuringia_otto
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_vladimir = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_vladimir
+		}
+		conditional_tooltip = {
+			trigger = {
+				k_wales = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			has_landed_title = k_wales
+		}
+	}
+
+	gain_effect = {
+		give_nickname = nick_the_lion
+		create_bloodline = {
+					type = lion
+		}
+		new_bloodline = {
+					set_description = "lion_desc"
+		}
+		e_bulgaria = {
+			any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_lions
+						}
+			destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+		}
+		e_carpathia = {
+			any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_lions
+						}
+			destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+		}
+		e_cordoba = {
+			any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_lions
+						}
+			destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+		}
+		e_lechczechrus = {
+			any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_lions
+						}
+			destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+		}
+		if = {
+			limit = {
+				k_abyssinia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_abyssinia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_africa = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_africa = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_alania = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_alania = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_andalusia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_andalusia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_aquitaine = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_aquitaine = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_arabia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_arabia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_armenia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_armenia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_badajoz = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_badajoz = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_bohemia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_bohemia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_bulgaria = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_bulgaria = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_burgundy = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_burgundy = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_cyprus = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_cyprus = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_dacia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_dacia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_denmark = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_denmark = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_england = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_england = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_epirus = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_epirus = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_estonia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_estonia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_finland = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_finland = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_galicia-volhynia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_galicia-volhynia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_kosala = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_kosala = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_lanka = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_lanka = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_leon = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_leon = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_mauretania = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_mauretania = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_norway = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_norway = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_orissa = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_orissa = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_persia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_persia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_schweiz = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_schweiz = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_scotland = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_scotland = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_suomi = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_suomi = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_swabia = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_swabia = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_swabia_otto = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_swabia_otto = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_thuringia_otto = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_thuringia_otto = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_tunis = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_tunis = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_vladimir = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_vladimir = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+		if = {
+			limit = {
+				k_wales = {
+					is_titular = no
+					NOT = {
+						de_jure_liege = e_lions
+					}
+				}
+			}
+			k_wales = {
+				show_scope_change = no
+				de_jure_liege = e_lions
+			}
+		}
+	}
+}
