@@ -1,0 +1,162 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#** CELTIC **;;;;;;;;;;;;;;
+#** IRISH **;;;;;;;;;;;;;;
+emperor_irish;August;August;August;;August;;;;;;;;;x
+emperor_female_irish;Banimpire;Banimpire;Banimpire;;Banimpire;;;;;;;;;x
+emperor_title_queen_mother_female_irish;Banimpire Máthair;Banimpire Máthair;Banimpire Máthair;;Banimpire Máthair;;;;;;;;;x
+empire_of_irish;Impireacht of;Impireacht de;Impireacht von;;Impireacht de;;;;;;;;;x
+city_emperor_irish;Uachtarán;Uachtarán;Uachtarán;;Uachtarán;;;;;;;;;x
+city_empire_of_irish;Confederation of;Confédération de;Konföderation von;;Confederación de;;;;;;;;;x
+#** King **;;;;;;;;;;;;;;
+king_irish;Ard Rí;Ard Rí;Ard Rí;;Ard Rí;;;;;;;;;x
+king_female_irish;Ard Bhanríon;Ard Banríon;Ard Banríon;;Ard Banríon;;;;;;;;;x
+kingdom_of_irish;High Kingdom of; Haut Royaume de;Königreich von;;Reino de;;;;;;;;;x
+city_king_irish;Taoiseach;Taoiseach;Taoiseach;;Taoiseach;;;;;;;;;x
+city_kingdom_of_irish;Federation of;Fédération de;Föderation von;;Federación de;;;;;;;;;x
+#** Duke **;;;;;;;;;;;;;;
+duke_irish;Rí;Roi;König;;Rey;;;;;;;;;x
+duke_female_irish;Banríon;Reine;Königin;;Reina;;;;;;;;;x
+duchy_of_irish;Minor Kingdom of;Royaume Mineur de;Kleinlich Königreich von;;Pequeña Reino de;;;;;;;;;x
+city_duke_irish;Ard-Rianaire;Ard-Rianaire;;;;;;;;;;x
+city_duchy_of_irish;Poblacht of;Haut Rianarat de;;;;;;;;;;x
+tribal_duke_irish;Rí Ruirech;;;;;;;;;;;;;x
+tribal_duchy_of_irish;Kingdom of;;;;;;;;;;;;;x
+#** Count **;;;;;;;;;;;;;;
+count_irish;Tigerna;Tigerna;Tigerna;;Tigerna;;;;;;;;;x
+count_female_irish;Bantigerna;Bantigerna;Bantigerna;;Bantigerna;;;;;;;;;x
+county_of_irish;Tuath of;Tuatha de;Hohe Lordschaft von;;Alto Señorío de;;;;;;;;;x
+city_count_irish;Ardmhéara;Ardmhéara;;;;;;;;;;x
+city_county_of_irish;Ardchathair of;Ardchathair de;;;;;;;;;;x
+tribal_count_irish;Rí Tuath;;;;;;;;;;;;;x
+tribal_county_of_irish;Tuatha of;Tuatha de;Hohe Lordschaft von;;Alto Señorío de;;;;;;;;;x
+#** Baron **;;;;;;;;;;;;;;
+baron_irish;Ridire;Ridire;Ridire;;Ridire;;;;;;;;;x
+barony_of_irish;Ridirship of;Tuath de;Lordschaft von;;Señorío de;;;;;;;;;x
+city_baron_irish;Méara;Petit Ceann;;;;;;;;;;x
+city_barony_of_irish;Cathair of;Cathair de;;;;;;;;;;x
+family_palace_baron_irish;Clan Chief;Chef de Clan;Clanchef;;Jefe del Clan;;;;;;;;;x
+family_palace_baron_female_irish;Lady;Dame;Frau;;Señora;;;;;;;;;x
+tribal_baron_irish;Rí Túaithe;;;;;;;;;;;;;x
+tribal_barony_irish;Túath;;;;;;;;;;;;;x
+#**Council**;;;;;;;;;;;;;;
+job_chancellor_irish;Seansailéir;Seansailéir;;;;;;;;;;x
+job_spymaster_irish;Brathadóir;Brathadóir;;;;;;;;;;x
+job_treasurer_irish;Ardmhaor;Ardmhaor;;;;;;;;;;x
+job_marshal_irish;Curadh;Curadh;;;;;;;;;;x
+job_spiritual_irish;Anmchara;;;;;;;;;;;;;x
+#**Titular Job Names**;;;;;;;;;;;;;;
+title_prince_irish;Flaith;;;;;;;;;;;;;x
+title_prince_female_irish;Banfhlaith;;;;;;;;;;;;;x
+#** SCOTTISH **;;;;;;;;;;;;;;
+emperor_scottish;Ímpire;Ímpire;Ímpire;;Ímpire;;;;;;;;;x
+emperor_female_scottish;Ímpress;Ímpress;Ímpress;;Ímpress;;;;;;;;;x
+emperor_title_queen_mother_female_scottish;Ímpress Baintreach;Ímpress Baintreach;Ímpress Baintreach;;Ímpress Baintreach;;;;;;;;;x
+city_emperor_scottish;Ard-Seansailéir;Ard-Seansailéir;Ard-Seansailéir;;Ard-Seansailéir;;;;;;;;;x
+city_empire_of_scottish;Confederation of;Confédération de;Konföderation von;;Confederación de;;;;;;;;;x
+#** King **;;;;;;;;;;;;;;
+city_king_scottish;Chancellor;Chancellier;Kanzler;;Canciller;;;;;;;;;x
+city_kingdom_of_scottish;Federation of;Fédération de;Föderation von;;Federación de;;;;;;;;;x
+#** Duke **;;;;;;;;;;;;;;
+duke_scottish;Mormaer;Mormaer;Mormaer;;Mormaer;;;;;;;;;;;;;;;;;;x
+duchy_of_scottish;Mormaerdom of;Mormaerdome de;Mormaertum von;;Mormaerdomo de;;;;;;;;;;;;;;x
+city_duke_scottish;Prince;Prince;Prinz;;Príncipe;;;;;;;;;x
+#** Count **;;;;;;;;;;;;;;
+count_scottish;Thane;Thane;Thane;;Thane;;;;;;;;;x
+count_female_scottish;Lady;Dame;Frau;;Señora;;;;;;;;;x
+county_of_scottish;Thanage of;Thanage de;Thanatum von;;Thanago de;;;;;;;;;x
+city_count_scottish;Lord Provost;Seigneur Prévôt;Herr Propst;;Señor Preboste;;;;;;;;;
+#** Baron **;;;;;;;;;;;;;;´
+baron_scottish;Chief;Chef;Häuptling;;Jefe;;;;;;;;;x
+baron_female_scottish;Chieftess;Cheftaine;Oberin;;Jefa;;;;;;;;;x
+barony_of_scottish;Castle of;Château de;Schloss von;;Castillo de;;;;;;;;;x
+city_baron_scottish;Provost;Prévôt;Propst;;Preboste;;;;;;;;;x
+family_palace_baron_scottish;Clan Chief;Chef de Clan;Clanchef;;Jefe del Clan;;;;;;;;;x
+family_palace_baron_female_scottish;Lady;Dame;Frau;;Señora;;;;;;;;;x
+#**Council**;;;;;;;;;;;;;;
+job_chancellor_scottish;Seansailéir;Seansailéir;;;;;;;;;;x
+job_spymaster_scottish;Lorgaire;Lorgaire;;;;;;;;;;x
+job_treasurer_scottish;High Steward;Ardmhaor;;;;;;;;;;x
+job_marshal_scottish;Gaisgeach;Gaisgeach;;;;;;;;;;x
+#** Gall Gael **;;;;;;;;;;;;;;
+emperor_norsegael;Ímpire;Ímpire;Ímpire;;Ímpire;;;;;;;;;x
+emperor_female_scottish;Ímpress;Ímpress;Ímpress;;Ímpress;;;;;;;;;x
+emperor_title_queen_mother_female_norsegael;Ímpress Baintreach;Ímpress Baintreach;Ímpress Baintreach;;Ímpress Baintreach;;;;;;;;;x
+city_emperor_norsegael;Ard-Seansailéir;Ard-Seansailéir;Ard-Seansailéir;;Ard-Seansailéir;;;;;;;;;x
+city_empire_of_norsegael;Confederation of;Confédération de;Konföderation von;;Confederación de;;;;;;;;;x
+#** King **;;;;;;;;;;;;;;
+city_king_norsegael;Chancellor;Chancellier;Kanzler;;Canciller;;;;;;;;;x
+city_kingdom_of_norsegael;Federation of;Fédération de;Föderation von;;Federación de;;;;;;;;;x
+#** Duke **;;;;;;;;;;;;;;
+duke_norsegael;Mormaer;Mormaer;Mormaer;;Mormaer;;;;;;;;;;;;;;;;;;x
+duchy_of_norsegael;Mormaerdom of;Mormaerdome de;Mormaertum von;;Mormaerdomo de;;;;;;;;;;;;;;x
+city_duke_norsegael;Prince;Prince;Prinz;;Príncipe;;;;;;;;;x
+#** Count **;;;;;;;;;;;;;;
+count_norsegael;Thane;Thane;Thane;;Thane;;;;;;;;;x
+count_female_norsegael;Lady;Dame;Frau;;Señora;;;;;;;;;x
+county_of_norsegael;Thanage of;Thanage de;Thanatum von;;Thanago de;;;;;;;;;x
+city_count_norsegael;Lord Provost;Seigneur Prévôt;Herr Propst;;Señor Preboste;;;;;;;;;
+#** Baron **;;;;;;;;;;;;;;´
+baron_norsegael;Chief;Chef;Häuptling;;Jefe;;;;;;;;;x
+baron_female_norsegael;Chieftess;Cheftaine;Oberin;;Jefa;;;;;;;;;x
+barony_of_norsegael;Castle of;Château de;Schloss von;;Castillo de;;;;;;;;;x
+city_baron_norsegael;Provost;Prévôt;Propst;;Preboste;;;;;;;;;x
+family_palace_baron_norsegael;Clan Chief;Chef de Clan;Clanchef;;Jefe del Clan;;;;;;;;;x
+family_palace_baron_female_norsegael;Lady;Dame;Frau;;Señora;;;;;;;;;x
+#**Council**;;;;;;;;;;;;;;
+job_chancellor_norsegael;Seansailéir;Seansailéir;;;;;;;;;;x
+job_spymaster_norsegael;Lorgaire;Lorgaire;;;;;;;;;;x
+job_treasurer_norsegael;High Steward;Ardmhaor;;;;;;;;;;x
+job_marshal_norsegael;Gaisgeach;Gaisgeach;;;;;;;;;;x
+#** WELSH **;;;;;;;;;;;;;;
+pendragon_title;Pennaeth Draig;Pennaeth Draig;Pennaeth Draig;;Pennaeth Draig;;;;;;;;;x
+pendragon_title_female;Pennaeth Draig;Pennaeth Draig;Pennaeth Draig;;Pennaeth Draig;;;;;;;;;x
+pendragon_foa;Pennaeth Draig;Pennaeth Draig;Pennaeth Draig;;Pennaeth Draig;;;;;;;;;x
+emperor_welsh;Ymerawdwr;Ymerawdwr;Ymerawdwr;;Ymerawdwr;;;;;;;;;x
+emperor_female_welsh;Ymerodres;Ymerodres;Ymerodres;;Ymerodres;;;;;;;;;x
+emperor_title_ruler_consort_welsh;Brenin;Brenin;Brenin;;Brenin;;;;;;;;;x
+emperor_title_ruler_consort_female_welsh;Frenhines;Frenhines;Frenhines;;Frenhines;;;;;;;;;x
+emperor_title_queen_mother_female_welsh;Fam Frenhines;Fam Frenhines;Fam Frenhines;;Fam Frenhines;;;;;;;;;x
+city_emperor_welsh;Uchel Ganghellor;Uchel Ganghellor;Uchel Ganghellor;;Uchel Ganghellor;;;;;;;;;x
+city_empire_of_welsh;Confederation of;Confédération de;Konföderation von;;Confederación de;;;;;;;;;x
+#** King **;;;;;;;;;;;;;;
+king_welsh;Tywysog;Tywysog;Tywysog;;Tywysog;;;;;;;;;x
+king_female_welsh;Tywysoges;Tywysoges;Tywysoges;;Tywysoges;;;;;;;;;x
+city_king_welsh;Chancellor;Chancelier;Kanzler;;Canciller;;;;;;;;;x
+city_kingdom_of_welsh;Federation of;Fédération de;Föderation von;;Federación de;;;;;;;;;x
+#** Duke **;;;;;;;;;;;;;;
+duke_welsh;Prince;Prince;Prinz;;Príncipe;;;;;;;;;x
+duke_female_welsh;Princess;Princesse;Fürstin;;Princesa;;;;;;;;;x
+duchy_of_welsh;Principality of;Principauté de;Fürstentum von;;Principado de;;;;;;;;;x
+#** Count **;;;;;;;;;;;;;;
+count_welsh;Teyrn;Teyrn;Teyrn;;Teyrn;;;;;;;;;x
+count_female_welsh;Lady;Dame;Frau;;Señora;;;;;;;;;x
+county_of_welsh;Lordship of;Seigneurie de;Lordschaft von;;Señorío de;;;;;;;;;x
+#** Baron **;;;;;;;;;;;;;;´
+baron_welsh;Lord;Seigneur;Herr;;Señor;;;;;;;;;x
+baron_female_welsh;Lady;Dame;Frau;;Señora;;;;;;;;;x
+barony_of_welsh;Cantref of;Cantref de;Cantref von;;Cantref de;;;;;;;;;x
+family_palace_baron_welsh;Clan Chief;Chef de Clan;Clanchef;;Jefe del Clan;;;;;;;;;x
+family_palace_baron_female_welsh;Lady;Dame;Frau;;Señora;;;;;;;;;x
+#**Council**;;;;;;;;;;;;;;
+job_chancellor_welsh;Canghellor;Canghellor;;;;;;;;;;x
+job_treasurer_welsh;Distain;Distain;;;;;;;;;;x
+job_marshal_welsh;Pencampwr;Pencampwr;;;;;;;;;;x
+#** BRETON **;;;;;;;;;;;;;;
+pendragon_title_breton;Penn Aerouant;Penn Aerouant;Penn Aerouant;;Penn Aerouant;;;;;;;;;x
+emperor_breton;Empereur;Empereur;Empereur;;Empereur;;;;;;;;;x
+emperor_female_breton;Impératrice;Impératrice;Impératrice;;Impératrice;;;;;;;;;x
+emperor_title_queen_mother_female_breton;Impératrice Douairière;Impératrice Douairière;Impératrice Douairière;;Impératrice Douairière;;;;;;;;;x
+city_emperor_breton;Consul;Consul;Consul;;Consul;;;;;;;;;x
+city_empire_of_breton;Senate of;Sénat de;Senat von;;Senado de;;;;;;;;;x
+#** King **;;;;;;;;;;;;;;
+king_breton;Roue;Roue;Roue;;Roue;;;;;;;;;x
+kingdom_of_breton;Rouantelezh of;;;;;;;;;;;;;x
+city_king_breton;Tribune;Tribun;Volkstribun;;Tribuno;;;;;;;;;x
+city_kingdom_of_breton;Grand Republic of;Grande République de;Großen Republik;;Gran República de;;;;;;;;;x
+#**Baron**;;;;;;;;;;;;;;
+barony_of_breton;Machtiernship of;Machtiernship de;Machtiernship von;;Machtiernship de;;;;;;;;;x
+barony_breton;Machtiernship;Machtiernship;Machtiernship;;Machtiernship;;;;;;;;;x
+baron_breton;Machtiern;Machtiern;Machtiern;;Machtiern;;;;;;;;;x
+baron_breton_female;Machtiern;Machtiern;Machtiern;;Machtiern;;;;;;;;;x
+city_baron_breton;Machtiern;Machtiern;Machtiern;;Machtiern;;;;;;;;;x
+city_baron_breton_female;Machtiern;Machtiern;Machtiern;;Machtiern;;;;;;;;;x

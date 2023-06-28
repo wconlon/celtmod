@@ -1,0 +1,813 @@
+namespace = celtic
+namespace = hellenic
+
+###################################################
+#
+# ANCIENT RELIGIONS
+# - Artifact Events
+#
+# Event ID celtic.2000 - celtic.2499 Decision Events
+#
+###################################################
+
+# Celtic Artifacts
+
+# Skull of Brigid
+#Quality 4
+character_event = {
+	id = celtic.2000
+	desc = celtic.2000.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MEDIUM_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_very_disappointed
+			years = 15
+		}
+		add_artifact = skull_of_brigid
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MEDIUM_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.5
+			min = 35
+		}
+
+		add_artifact = skull_of_brigid
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MEDIUM_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		reverse_add_favor = FROM
+		add_artifact = skull_of_brigid
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MEDIUM_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 5
+		}
+		FROM = { prestige = 50 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = skull_of_brigid
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Silver Hand of Nuada
+#Quality 5
+character_event = {
+	id = celtic.2002
+	desc = celtic.2002.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}
+		add_artifact = silver_hand_of_nuada
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+		add_artifact = silver_hand_of_nuada
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		reverse_add_favor = FROM
+		add_artifact = silver_hand_of_nuada
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = silver_hand_of_nuada
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Horn of Bran Galed
+#Quality 4
+character_event = {
+	id = celtic.2006
+	desc = celtic.2006.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MEDIUM_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_very_disappointed
+			years = 15
+		}
+		add_artifact = horn_of_bran_galed
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MEDIUM_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.5
+			min = 35
+		}
+
+		add_artifact = horn_of_bran_galed
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MEDIUM_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		reverse_add_favor = FROM
+		add_artifact = horn_of_bran_galed
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MEDIUM_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 5
+		}
+		FROM = { prestige = 50 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = horn_of_bran_galed
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Tusk of Torc Triath
+#Quality 3
+character_event = {
+	id = celtic.2007
+	desc = celtic.2007.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MEDIUM_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_very_disappointed
+			years = 15
+		}
+		add_artifact = tusk_of_torc_triath
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MEDIUM_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.5
+			min = 35
+		}
+
+		add_artifact = tusk_of_torc_triath
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MEDIUM_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		reverse_add_favor = FROM
+		add_artifact = tusk_of_torc_triath
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MEDIUM_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 5
+		}
+		FROM = { prestige = 50 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = tusk_of_torc_triath
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Boudicca's Torque
+#Quality 2
+character_event = {
+	id = celtic.2008
+	desc = celtic.2008.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MINOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_disappointed
+			years = 10
+		}
+		add_artifact = torque_of_boudicca
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MINOR_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.25
+			min = 20
+		}
+
+		add_artifact = torque_of_boudicca
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MINOR_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		reverse_add_favor = FROM
+		add_artifact = torque_of_boudicca
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MINOR_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		FROM = { prestige = 25 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = torque_of_boudicca
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Ancient Carnyx
+#Quality 2
+character_event = {
+	id = celtic.2009
+	desc = celtic.2009.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MINOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_disappointed
+			years = 10
+		}
+		add_artifact = old_carnyx
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MINOR_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.25
+			min = 20
+		}
+
+		add_artifact = old_carnyx
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MINOR_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		reverse_add_favor = FROM
+		add_artifact = old_carnyx
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MINOR_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		FROM = { prestige = 25 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = old_carnyx
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Horned Helm
+#Quality 2
+character_event = {
+	id = celtic.2010
+	desc = celtic.2010.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MINOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_disappointed
+			years = 10
+		}
+		add_artifact = horned_helm
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MINOR_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.25
+			min = 20
+		}
+
+		add_artifact = horned_helm
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MINOR_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		reverse_add_favor = FROM
+		add_artifact = horned_helm
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MINOR_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		FROM = { prestige = 25 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = horned_helm
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+# Battersea Shield
+#Quality 2
+character_event = {
+	id = celtic.2011
+	desc = celtic.2011.desc
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	has_dlc = "Mystics"
+
+	option = { #it's their duty
+		name = EVTOPT_MINOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_disappointed
+			years = 10
+		}
+		add_artifact = battersea_shield
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #monetary reward
+		name = EVTOPT_MINOR_ARTIFACT_MONEY
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.25
+			min = 20
+		}
+
+		add_artifact = battersea_shield
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #reward them with a favor
+		name = EVTOPT_MINOR_ARTIFACT_FAVOR
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		reverse_add_favor = FROM
+		add_artifact = battersea_shield
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+
+	option = { #praise them (prestige reward)
+		trigger = {
+			diplomacy = 15
+		}
+		name = EVTOPT_MINOR_ARTIFACT_PRESTIGE
+
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_minor_artifact
+			years = 10
+		}
+		FROM = { prestige = 25 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = battersea_shield
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
+}

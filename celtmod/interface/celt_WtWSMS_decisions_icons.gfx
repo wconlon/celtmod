@@ -1,0 +1,30 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_convert_to_spouse_insular"
+		texturefile = "gfx\\interface\\WtWSMS\\decision_icon_convert_spouse_insular.dds"
+	}
+	spriteType = {
+		name = "GFX_call_synod_of_whitby"
+		texturefile = "gfx\\interface\\decision_icon_patrons_chr.dds"
+	}
+	spriteType = {
+		name = "GFX_peregrinatio"
+		texturefile = "gfx\\interface\\decision_icon_catholic_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_create_pelagian_bishop"
+		texturefile = "gfx\\interface\\decision_icon_create_pelagian_bishop.dds"
+	}
+	spriteType = {
+		name = "GFX_create_bishop_of_iona"
+		texturefile = "gfx\\interface\\decision_icon_patrons_chr.dds"
+	}
+	spriteType = {
+		name = "GFX_give_alms"
+		texturefile = "gfx\\interface\\decision_icon_give_alms.tga"
+	}
+	spriteType = {
+		name = "GFX_create_dumnonia"
+		texturefile = "gfx\\interface\\WtWSMS\\decision_icon_recreate_dumnonia.dds"
+	}
+}

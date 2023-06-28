@@ -1,0 +1,25 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;x
+####### Titles (excluding County/Barony Titles);;;;;;;;;;;x
+HIGH_KING;High King;Grand Roi;;;Gran Rey;;;;;;;x
+HIGH_QUEEN;High Queen;Grande Reine;;;Gran Reina;;;;;;;x
+d_sons_of_ireland;Sons of Ireland;Fils d'Irlande;;;Hijos de Irlanda;;;;;;;x
+d_sons_of_ireland_adj;Irish;Irlandais;;;Irlandés;;;;;;;x
+k_galatia;Galatia;Galatie;;;Galatia;;;;;;;x
+k_galatia_adj;Galatian;Galatien;;;Gálata;;;;;;;x
+d_insulae;Insulae;;;;;;;;;;;x
+d_insulae_adj;Insular;;;;;;;;;;;x
+d_domnonia;Domnonia;Domnonée;;;Dumnonia;;;;;;;x
+d_domnonia_adj;Domnonian;Domnonéen;;;Dumnonio;;;;;;;x
+# Irish and Scottish kingdoms
+d_ce;Ce;;;;;;;;;;;x
+k_dal_riata;Dál Riata;Dal Riada;;;Dál Riata;;;;;;;x
+d_cait;Cait;;;;;;;;;;;x
+d_fortriu;Fortriu;Fortriú;;;Fortriu;;;;;;;x
+d_fotla;Fotla;Fódla;;;;;;;;;;x
+k_orkney;Orkney;Orcades;;;Orcadas;;;;;;;x
+e_celtic;Celtic Union;Empire Celtique;;;Imperio Celta;;;;;;;x
+e_celtic_adj;Celtic;Celtique;;;;;;;;;;x
+d_insular;Bishopric of Iona;Évêché d'Iona;;;Obispado de Iona;;;;;;x
+d_insular_adj;Ionan;Ionien;;;;;;;;;x
+d_pelagian;The Pelagian Bishopric;L'évêché pélagien;;;Obispado Pelagiano;;;;;;x
+d_pelagian_adj;Pelagian;Pélagien;;;;;;;;;;x

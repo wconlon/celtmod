@@ -1,0 +1,31 @@
+spriteTypes = {
+	# Secret religions
+	spriteType = {
+		name = "GFX_trait_secretly_insular"
+		texturefile = "gfx/traits/secret_religion_catholic.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_secretly_pelagianism"
+		texturefile = "gfx/traits/secret_religion_catholic.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_secretly_celtic_pagan"
+		texturefile = "gfx/traits/secret_religion_ref_germanic.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_secretly_celtic_pagan_reformed"
+		texturefile = "gfx/traits/secret_religion_ref_germanic.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
