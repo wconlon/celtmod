@@ -1,0 +1,11 @@
+spriteTypes = {
+	# PLOTS
+	
+	spriteType = {
+		name = "GFX_plot_succ_tanistry"
+		texturefile = "gfx/ambitions/plot_succ_tanistry.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

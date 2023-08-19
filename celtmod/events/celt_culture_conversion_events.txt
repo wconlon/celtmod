@@ -1,0 +1,422 @@
+##Events for converting province culture
+#3000-3999
+
+namespace = celt
+
+# Gaelic province culture changes to Gall Gael when ruled by North Germans
+province_event = 
+{
+	id = celt.3000
+	desc = celt.3000.desc
+	picture = GFX_evt_viking_throneroom_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = 
+	{
+		should_evolve_cultures_trigger = yes
+		year = 800
+		OR =
+		{
+			culture = irish
+			culture = gaelic
+			culture = scottish
+			culture = manx
+			culture = pictish
+		}
+		#region = custom_swedish
+		# NOT = 
+		# {
+			# owner = 
+			# { 
+				# top_liege = 
+				# { 
+					# culture = norse 
+					# OR = 
+					# {
+						# tier = emperor
+						# num_of_king_titles = 2
+					# }
+				# } 
+			# }
+		# }
+		OR = 
+		{
+			owner = { top_liege = { culture = norse } }
+			owner = { top_liege = { culture = swedish } }
+			owner = { top_liege = { culture = danish } }
+			owner = { top_liege = { culture = norwegian } }
+			owner = { top_liege = { culture = norsegael } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2800
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = celt.3000.a
+		trigger = {
+			NOT = {
+				owner = { culture = norsegael }
+			}
+		}
+		culture = norsegael
+	}
+	option = {
+		name = celt.3000.b
+		trigger = {
+			owner = { culture = norsegael }
+		}
+		culture = norsegael
+	}
+}
+#After the Augustus of Northwestern Europe decision, Scandinavia will convert to Norsegael as long as top leige is celtic
+province_event = 
+{
+	id = celt.3001
+	desc = celt.3001.desc
+	picture = GFX_evt_viking_throneroom_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = 
+	{
+		should_evolve_cultures_trigger = yes
+		has_global_flag = augustus_of_northwestern_europe
+		OR =
+		{
+			culture = norse
+			culture = swedish
+			culture = danish
+			culture = norwegian
+		}
+		OR =
+		{
+			region = custom_swedish
+			region = custom_norwegian
+			region = custom_danish
+		}
+		owner = 
+		{ 
+			top_liege = 
+			{ 
+				culture_group = celtic 
+				OR = 
+				{
+					tier = emperor
+					num_of_king_titles = 2
+				}
+			} 
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2800
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = celt.3001.a
+		trigger = {
+			NOT = {
+				owner = { culture_group = celtic }
+			}
+		}
+		culture = norsegael
+	}
+	option = {
+		name = celt.3001.b
+		trigger = {
+			owner = { culture_group = celtic }
+		}
+		culture = norsegael
+	}
+}
+#Breton culture becomes Cornish on the British Isles
+province_event = 
+{
+	id = celt.3002
+	desc = celt.3002.desc
+	picture = GFX_evt_throne_room_celtic
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = 
+	{
+		should_evolve_cultures_trigger = yes
+		year = 750
+		culture = breton
+		region = world_europe_west_brittania
+		NOT = 
+		{
+			owner = 
+			{ 
+				top_liege = 
+				{ 
+					culture = breton
+					OR = 
+					{
+						tier = emperor
+						num_of_king_titles = 2
+					}
+				} 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2800
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = celt.3002.a
+		trigger = {
+			NOT = {
+				owner = { culture = cornish }
+			}
+		}
+		culture = cornish
+	}
+	option = {
+		name = celt.3002.b
+		trigger = {
+			owner = { culture = cornish }
+		}
+		culture = cornish
+	}
+}
+
+#Welsh culture becomes Cumbric in northern Britain
+province_event = 
+{
+	id = celt.3003
+	desc = celt.3003.desc
+	picture = GFX_evt_throne_room_celtic
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = 
+	{
+		should_evolve_cultures_trigger = yes
+		year = 750
+		culture = welsh
+		region = custom_hen_ogledd
+		NOT = 
+		{
+			owner = 
+			{ 
+				top_liege = 
+				{ 
+					culture = welsh
+					OR = 
+					{
+						tier = emperor
+						num_of_king_titles = 2
+					}
+				} 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2800
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = celt.3003.a
+		trigger = {
+			NOT = {
+				owner = { culture = cumbric }
+			}
+		}
+		culture = cumbric
+	}
+	option = {
+		name = celt.3003.b
+		trigger = {
+			owner = { culture = cumbric }
+		}
+		culture = cumbric
+	}
+}
+
+# After Kingdom of Mann decision, costal provinces controlled at the time can convert to Manx
+province_event = 
+{
+	id = celt.3004
+	desc = celt.3004.desc
+	picture = GFX_evt_viking_throneroom_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = 
+	{
+		should_evolve_cultures_trigger = yes
+		has_global_flag = kingdom_of_mann
+		has_province_flag = flag_convert_to_manx
+		OR =
+		{
+			owner = { liege = { culture = manx } }
+			owner = { culture = manx }
+		}
+	}
+	
+	mean_time_to_happen = 
+	{
+		months = 2800
+		modifier = 
+		{
+			factor = 0.3
+			OR = 
+			{
+				has_game_rule = 
+				{
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = 
+				{
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = 
+	{
+		name = celt.3004.a
+		trigger = 
+		{
+			NOT = 
+			{
+				owner = { culture = manx }
+			}
+		}
+		culture = manx
+	}
+	option = 
+	{
+		name = celt.3004.b
+		trigger = 
+		{
+			owner = { culture = manx }
+		}
+		culture = manx
+	}
+}
+#French and Occitan provinces can become Gaulish
+province_event = 
+{
+	id = celt.3005
+	desc = celt.3005.desc
+	picture = GFX_evt_stone_church
+
+	trigger = 
+	{
+		should_evolve_cultures_trigger = yes
+		year = 776
+		has_global_flag = flag_gaul_restored
+		OR =
+		{
+			culture = old_frankish
+			culture = frankish
+			culture = occitan
+			culture = norman
+		}
+		owner = 
+		{
+			top_liege =
+			{
+				culture_group = celtic
+			}
+		}
+		any_province_holding =
+		{
+			NOT = { holding_type = nomad }
+		}
+	}
+
+	mean_time_to_happen = 
+	{
+		months = 1200
+		modifier = 
+		{
+			factor = 0.5
+			owner = 
+			{
+				culture_group = celtic
+			}
+		}
+		modifier = 
+		{
+			factor = 0.3
+			OR = 
+			{
+				has_game_rule = 
+				{
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = 
+				{
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = 
+	{
+		name = celt.3005.a
+		culture = gaulish
+	}
+}

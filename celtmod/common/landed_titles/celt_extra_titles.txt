@@ -1,0 +1,90 @@
+#################################
+#
+# Titular, Tribal, and Republic Titles
+#
+#################################
+
+#Britain for the Britons
+k_britain = {
+	color={ 255 36 0 }
+	color2={ 255 255 20 }
+	
+	capital = 32 #London
+	
+	culture = welsh
+
+	allow = {
+		always = no
+	}
+}
+
+#Dumnonia
+k_dumnonia = {
+	color={ 100 15 15 }
+	color2={ 255 255 20 }
+	
+	capital = 29 #cornwall
+	
+	culture = cornish
+
+	allow = {
+		always = no
+	}
+}
+
+e_celtic = {
+	color={ 89 151 89 }
+	color2={ 0.7 0.7 0.3 }
+	short_name = yes
+
+	capital = 112 # Paris
+
+	dignity = 100 # Counted as having this many more counties than it does
+
+	briton = "Undeb Celtaidd"
+	welsh = "Undeb Celtaidd"
+	cumbric = "Undeb Celtaidd"
+	cornish = "Unyans Keltek"
+	irish = "Aontas Ceilteach"
+	gaelic = "Aonadh Ceilteach"
+	scottish = "Aonadh Ceilteach"
+	manx = "Unnaneys Cheltiagh"
+	norsegael = "Aonadh Ceilteach"
+	pictish = "Undeb Celtaidd"
+	breton = "Unaniezh Keltiek"
+
+	allow = {
+		OR = {
+			culture_group = celtic
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+		11 = { 
+			owner = {
+				OR = {
+					is_liege_or_above = ROOT
+					character = ROOT
+				}
+			} 
+		}
+		32 = { 
+			  owner = {
+				OR = {
+					 is_liege_or_above = ROOT
+					 character = ROOT
+					}
+				  } 
+				 }
+		112 = { 
+			owner = {
+				OR = {
+					is_liege_or_above = ROOT
+					character = ROOT
+				}
+			}
+		}
+		prestige = 1000
+		independent = yes
+		realm_size = 255
+	}
+}

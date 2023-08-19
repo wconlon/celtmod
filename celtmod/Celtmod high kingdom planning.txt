@@ -1,0 +1,51 @@
+High Kingdom mechanics concept
+
+Characters of appropriate culture gain high king authority stacks by doing various things
+that were historically considered significant for establishing authority
+
+examples:
+Subjugating other kingdoms (and lower) in Ireland (1 for each of the fifths at least, maybe one for smaller realms too)
+Controlling one of the fifths of Ireland (must hold the actual title)
+Controlling Tara
+Holding Aonach Tailtean (maybe a bonus point for full pagan ceremony, and a rare chance for another bonus if the stone roars)
+Parent held High Kingdom (maybe only after establishing dynastic dominance)
+Relative gains high kingdom (again maybe only after dynastic dominance for the sake of north O'Neil vs south O'Neil conflict)
+?Maybe controlling the three most prosperous cities (but I'm not sure how I'd impliment that)
+Defeating another rulers in war (maybe just revolts, or maybe any war)
+
+Authority provides some bonus on its own that adds stability (maybe opinion and/or presteige)
+but can also be spent to gain High Kingdom title or to strengthen it.
+If the title is already possessed by someone, can spend authority to gain strong claim instead (possibly less than is required to gain title outright, and probably only after dynasty controls title)
+Strong claimants can either gain title for free once it is vacant or for a discounted authority cost
+
+Initially High Kingdom title deletes itself whenever its owner dies and is only a Ducal title (essentially just being bragging rights)
+but surplus authority can be spent to strenghten the title. Strengthening title weakens hold on Ireland in the short term by removing the authority bonuses
+Perhaps also by granting an opinion penalty to either every character with a strong claim or with every character that holds some amount of authority themselves
+
+levels of High Kingdom centralization (ideally there should be five):
+level 1: Unmodified High Kingdom mechanics, title is gained by asserting hegimony over (making tributaries of) the other kings of Ireland
+level 2: Dynastic control. High Kingdom is considered to belong to your dynasty by default. This is the state the title is in after Nial of the Nine Hostages establishes his dynasty
+in this state the title still deletes after each succession but your heir should get free authority so that the title can be formed immediately.
+However some amount of authority should be provided to each independant ruler of the same dynasty to encourage the title to change hands between family branches. This may prove problematic if there are no other independant rulers of the same dynasty, so may have to enforce the creation of them in that case
+level 3: Perminant title. The High King title no longer deletes with each succession, thus it will automatically inherit to holder's heir.
+This level should be somewhat difficult to attain to represent the comfortable stagnation of the O'Neils' high kingdom era. Probably by requiring the control of all other rulers of the same dynasty, and possibly by also requiring there be no other strong claimants
+Other Duke level rulers in Ireland should not be happy about this, and possibly other members of dynasty as well
+level 4: Perminant hegimony. Previously the High King would make temporary tributaries of the other kings in Ireland, this change changes these to perminant tributaries so that the High King retains a weak but stable control over the other kings
+Perhaps a unique form of perminant tributary would need to be made for this so that tributaries can still be asked to join wars, but otherwise should match normal perminant tributaries.
+this level should be especially unpopular with the kings of the other Fifths, should be likely to rebel at first
+level 5: kingdom-level High Kingdom. Until now the High King title was a ducal title to represent the low level of practical power it held and also to stop players from just vassalizing the duke-level titles for perminant control.
+A this point the High King can actually vassalize their tributaries and formation of the proper Kingdom of Ireland is essentially inevitable.
+Should be some mechanic where tributaries can be automatically converted to vassals without having to release them and then vassalize them again. However, powerful kings in Ireland should either be able to refuse vassalization, or be very likely to revolt after acheiving this level of control
+Although essentially a united kingdom at this point, there should be one final condition before replacing the High Kingdom title with the Kingdom of Ireland, and failing to acheive it should cause the kingdom to explode to represent the effects of Brian Boru's unexpected death (maybe give all vassals a strong claim so that they all revolt at once?)
+
+Once level 5 has been reached and some final condition is achieved (possibly just having all of Ireland as vassals, but maybe also removing surviving claimants) a decision will be available to replace the High Kingdom title with the Kingdom of Ireland, making the unification of Ireland perminant and disabling all remaining high kingdom mechanics
+There should be some really good bonus for uniting Ireland this way so that players don't just ignore them and create Ireland though bog standard conquest. I'm thinking either all demense counties or all counties in Ireland gain an extra holding slot
+
+Strong claimants should have a CB to take the High Kingdom title (kind of goes without saying, but maybe there needs to be a special CB type in case of weird interactions with High Kingdom mechanics)
+Strong claims should be used to preserve conflict over the title, so should be fairly easy to acquire if the title itself is already held. Should be able to obtain for less authority than the title itself, and maybe automatically give one to members of dynasty if possible (might not be possible with non-inherited version of title)
+
+Increasing centralization should not be restricted to once per ruler, but because easy sources of authority are non-repeatable, it should be generally quite difficult to push through multiple authority increases in a single ruler's lifetime
+Also other realms in Ireland should become increasingly beligerant when centralization is increased (be it through giving them free claims, free authority, or just a stacking opinion malus) so that forcing the High Kingdom to centralize quickly will result in heavy revolts
+It should still be possible so that any ruler could hypothetically reenact Brian Boru's rapid rise to power
+
+Brian Boru may need special events that boost authority so that he can more easily reenact his rise to power, but also an event that is very likely to kill him and shatter the kingdom

@@ -1,0 +1,157 @@
+living_legend_male = {
+    inheritance = patrilineal
+    matrilineal_override = yes
+    allow_bastards = no
+    flags = { bloodline_heroes bloodline_female_marshal created_bloodline }
+    picture = GFX_bloodlines_placeholder_symbol
+    active = {
+		OR =
+		{
+			religion_openly_in_celtic_subgroup_trigger = yes
+			culture_group = celtic
+		}
+    }
+
+    combat_rating = 10
+    celtic_pagan_opinion = 5
+    celtic_pagan_reformed_opinion = 5
+    monthly_character_piety = 0.1
+    monthly_character_prestige = 0.1
+}
+
+living_legend_female = {
+    inheritance = matrilineal
+    matrilineal_override = yes
+    allow_bastards = no
+    flags = { bloodline_heroes bloodline_female_marshal created_bloodline }
+    picture = GFX_bloodlines_placeholder_symbol
+    active = {
+		OR = {
+			religion_openly_in_celtic_subgroup_trigger = yes
+			culture_group = celtic
+		}
+    }
+
+    combat_rating = 10
+    celtic_pagan_opinion = 5
+    celtic_pagan_reformed_opinion = 5
+    monthly_character_piety = 0.1
+    monthly_character_prestige = 0.1
+}
+
+arthur_pendragon = {
+    inheritance = patrilineal
+    matrilineal_override = yes
+    allow_bastards = no
+    flags = { bloodline_knights bloodline_female_marshal created_bloodline bloodline_arthur bloodline_bry }
+    picture = GFX_bloodlines_placeholder_symbol
+	bloodline_effect_knights = 1
+    active = {
+		OR =
+		{
+			religion_openly_celtic_or_reformed_trigger = yes
+			culture_group = celtic
+			religion_group = christian
+		}
+    }
+
+    combat_rating = 10
+	celtic_opinion = 10
+    celtic_pagan_opinion = 10
+    celtic_pagan_reformed_opinion = 10
+    monthly_character_piety = 0.1
+    monthly_character_prestige = 0.1
+
+    vassal_opinion = 15
+}
+
+saintly_bloodline_celtic_01 = {
+	monthly_character_piety = 0.3
+	command_modifier = {
+		religious_enemy = 0.3
+	}	
+	saintly_defender_bloodline = 1
+	inheritance = patrilineal
+	allow_bastards = no
+	flags = { ancestor_worship_bloodline defender_of_the_faith }
+	picture = GFX_bloodlines_symbol_war
+	active = {
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+william_wallace = {
+	combat_rating = 8
+	scottish_opinion = 5
+	command_modifier = {
+		morale_defence = 0.05
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { bloodline_gael historical_bloodline }
+}
+
+brian_boru = {
+	combat_rating = 5
+	irish_opinion = 5
+	monthly_character_prestige = 0.1
+	bloodline_effect_tanistry = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = { bloodline_gael historical_bloodline bloodline_tanistry bloodline_high_king }
+}
+
+niall = {
+	combat_rating = 5
+	light_infantry_morale = 0.05
+	monthly_character_prestige = 0.1
+	bloodline_effect_tanistry = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = { bloodline_gael historical_bloodline bloodline_tanistry bloodline_high_king bloodline_niall }
+}
+
+vortigern = {
+	combat_rating = 5
+	monthly_character_prestige = 0.1
+	saxon_opinion = 5
+	cruel_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = { bloodline_bry historical_bloodline }
+}
+
+caratacus = {
+	combat_rating = 5
+	welsh_opinion = 5
+	monthly_character_prestige = 0.2
+	command_modifier = {
+		morale_defence = 0.05
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = {bloodline_bry historical_bloodline brythonic_bloodline }
+}
+
+conan_meriadoc = {
+	combat_rating = 5
+	breton_opinion = 5
+	cornish_opinion = 5
+	welsh_opinion = 5
+	monthly_character_prestige = 0.2
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = {bloodline_bry historical_bloodline brythonic_bloodline }
+}

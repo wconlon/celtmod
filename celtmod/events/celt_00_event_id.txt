@@ -1,0 +1,28 @@
+###################################
+#
+# Celtic Druidism
+#
+# celtic.0 - celtic.9 Rebirth of Druidism
+# celtic.10 - celtic.19 Celtic Headhunters
+# celtic.20 - celtic.109 Celtic Divination Events
+# celtic.110 - celtic.149 The Sons of Gwydion
+# celtic.150 - celtic.151 Celtic Flavor Events
+# celtic.152 - celtic.207 Druidic Caste Events
+# celtic.208 - celtic.210 Celtic Flavor Events
+# celtic.211 - celtic.241 Celtic changelings
+# celtic.244 - celtic.255 Celtic sacred symbols Events
+# celtic.256 				Celtic Flavor Event
+# celtic.270 - celtic.279 Celtic Reincarnation
+# celtic.280 - celtic.299 Wolf Tails Events
+# celtic.300 - celtic.302 Druidic Revival Events
+# celtic.1000 - celtic.1100 Unfit King Events
+# celtic.1150 - celtic.1189 The Fianna
+# celtic.1190 - celtic.1251 Aonach Tailteann Events
+# celtic.1252 - celtic.1253 Celtic Flavor Events
+# celtic.1254 - celtic.1260 The Fianna
+# celtic.1261 - celtic.1318 Thirteen Treasures of Britain events
+# celtic.1319 - celtic.1332 Red Dragon Knights
+# celtic.1333 - celtic.1334 The Fianna
+# celtic.2000 - celtic.2499 Artifact Events
+#
+###################################

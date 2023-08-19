@@ -1,0 +1,365 @@
+# Religion-specific opinion can be added to modifiers (E.G., norse_pagan_opinion = 5), but the modifier *has* to be defined in 00_modifier_definitions.txt as well. It also needs localisation. Works for groups as well
+
+# join_crusade_if_bordering_hostile = yes # The AI won't refrain from joining a crusade simply because it borders a heathen/heretic realm
+
+# women_can_take_consorts = yes # If set, women can take consorts as well, not just men. Defaults to "no". Has no effect if max_consorts is 0
+# men_can_take_consorts = no # If set, men cannot take consorts any more. Defaults to "yes". Has no effect if max_consorts is 0
+# male_temple_holders = no # If set to no, men cannot hold temples. Defaults to "yes". You might need to update your law scripts for this to fully work (see trigger "religion_allows_male_temple_holders")
+
+christian = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	crusade_cb = crusade
+	playable = yes
+	ai_peaceful = yes # Will make Hordes lose their super aggressiveness
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2 # always try to convert
+	
+	color = { 0.8 0.8 0.6 }
+	
+	# Names given only to Christian characters (base names)
+	male_names = {
+		Andrew Antoninus Bartolomeus Benedict Christian Christopher Clement Constantine David Demetrius Eustace George Gregory 
+		Hans Isaac Joakim Jacob John Jordan Joseph Laurence Magnus Marcus Martin Matthew Michael Nicholas Patrick Paul Peter Philip 
+		Salvador Samuel Sebastian Simon Stephen Thomas Abraham Alexander Daniel Jesus Job Joshua Cyrus Luke Zachariah
+	}
+	female_names = {
+		Anna Beatrice Benedicta Brigid Catherine Cecilia Christina Clementia Constance Dorothy Elisabeth Joan Judith Juliana Helen 
+		Magdalena Margaret Maria Marine Patricia Philippa Rachel 
+		Sarah Sophia Stephania
+	}
+	
+	# Insular and heresies
+	insular = {
+		graphical_culture = westerngfx
+
+		icon = 139
+		heresy_icon = 140
+		
+		color = { 0.23 1.0 0.23 }
+		
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+		high_god_name = GOD_GOD
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL
+		}
+		
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = no
+		priests_can_inherit = no
+		
+		can_retire_to_monastery = yes
+		
+		religious_clothing_head = 1
+		religious_clothing_priest = 1
+		
+		intermarry = catholic
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = lollard
+
+		intermarry = orthodox
+		intermarry = adoptionism
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = sabellianism
+		intermarry = psilanthropism
+
+		intermarry = aquileian
+
+		intermarry = nicene
+		intermarry = total_depravity
+		intermarry = eutychian
+		intermarry = binitarian
+		intermarry = antinomianism
+		intermarry = ebionites
+		intermarry = marcionism
+		intermarry = montanist
+		intermarry = sethian
+		intermarry = valentinianism
+		intermarry = apollinarian
+		intermarry = docetic
+		intermarry = pneumatomachians
+		intermarry = melchisedechianism
+		intermarry = patripassianism
+		intermarry = arian
+		intermarry = donatism
+		intermarry = priscillianism
+
+		#intermarry = insular
+		intermarry = pelagianism
+
+		intermarry = georgian_orthodox
+
+		intermarry = miaphysite
+		intermarry = audianistic
+		intermarry = monophysite
+		intermarry = monarchianism
+
+		intermarry = nestorian
+		intermarry = messalian
+
+		intermarry = celtic_pagan
+		intermarry = celtic_pagan_reformed
+		intermarry = germanic_pagan
+		intermarry = germanic_pagan_reformed
+	}
+	pelagianism = {
+		graphical_culture = westerngfx
+
+		icon = 115
+		heresy_icon = 140
+		
+		color = { 0.5 0.9 0.55 }
+		parent = insular
+		
+		crusade_name = "WAROFEXAMPLE"
+		
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		female_temple_holders = no
+		
+		religious_clothing_head = 1
+		religious_clothing_priest = 1
+		
+		character_modifier = { 
+			general_opinion = -10
+			same_opinion_if_same_religion = 20
+			infidel_opinion = -20
+		}
+		
+		intermarry = catholic
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = lollard
+
+		intermarry = orthodox
+		intermarry = adoptionism
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = sabellianism
+		intermarry = psilanthropism
+
+		intermarry = aquileian
+
+		intermarry = nicene
+		intermarry = total_depravity
+		intermarry = eutychian
+		intermarry = binitarian
+		intermarry = antinomianism
+		intermarry = ebionites
+		intermarry = marcionism
+		intermarry = montanist
+		intermarry = sethian
+		intermarry = valentinianism
+		intermarry = apollinarian
+		intermarry = docetic
+		intermarry = pneumatomachians
+		intermarry = melchisedechianism
+		intermarry = patripassianism
+		intermarry = arian
+		intermarry = donatism
+		intermarry = priscillianism
+
+		intermarry = insular
+		#intermarry = pelagianism
+
+		intermarry = georgian_orthodox
+
+		intermarry = miaphysite
+		intermarry = audianistic
+		intermarry = monophysite
+		intermarry = monarchianism
+
+		intermarry = nestorian
+		intermarry = messalian
+
+		intermarry = celtic_pagan
+		intermarry = celtic_pagan_reformed
+		intermarry = germanic_pagan
+		intermarry = germanic_pagan_reformed
+	}
+		
+}
+
+pagan_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+	crusade_cb = crusade
+	playable = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 0	# never try to convert
+	ai_fabricate_claims = no
+	
+	color = { 0.6 0.0 0.0 }
+	
+	interface_skin = { pagan_interface }
+	
+	# Names given only to Pagan characters (base names)
+	male_names = {
+		Anund Asbjörn Aslak Audun Bagge Balder Brage Egil Emund Frej Gnupa Gorm Gudmund Gudröd Hardeknud Helge Odd Orm 
+		Orvar Ottar Rikulfr Rurik Sigbjörn Styrbjörn Starkad Styrkar Sämund Sölve Sörkver Thorolf Tjudmund Toke Tolir 
+		Torbjörn Torbrand Torfinn Torgeir Toste Tyke
+	}
+	female_names = {
+		Aslaug Bothild Björg Freja Grima Gytha Kráka Malmfrid Thora Thordis Thyra Ragnfrid Ragnhild Svanhild Ulvhilde
+	}
+
+	celtic_pagan_reformed = { # Druidic
+		graphical_culture = norsegfx
+		alternate_start = { always = no }
+
+		icon = 155
+		heresy_icon = 156
+		
+		ai_convert_other_group = 2 # always try to convert
+		ai_convert_same_group = 2 # always try to convert
+		
+		color = { 0.3 0.5 0.0 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = DRUID
+		can_call_crusade = yes
+		
+		high_god_name = GOD_CERNNUNOS
+
+		god_names = {
+			GOD_ANGUS GOD_MANANNAN GOD_DAGHDA GOD_LUGH GOD_MACHA GOD_DANA GOD_NUADA GOD_HORNED_ONE GOD_CERNNUNOS
+		}
+		evil_god_names = {
+			THE_FOMORIANS EVIL_BALOR EVIL_BRES GOD_CAILLEACH
+		}
+		
+		unit_modifier = {
+			levy_size = 0.15
+			
+			retinuesize_perc = 0.3
+			garrison_size = 0.2
+			
+			key = "HERO_RELIGION"
+		}
+		
+		unit_home_modifier = {
+			land_morale = 0.4
+			light_infantry_defensive = 0.4
+			heavy_infantry_defensive = 0.4
+			pikemen_defensive = 0.4
+			light_cavalry_defensive = 0.4
+			knights_defensive = 0.4
+			archers_defensive = 0.4
+			horse_archers_defensive = 0.4
+			camel_cavalry_defensive = 0.4
+			war_elephants_defensive = 0.4
+			
+			garrison_size = 0.2
+			
+			key = "HERO_RELIGION_HOME_TERRITORY"
+		}
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		feminist = yes
+		max_consorts = 3
+		allow_looting = yes
+
+		aggression = 1.5 # AI aggression factor
+		
+		short_reign_opinion_year_mult = 1.5 # The default is 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		intermarry = celtic_pagan
+		intermarry = norse_pagan
+		intermarry = insular
+		
+		allow_in_ruler_designer = no
+	}
+	celtic_pagan = { # Celts 
+		graphical_culture = norsegfx
+
+		icon = 154
+		heresy_icon = 156
+
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.0 0.3 0.0 }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BALLADS
+		priest_title = DRUID
+		
+		high_god_name = GOD_CERNNUNOS
+		
+		god_names = {
+			GOD_ANGUS GOD_MANANNAN GOD_DAGHDA GOD_LUGH GOD_MACHA GOD_DANA GOD_NUADA GOD_HORNED_ONE GOD_CERNNUNOS
+		}
+		evil_god_names = {
+			THE_FOMORIANS EVIL_BALOR EVIL_BRES GOD_CAILLEACH
+		}
+		
+		unit_modifier = {
+			levy_size = 0.15
+			
+			retinuesize_perc = 0.3	
+			garrison_size = 0.2
+			
+			key = "HERO_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.6
+			light_infantry_defensive = 0.6
+			heavy_infantry_defensive = 0.6
+			pikemen_defensive = 0.6
+			light_cavalry_defensive = 0.6
+			knights_defensive = 0.6
+			archers_defensive = 0.6
+			horse_archers_defensive = 0.6
+			camel_cavalry_defensive = 0.6
+			war_elephants_defensive = 0.6
+			
+			garrison_size = 0.2
+			
+			key = "HERO_RELIGION_HOME_TERRITORY"
+		}
+		
+		intermarry = celtic_pagan_reformed
+		priests_can_marry = yes
+		female_temple_holders = yes
+		feminist = yes
+		defensive_attrition = yes
+		max_consorts = 3
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		allow_looting = yes
+		reformed = celtic_pagan_reformed
+		aggression = 1.5 # AI aggression factor
+		
+		dislike_tribal_organization = yes
+
+		short_reign_opinion_year_mult = 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+
+		intermarry = insular
+	}
+}

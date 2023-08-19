@@ -1,0 +1,54 @@
+todo:
+Brian Boru event chain
+	Test it
+High kingdom mechanics (done for now, come back to tweak later)
+	figure out what the deal is with counting irish tributaries
+	test AI liklihood for become tributary decisions (works pretty well it seems)
+	Add high kingdom history
+Celtic legal codes (Cáin Adomnáin, Cyfraith Hywel, Tripartate Indenture)
+Finish cultural retinues/buildings for Cumbric Cornish and Briton - on indefinite hold
+Insular Gwydion formation - test it
+Armes Prydein event
+
+Insular Patriarch
+Different patron saints for Insular
+Different pilgrimages for Insular (maybe already did this)
+Add some bard events
+other cumdach artifacts (maybe)
+Monistary province modifiers (maybe)
+Laudabiliter and reverse Laudabiliter events (maybe)
+Owain Glyndwr event (maybe)
+Convert Galician culture to celtic event (maybe)
+City of London mercant republic title (maybe)
+Figure out why Aonach events don't ping back to vassals properly
+
+Stuff for each celtic nation
+
+All:
+insular and druidic religions
+Bard stuff (tbd)
+united celtic empire
+Augustus of Northwestern Europe (Irish associated name, but was also a feat attributed to King Arthur, plus Scotland and Brittany both have their own dealings with the norse
+
+Ireland + Scotland:
+Greater Scotia + bloodline
+Gall Gael culture (could be considered a pan-celtic perk, but clearly modeled after the historical norse-gaels and not hypothetical norse-brythons)
+
+Ireland:
+High Kingdom mechanics (big one)
+Fiana
+Aonach
+
+Scotland:
+William Wallace event
+
+Wales and friends + Brittany:
+King Arthur event that gives empire title, includes Brittany, and gives a King Arthur bloodline (big one)
+
+Wales and friends:
+United kingdom of Britain + expel English
+Gwydion
+Red Dragon Knights
+
+Brittany:
+nayfin

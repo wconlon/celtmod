@@ -1,0 +1,339 @@
+celtic =
+{
+	irish = 
+	{
+		dukes_called_kings = no
+	}
+	welsh =
+	{
+		dukes_called_kings = no
+	}
+	gaelic = {
+		graphical_cultures = { celticgfx }
+		alternate_start = {
+			OR = {
+				year < 1000 
+				has_alternate_start_parameter = { key = culture value = full_random }
+			}
+		}
+		
+		color = { 0.0 0.25 0.65 }
+
+		male_names = {
+			Áed_Hugh Áedán_Hugh Áengus_Angus Éamonn_Edmund Éicnechán Énna Énri_Henry Óengus_Angus Ólchobar Ailill Ainmere Amalgaid Amlaíb_Olaf Ardgar Art_Arthur Artgal Artúr_Arthur Augaire  
+			Báetán Blathmac Bran Brandub  Brian Bróen Carlus_Charles Cathal Cathalán Cellach Cennétig Cenn-Fáelad Cerball Cináed_Kenneth Coirpre Colmán Conall Conchobar Congalach Conn Constantín_Constantine
+			Cormac Crimthann Crundmáel Dabíd_David Demmán Diarmait Domnall_Donald Donnchad_Duncan Donncuan_Duncan Dúnchad_Duncan Dúngal Dúnlaing Eógan_Ewan Echmarcach 
+			Fáelán Fáelbe Fergal Fergus Feidlimid_Fedlimid Fedlimid_Fedlimid Fedelmid_Fedlimid Fiachnae Fingen Finn Finnsnechtae Flaithbertach Flann Fogartach 
+			Gabrán Gilla-Íosa Gilla-Brígte_Gilbert Gilla-Coluim Gilla-Comgáin Gilla-Críst Gilla-na-Náem Gilla-Pátraic Gilla-Ruad
+			Iacob_Jacob Indrechtach Liam_William Lóeguire Loingsech Lorcán Lugaid Lochlann Máel-Brígte Máel-Ciaráin Máél-Dúin Máel-Íosa_Malise 
+			Máel-Máedóc Máel-Martain Máel-Mórda Máel-Pátraic Máel-Ruanaid Máel-Sechlainn Máel-Sechnaill Magnus_Magnus Mathgamain Matudán Muirchertach Muiredach_Murdoch Murchad 
+			Niall_Nigel Pátraic_Patrick Pilib_Philip Ricard_Richard Róen Ruaidrí_Roderick Ruarc Seán_John Selbach Seoán_John Túathal Tadg Tigernán Toirrdelbach Tomás_Thomas Ualgarg Ualtar_Walter Uilliam_William
+		}
+		female_names = {
+			Áine_Agnes Éua_Eva Órlaith Úna Aíbinn Affraic Aibilín Aife Aignes_Agnes Ailbhe Alis_Alice Annábla Bébinn Ben-Míde Ben-Muman Ben-Ulad
+			Cacht Caisséne Caitilín_Catherine Cathán Catríona_Catherine Crístina_Christina Cobflaith Condál Deirdre Derbáil Derborgaill Dervorgilla Der-Lugdach Dubchoclaigh Dub-Dil 
+			Echrad Eilionora_Eleanor Fine Finnguala Gormflaith_Gormflaith Gormlaith_Gormflaith Gráinne   
+			Imag Lann Lasairfíona Lerthan Lucia_Lucia Máire_Maria Máiread Máirgred_Margaret Mór Máel-Muire Mauda_Matilda 
+			Nuala Róis Sadb Scáthach Sébdann Seonaid Siobán Sisuile Sláíne Taileflaith 
+		}
+		
+		dukes_called_kings = yes
+		
+		from_dynasty_prefix = "de "
+		male_patronym = "mac "
+		female_patronym = "nic "
+		prefix = yes
+
+		modifier = default_culture_modifier
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+	}
+	manx = {
+		graphical_cultures = { celticgfx }
+		alternate_start = {
+			OR = {
+				year < 1000 
+				has_alternate_start_parameter = { key = culture value = full_random }
+			}
+		}
+		
+		color = { 0.1 0.6 0.6 }
+
+		male_names = {
+			Abban Adam Adaue Aue Ae Airh Aleyn Alister Allow Alured Anghus Askon Askell Barnab Bearnard Bertrem Bradan Brian Brice 
+			Callan Cane Cabry Carmane Cavalier Chalse Colum Colyn Corcan Creenan Cutell Cupert Danell Dilnow Dolyn Doncan Doolish 
+			Dugal Eaghan Ean Edard Fargher Fingal Fingan Finn Fogolt Franck Frost Germot Gilcolm Gilcowel Gilcrist Gilhast Gilhonyl 
+			Gilpeddyr Godred Gorry Gospatrick Gubon Hamond Hane Harald Hefare Huan Hubart Hymyn Hugh Jamys Jenken Juan 
+			Kellagh Keniagh Kerron Logmabr Lewes Loghlin Lonan Lugh Lucas Machonna Malew Moldi Mian Maughald Martyn Mores 
+			Monac Mucard Murdach Nele Ninian Odo Ollick Onan Orry Otes PAnden Patrik Peddyr Payl Ralf Ramsey Ranlyn Ree 
+			Robart Sampson Sanctan Stanlagh Steaoin Swithin Teig Thomlyn Thorfin Turner Irmen Wilmot Walter Ysaag 
+		}
+		female_names = {
+			Áine_Agnes Éua_Eva Órlaith Úna Aíbinn Affraic Aibilín Aife Aignes_Agnes Ailbhe Alis_Alice Annábla Bébinn Ben-Míde Ben-Muman Ben-Ulad
+			Cacht Caisséne Caitilín_Catherine Cathán Catríona_Catherine Crístina_Christina Cobflaith Condál Deirdre Derbáil Derborgaill Dervorgilla Der-Lugdach Dubchoclaigh Dub-Dil 
+			Echrad Eilionora_Eleanor Fine Finnguala Gormflaith_Gormflaith Gormlaith_Gormflaith Gráinne   
+			Imag Lann Lasairfíona Lerthan Lucia_Lucia Máire_Maria Máiread Máirgred_Margaret Mór Máel-Muire Mauda_Matilda 
+			Nuala Róis Sadb Scáthach Sébdann Seonaid Siobán Sisuile Sláíne Taileflaith 
+		}
+		
+		dukes_called_kings = yes
+		
+		from_dynasty_prefix = "de "
+		male_patronym = "mac "
+		female_patronym = "nic "
+		prefix = yes
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		
+		founder_named_dynasties = yes
+
+		modifier = default_culture_modifier
+	}
+	norsegael =
+	{
+		graphical_cultures = { celticgfx }
+		
+		color = { 0.79 0.99 0.99 }
+
+		male_names = 
+		{
+			Alastar_Ale Aindréas_Andrew Anund Arngrim_Arngrimr Éirne_Arne Arnfast Asborn_Asbjörn Baldur_Balder Beinidict_Benedict Bertil_Berthold Birger Björn_Beorn Bo Botulf_Botulf Bragi_Brage Brian_Brian
+			Dag Dan Doirse Eilif Egill_Egil Emund Einarr_Einar Eiric_Erik Escild_Eskild Faste Pilib_Philip Feardorcha_Frederick Fraer_Frej Gandálf Geirr Seoirse_George Gorm_Gorm Gréagóir_Gregory Grim_Grim Goraidh_Godfrey Gudmund_Gudmund Gofraidh_Gudröd Gunnarr_Gunnar Hacon_Hakon Halstain_Halsten Arald_Harold Helgi_Helge
+			Hemming Holmger Hrafn Rolf_Rolf Hjalmar_Hjalmar Hróarr_Hroðgar Roderick_Roderick Ingólf_Ingolf Ìomhar_Ivar Eadbhárd_Edward Seán_John Séarlas_Charles Certán_Kjartan Cnút_Knut Coel Leòid Mághnus_Magnus Marcas_Marcus 
+			Maitiú_Matthew Niall_Nigel Nioclás_Nicholas Amhlaibh_Olaf Orm_Orm Óttar_Ottar Pátraic_Patrick Rabhartach Raghnall_Ragnvald Snorri Sitruic_Sigtrygg Sigurd_Sigurd Steinn_Sten Sturla Somhairle_Somerled Suibne_Sweeny Suibheinn_Sven
+			Sverker Toke_Toke Tolir Torcuil_Torkel Toste Totil Ulf_Ulf Vagn Valdemar_Vladimir Ingvar_Ingvar Órvar_Orvar
+		}
+		female_names = 
+		{
+			Aleta Nainsí_Anna Asa_Åsa Aslaug Asta_Asta Astrid_Astrid Beata Brigit_Brigid Bodil Síle_Cecilia
+			Edla Isibéal_Elizabeth Emer_Emer Frae_Freja Gerd Grima Gunnhild_Gunhild Gurli Gudrun_Gudrun Halla Léan_Helen
+			Iliana Inga_Inge Ingfrid Ingeborg_Ingeborg Ingrid_Ingrid Ríona_Catherine Tríona_Catherine Cairistìona_Christina Linda Maer
+			Máighréad_Margaret Máire_Maria Rikissa Rögnfrið_Ragnfrid Ragnhild_Ragnhild Saga Sara_Sarah Sif Sigrid_Sigrid Sculd_Skuld Sóifia_Sophia
+			Mhigdis Uilmhea_Ylva Ursula_Ursula
+		}
+		
+		dukes_called_kings = yes
+		
+		from_dynasty_prefix = "af "
+		male_patronym = "mac "
+		female_patronym = "nic "
+		prefix = yes
+
+		modifier = default_culture_modifier
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		
+		allow_looting = yes
+		seafarer = yes
+	}
+	cornish = {
+		graphical_cultures = { celticgfx }
+		alternate_start = {
+			OR = {
+				year < 1000 
+				has_alternate_start_parameter = { key = culture value = full_random }
+			}
+		}
+		
+		color = { 0.3 0.8 0.8 }
+		
+		male_names = {
+			Adoyre Aedan Alan Aldrien Ambros_Ambrosius Agustin_Augustine Anaoc Anaubritou Anaugen Anauuoret Aniud Argantbri Argantmoet Arthguiu_Arthur Arthmael Arthueu_Arthur Arthuiu_Arthur Arthuis_Artorius
+			Austol_Austell Beli Beniamen_Benjamin Bledric Bledros Bleidcum Bleidiud Bodan Branhucar Branoc Branwalator_Brendan Brenci Breselgar Breseloc Brethoc Brient_Brian Brigual 
+			Brigualt Brioc Brithael Bronmael Budguoret Budhoiarn Budic Budoc Buhedoc Cadan Cadaouen Cadarvan Cado Cadoc Cantgueithen Carantoc Caradec_Caradog 
+			Catguallon_Cadwallon Catgualtr_Cadwalladr Catgueten Catgutic Cenmin Cingur Cinhoedl Clemen_Clement Comoere Conan_Conan Congar_Cyngar Conmonoc Conogan Conomor_Cunomor Conredeu 
+			Convelin_Cynfelyn Conguoïon Courantmonoc Credan Culmin_Colman Custentin_Constantine Custeyn_Constantius Dauid_David Deroch Deurhoiarn Donual Donuallon_Donald Drogon Dungarth_Duncan Eguen_Eugene 
+			Eon_John Erbin_Urban Erispoe Etgual Eudon_Otto Euhoiarn Even_Eugene Felec_Felix Fracan_Fragan Frioc_Ffriog Gadeon_Gideon Gerren_Gerontius Gest Gestin_Justin Gourmaelon Gradlon Gratcant Grifiud Guallon Gudgual Guecon 
+			Guenerdon Guentanet Guentiern Guerech Guethenan Guethencar Guethenguoion Guethenoc Guihomarch Guincalon Guincum Guinhoiarn Guithrit Guitol 
+			Guobrian Guocon Guoletec Guorbili Guordotal Guoretan Guorethoiarn Guorhoiarn Gurbodu Gurcant Gurcencor Gurci Gurcon Gurdilic Gurgen 
+			Gurguaret Gurguistl Gurheter Guriant Gurlouen Gurlouuen Gurmael Gurthcid Gurthiern_Vortigern Guruant Haeloc Hedyn Hincomhal Hoel_Hywel Iarcun 
+			Iarnbud Iarncant Iarndetguid Iarngon Iarnguallon Iarnguocon Iarnhitin Ilcarthon Iliud Inisian Iodoc_Judicael Ionas_Jonas Iosep_Joseph Iouan_John Iudicaelh_Judicael 
+			Iudnerth Iudoc_Judicael Iudguallon Iunceneu Leucum Loi Louenan Loumarch Machtiern Massen_Maximus Maeldoi Maelhuedoc Maeloc_Maelog Maenceneu Mailoc_Maelog March_Mark Matuid Maugan_Mawgan Mauric_Maurice 
+			Medrod_Mordred Melor Meriadec_Meriadoc Mermin Meven Morcant_Morgan Morhaetho Nomenoe Oss'ne Outham_Octavius Pascueten_Pasquitan Patric_Patrick Petroc Piran Putrael Resmen Ridoredh 
+			Rinduran Rioc Riol Riotham_Riothamus Rioual_Riwal Riouallon_Rhiwallon Ronan Ryd Salenn Salomon_Solomon Samson Selevan_Solomon Sulian_Julian Sulmonoc Talan Talhoiarn Tanci Telent Terithien 
+			Tethion Teudar_Theodore Teudoc_Theodoric Tiernmael Tugdual_Theodowalaunus  Ungust Urbien_Urban Urblon Uther_Victor Waroch 
+		}
+		female_names = {
+			Aanor Aedoc Anaguistl Anaudat Anauprost Aourcen Aouren Argantan Arganteila Arganteilin Argantguistl Arganthael Argantlon Argantmoet 
+			Artaca Avandrec Breaca Buriana Canna Catguistl Ceindrec Ceinguled Dengel Diuset Duihon Elisaued_Elizabeth Elguen Endellion Enoguen Ewsannec Fuandrec 
+			Gloiucen Gloiumed Guelet Guenbrith Guencen Guencenedl Guencor Guenguerthlon Guenguistl Guenguiu Guenmon Guenna Guenneret Guennuuar 
+			Guigoëdon Halbiu Herannuen Igerna Ignoguen Ilcum Iofa Iseullt Iudhent Iudprost Louhelic Luncen Maben Medguistl Meduil Meonre Milian Morguetel Moruith 
+			Moruen Oncenedl Oncum Onguen Ordguydel Ourcen Ourdilic Perem Proscen Prosguetel Prostlon Rannoeu Riguistl Rimoet Rioantcen Rioantdrec 
+			Rioanon Rioanuuellt_Regina Rum Rumun Sulcen Sulleisoc Sulmed Tandrec Tanguistl Trifine Ursula
+		}
+
+		male_patronym = "map "
+		female_patronym = "merch "
+		prefix = yes
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 80
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 50
+		mother_name_chance = 0
+		
+		founder_named_dynasties = yes
+
+		modifier = default_culture_modifier
+	}
+	briton = {
+		graphical_cultures = { celticgfx westerngfx }
+		alternate_start = {
+			OR = {
+				year < 1000 
+				has_alternate_start_parameter = { key = culture value = full_random }
+			}
+		}
+		
+		color = { 0.2 0.6 0.6 }
+
+		male_names = {
+			Agrafin Alan Alisander_Alexander Alwyn_Alwyn Amhar Annan Apon Aradig Aradoc Arawain Arod Arthfael Arthwr_Arthur
+			Balin Balise Bedwyr Bedwyn Bleddyn Bleiddig Britannicus Brochvael Brochmael Brwyn Brychan Brân_Bran
+			Caddan Cadell Cadfael Cadog Cadwal Cadwallon Caelgyn Cai Carig Cain Caleddin Caradoc Caraled Carawain Cavan
+			Caswallon Cerdig Cerdoc Cerfin Cerlyn Cerwain Cedwyn Celwin Ceredig Coel Custennin_Constantine
+			Cynfarch Cynfawr Cynfelyn Cynfyn Cynwallon Cynyr Culhwch Cythryn Cynlas
+			Dafydd_David Deiniol Derella Dinas Dyrrig Dyfrig Dorfael Drystan Edern Edwyn_Edwin Erbin
+			Einion Eldoc Elgwyn Eachern Elwain Elwydd Elystan Emrys_Ambrose Ermid Fragan Fergal Feldan
+			Gadric Galed Gareth Gawain Gerdin Gereint Geralt_Gerald Gergant Gerled Gerlyd Gerreth Gerwain Griffid
+			Gruffydd Gudovan Gundleus Gwen_Finn Gwerthern Gwidyr Gwilym Gwydre Gwylyddyn Gyllad
+			Hywel Hygwydd Jacob Idwal Idfael Iorweth_Edward Ithel Issa
+			Lanval Lavaine Licat Ligessac Llanval Lladarn Llystan Llyr Llywarch Lwellwyn Loholt Malaine Mardoc Madog
+			Mael Maelgwn Maelfin Maelgyr Maelgwyn Maelgore Mapon Mared Menw
+			Meilyr Meirion Meric Meriadoc Merfyn Meurig Minac Morfans Morien Morridig Morydd Nasiens
+			Oreth Owain Padarn Padern Pellinore Perddel Peredyr Peredur Quintus
+			Rowain Severus Sestus
+			Taliesin Tegwyd Tertius Tristan Tudwal Tudwallon Tyllwn Urien Uther Valerin Ynyr Ysfael
+		}
+		female_names = {
+			Aliena Aelwyd Aeronwen Aeronwy Ailleann Alys Annes_Anna Annwyl Boudicca
+			Blodwen Bronwen Ceridwen Cerie Cerys Clarisant Ceinwyn Dian Delyth Denis_Denise Dwynwen
+			Efa_Eve Elaine_Elaine Elen Elinion Elinor_Eleanor Ellyn Enid Fion
+			Glynys Guinevere Gwen_Gwen Gwenda Gwenhwyfar Gwenllian Gwenwyn Gwerfyl Gwladys Heledd Heulwen Hywella
+			Ilud Igraine Isabel Iseult Isolde Ladwys Leanor Lunete Matilda
+			Margred_Margaret Marwenna Melisant_Melisende Morgan_Morgana Morgause Myrien Norwenna Nwylle
+			Nefyn Olwen Owena Ralla Rowena Sarlinna Senena Sibyl_Sibylla Seren
+			Siân_Joan Susanna Veneva
+		}
+
+		dukes_called_kings = yes
+		from_dynasty_prefix = "of "
+		male_patronym = "ap "
+		#female_patronym = "ferch "
+		prefix = yes
+
+		pat_grf_name_chance = 20
+		mat_grf_name_chance = 10
+		father_name_chance = 0
+		
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 20
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+	cumbric = {
+		graphical_cultures = { celticgfx }
+		alternate_start = {
+			OR = {
+				year < 1000 
+				has_alternate_start_parameter = { key = culture value = full_random }
+			}
+		}
+	
+		color = { 0.5 0.7 0.2 }
+
+		male_names = {
+			Aliotus Ardun Artgal Arthuis Asaph Beli Ceredig Cinuit Clinoch Coel Cubricht Cynfarch Deiniol Dunod Dyfnwal Elfin Eochaid Ernwin Eugein Gureit Gwallog
+			Llaennog wMar Masgwid Meirchion Neithon Ohan Owain Pabo Riderc Rotri Rhun Sawyl Taudar Teudebur Tothail Tutagual Tysilio Urien
+		}
+		female_names = {
+			Angharad Ceindrech Denyw Dwywai Efrddyl Enynny Gwawl Gwawr Gwladus Gwrygon Languoreth Morfudd Nyfain Onnen Riemmelth Ystradwel
+		}
+
+		from_dynasty_prefix = "map "
+		male_patronym = "ab "
+		prefix = yes
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 20
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 30
+		mother_name_chance = 0
+		
+		founder_named_dynasties = yes
+		
+		modifier = default_culture_modifier
+	}
+	gaulish = {
+		graphical_cultures = { celticgfx }
+		alternate_start = {
+			OR = {
+				year < 1000 
+				has_alternate_start_parameter = { key = culture value = full_random }
+			}
+		}
+
+		color = { 0.025 0.2 0.025 }
+		male_names = {
+			Orestoco Segolitavis Gaularix Acichomatus Cerethrius Lutavanus Segocus Solonus Cambaules Andevolcus Deiotarus Sedulitavis 
+			Tasciorius Ortiavettius Dumnotiacus Manducatus Senacugon Rianotiacus Valetidorix Lutatix Taximagurix Mandusnactus Camulotorix 
+			Ambiotius Deiociacus Litanus Mandumarus Lutalitavis Autarigon Cerelitavis Litarix Cingeco Moritagenus Cingevax Ortiabracius 
+			Senacumatus Camulolus Tasgetiacus Seducus Combumarus Boduoles Camuloviccus Convictogenus Crivolcus Bellocomborius Critiacus 
+			Ceretodumnus Leonnorius Teutolitavis Eporelitavis Brennus Acichorius Verucomborius Acichotaurus Andeciacus Rianorius 
+			Conconnematus Sinognatus Brogitavix Lutacos Cotuatius Vindociacus Vertimatus Dumnorix Litavigenus Adiatodumnus Dyteutus 
+			Orestovellaunus Cambauccus Ambioviccus Orgetix Cavaritagus Caurus Adiatorix Andetius Ortiagenus Conconnetus Celtithreus 
+			Luctebracius Deioles Segodorix Gauladumnus Adiathreus Ceredumnus Divicatus Belgius Orestociacus Prasucloeitus Litavitagus 
+			Acichovix Amillus Tasciodumnus Vertitagus Tasgedorix Acichovolcus Orgetus Brogitagnatus Prasumatus Donnollus Ortiatix
+		}
+		female_names = {
+			Covuinna Volcaseibra Morgosuelta Nantosuelta Andrantona Volcila Ardantona Arduinna Cunentina Galicca Brigasta Senila Morgubodva 
+			Sirentina Andraseibra Cunubodva Galuinna Valaseibra Riguinna Matrisama Valona Damona Vevuinna Nantasta Arderta Agrantona Vevona 
+			Cunaseibra Cunerta Osmuinna Agrubodva Genovuinna Nemeterta Sulicca Belosuelta Nemetisama Belerta Adobogiona Damerta Andrantia 
+			Volcantia Sirerta Sulisama Damisama Sulentina Episama Nantantona Epaseibra Vevubodva Osmaseibra Galila Vevisama Belona Brigona 
+			Damentina Nantantia Damuinna Nemetantia Morgantia Matrosuelta Morgaseibra Ardicca Morgicca Coverta Andrisama Andrerta Brigisama 
+			Genovila Epuinna Senona Valasta Cunisama Ardosuelta Valicca Catisama Damantia Siricca Nantisama Senicca Sulerta Catubodva Coventina 
+			Senerta Belaseibra Cunantia Catona Boudantona Nantaseibra Genovisama Osmosuelta Vevantona Catantona Boudona Galona Nantila Valantia 
+			Epasta Valentina Nantona Senuinna
+		}
+		
+		from_dynasty_prefix = "ab " # from
+		grammar_transform = spanish
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+		
+		modifier = default_culture_modifier
+	}
+}

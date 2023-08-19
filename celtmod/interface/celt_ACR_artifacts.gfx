@@ -1,0 +1,59 @@
+spriteTypes = {
+	### Celtic
+	spriteType = {
+		name = "GFX_boudiccas_torque"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\boudiccas_torque.dds"
+	}
+	spriteType = {
+		name = "GFX_boudiccas_torque_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\boudiccas_torque_small.dds"
+	}
+	spriteType = {
+		name = "GFX_carnyx"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\carnyx.dds"
+	}
+	spriteType = {
+		name = "GFX_carnyx_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\carnyx_small.dds"
+	}
+	spriteType = {
+		name = "GFX_battersea_shield"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\battersea_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_battersea_shield_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\battersea_shield_small.dds"
+	}
+	spriteType = {
+		name = "GFX_horned_helm"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\horned_helm.dds"
+	}
+	spriteType = {
+		name = "GFX_horned_helm_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\horned_helm_small.dds"
+	}
+	spriteType = {
+		name = "GFX_silver_torque"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\silver_torque.dds"
+	}
+	spriteType = {
+		name = "GFX_silver_torque_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\silver_torque_small.dds"
+	}
+	spriteType = {
+		name = "GFX_golden_torque"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\gold_torque.dds"
+	}
+	spriteType = {
+		name = "GFX_golden_torque_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\gold_torque_small.dds"
+	}
+	spriteType = {
+		name = "GFX_jeweled_torque"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\jeweled_torque.dds"
+	}
+	spriteType = {
+		name = "GFX_jeweled_torque_small"
+		texturefile = "gfx\\interface\\ACR\\artifacts\\jeweled_torque_small.dds"
+	}
+}

@@ -1,0 +1,927 @@
+#Events for new artifacts
+#celt.1000-celt.1999
+
+namespace = celt
+
+#recover book of kells
+narrative_event = {
+    id = celt.1017
+    title = celt.1017.title
+    desc = celt.1017.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}
+        add_artifact = book_of_kells
+        new_artifact = {
+			set_creation_date = 800.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+        add_artifact = book_of_kells
+        new_artifact = {
+			set_creation_date = 800.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+        add_artifact = book_of_kells
+        new_artifact = {
+			set_creation_date = 800.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+        add_artifact = book_of_kells
+        new_artifact = {
+			set_creation_date = 800.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#recover bachal isu
+narrative_event = {
+    id = celt.1018
+    title = celt.1018.title
+    desc = celt.1018.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}
+        add_artifact = bachal_isu
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+        add_artifact = bachal_isu
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+        add_artifact = bachal_isu
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+        add_artifact = bachal_isu
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#find cathach
+character_event = {
+    id = celt.1019
+    desc = celt.1019.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_normal_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MEDIUM_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_very_disappointed
+			years = 15
+		}
+        add_artifact = cathach
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MEDIUM_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.5
+			min = 35
+		}
+
+        add_artifact = cathach
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MEDIUM_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+        add_artifact = cathach
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MEDIUM_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 5
+		}
+		FROM = { prestige = 50 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+        add_artifact = cathach
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#find cross of cong
+character_event = {
+    id = celt.1020
+    desc = celt.1020.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_normal_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MEDIUM_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_very_disappointed
+			years = 15
+		}
+        add_artifact = cross_of_cong
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MEDIUM_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 0.5
+			min = 35
+		}
+
+        add_artifact = cross_of_cong
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MEDIUM_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+        add_artifact = cross_of_cong
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MEDIUM_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 10
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_medium_artifact
+			years = 5
+		}
+		FROM = { prestige = 50 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+        add_artifact = cross_of_cong
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+character_event = {
+	id = celt.1021 #Epic rumor
+	hide_window = yes
+	is_triggered_only = yes
+    has_dlc = "Mystics"
+	immediate = { event_target:relic_ruler = { character_event = { id = celt.1022 } } }
+}
+
+#Epic rumor event
+character_event = {
+	id = celt.1022
+	desc = celt.1022.desc
+	picture = GFX_evt_treasure_chamber
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+    has_dlc = "Mystics"
+
+	option = {
+		name = celt.1022.a
+		custom_tooltip = { text = celt.1022.a.TT }
+		custom_tooltip = { text = outcome_will_depend_on_froms_skill_tt }
+		add_character_modifier = {
+			name = relic_rumor_epic
+			years = 20
+		}
+		add_artifact_search_payment_effect = yes
+		hidden_effect = {
+			#Start searching
+			FROM = {  #the councilor
+				set_character_flag = relic_hunter
+				save_event_target_as = relic_hunter
+				character_event = { id = MNM.9007 days = 30 } # The looping evaluation for progress increase/decrease begins...
+			}  
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = celt.1022.b
+		custom_tooltip = { text = celt.1022.b.TT }
+		add_character_modifier = {
+			name = relic_rumor_epic
+			years = 20
+		}
+	}
+
+	after = {
+		hidden_effect = { set_variable = { which = relic_score value = 0 } }
+		opinion = {
+			who = FROM
+			modifier = opinion_grateful
+			years = 20
+		}
+	}
+}
+
+#Found Holy Grail
+narrative_event = {
+    id = celt.1023
+    title = celt.1023.title
+    desc = celt.1023.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+	immediate = 
+	{
+		hidden_tooltip = 
+		{
+			set_global_flag = found_the_holy_grail
+		}
+	}
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}	
+		if = 
+		{ 
+			limit = 
+			{
+				OR = 
+				{
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = on
+					}
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = unrestricted
+					}
+				}
+			}
+			add_artifact = holy_grail
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+		if = 
+		{
+			limit = 
+			{
+				has_game_rule = 
+				{
+					name = supernatural_events
+					value = off
+				}
+			}
+			add_artifact = holy_chalice
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+		if = 
+		{ 
+			limit = 
+			{
+				OR = 
+				{
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = on
+					}
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = unrestricted
+					}
+				}
+			}
+			add_artifact = holy_grail
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+		if = 
+		{
+			limit = 
+			{
+				has_game_rule = 
+				{
+					name = supernatural_events
+					value = off
+				}
+			}
+			add_artifact = holy_chalice
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+		if = 
+		{ 
+			limit = 
+			{
+				OR = 
+				{
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = on
+					}
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = unrestricted
+					}
+				}
+			}
+			add_artifact = holy_grail
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+		if = 
+		{
+			limit = 
+			{
+				has_game_rule = 
+				{
+					name = supernatural_events
+					value = off
+				}
+			}
+			add_artifact = holy_chalice
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		if = 
+		{ 
+			limit = 
+			{
+				OR = 
+				{
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = on
+					}
+					has_game_rule = 
+					{
+						name = supernatural_events
+						value = unrestricted
+					}
+				}
+			}
+			add_artifact = holy_grail
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+		if = 
+		{
+			limit = 
+			{
+				has_game_rule = 
+				{
+					name = supernatural_events
+					value = off
+				}
+			}
+			add_artifact = holy_chalice
+			new_artifact = 
+			{
+				set_creation_date = 1.1.1
+			}
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#Found Lance of Longinus
+narrative_event = {
+    id = celt.1024
+    title = celt.1024.title
+    desc = celt.1024.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+	immediate = 
+	{
+		hidden_tooltip = 
+		{
+			set_global_flag = found_the_holy_lance
+		}
+	}
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}	 
+		add_artifact = spear_of_destiny
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+		add_artifact = spear_of_destiny
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+		add_artifact = spear_of_destiny
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = spear_of_destiny
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#Found Shroud of Jesus
+narrative_event = {
+    id = celt.1025
+    title = celt.1025.title
+    desc = celt.1025.desc
+    picture = GFX_evt_relic_box
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}	 
+		add_artifact = shroud_of_jesus
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+		add_artifact = shroud_of_jesus
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+		add_artifact = shroud_of_jesus
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+		add_artifact = shroud_of_jesus
+		new_artifact = 
+		{
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}

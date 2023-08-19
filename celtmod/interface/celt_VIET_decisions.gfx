@@ -1,0 +1,59 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_succ_tanistry_ultimatum"
+		texturefile = "gfx\\interface\\decision_icon_faction_succ_tanistry_ultimatum.dds"
+	}
+	spriteType = {
+		name = "GFX_perform_sacrifice"
+		texturefile = "gfx\\interface\\decision_icon_perform_sacrifice.dds"
+	}
+	spriteType = {
+		name = "GFX_adopt_a_child"
+		texturefile = "gfx\\interface\\decision_icon_adopt_a_child.dds"
+	}
+	### CELTIC
+	spriteType = {
+		name = "GFX_reestablish_knights_of_the_round_table"
+		texturefile = "gfx\\interface\\decision_icon_reestablish_round_table.dds"
+	}
+	spriteType = {
+		name = "GFX_create_britain"
+		texturefile = "gfx\\interface\\decision_icon_reunite_britain.dds"
+	}
+	spriteType = {
+		name = "GFX_go_on_tro_breizh"
+		texturefile = "gfx\\interface\\decision_icon_tro_breizh_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_contribute_to_fathers_hogback_stone"
+		texturefile = "gfx\\interface\\decision_icon_contribute_to_fathers_hogback_stone.dds"
+	}
+	spriteType = {
+		name = "GFX_erect_high_cross"
+		texturefile = "gfx\\interface\\decision_icon_erect_celtic_high_cross.dds"
+	}
+	spriteType = {
+		name = "GFX_enact_stannary_charter"
+		texturefile = "gfx\\interface\\decision_icon_enact_stannary_charter.dds"
+	}
+	spriteType = {
+		name = "GFX_revoke_stannary_charter"
+		texturefile = "gfx\\interface\\decision_icon_revoke_stannary_charter.dds"
+	}
+	spriteType = {
+		name = "GFX_erect_calvary_breton"
+		texturefile = "gfx\\interface\\decision_icon_erect_calvary.dds"
+	}
+	spriteType = {
+		name = "GFX_go_to_gwyl_madant"
+		texturefile = "gfx\\interface\\decision_icon_hold_gwyl_mabsant.dds"
+	}
+	spriteType = {
+		name = "GFX_go_to_obby_oss"
+		texturefile = "gfx\\interface\\decision_icon_go_to_obby_oss.dds"
+	}
+	spriteType = {
+		name = "GFX_visit_celtic_holy_well"
+		texturefile = "gfx\\interface\\decision_icon_visit_celtic_holy_well.dds"
+	}
+}

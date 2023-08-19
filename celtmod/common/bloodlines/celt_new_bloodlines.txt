@@ -1,0 +1,36 @@
+true_brian =
+{
+	combat_rating = 8
+	irish_opinion = 5
+	scottish_opinion = 5
+	insular_opinion = 5
+	monthly_character_prestige = 0.2
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan
+	flags = { bloodline_gael bloodline_heroes }
+}
+
+blood_of_heroes =
+{
+	monthly_character_prestige = 0.01
+	inheritance = patrilineal
+	allow_bastards = no
+	bloodline_effect_unlimited_bloodlines = 1
+	flags = { bloodline_unlimited }
+	active = 
+	{
+		custom_tooltip = 
+		{
+			text = tooltip_bloodline_same_dynasty
+			FROM = 
+			{
+				founder = 
+				{
+					dynasty = ROOT
+				}
+			}
+		}
+	}
+}

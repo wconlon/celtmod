@@ -1,0 +1,4061 @@
+decisions =
+{
+	organize_gwydion_insular
+	{
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			OR = {
+				tier = king
+				tier = emperor
+			}
+			
+			OR =
+			{
+				has_landed_title = e_britannia
+				has_landed_title = e_uther_britannia
+			}
+			
+			OR =
+			{
+				religion = insular
+				religion = pelagianism 
+			}
+
+			prisoner = no
+			age = 16
+			OR =
+			{
+				has_global_flag = fiana_converted
+				NOT =
+				{
+					has_global_flag = wolftails_founded
+				}
+			}
+			NOT = { has_global_flag = gwydion_founded }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			trigger_if = {
+				limit = {
+					is_random_world = yes
+				}
+				tier = emperor
+			}
+			trigger_if = {
+				limit = {
+					is_random_world = no
+				}
+				OR =
+				{
+					has_landed_title = e_britannia
+					has_landed_title = e_uther_britannia
+				}
+			}
+			prestige = 300
+			wealth = 300
+		}
+		effect = {
+			set_global_flag = gwydion_founded
+			set_character_flag = acr_founded_gwydion
+			prestige = -300
+			wealth = -300
+			activate_title = { title = d_gwydion status = yes }
+			hidden_tooltip = {
+				narrative_event = { id = celtic.110 }
+				create_character = {
+					random_traits = yes
+					religion = insular
+					culture = ROOT
+					dynasty = NONE
+					female = no
+					age = 34
+					trait = skilled_tactician
+				}
+				new_character = {
+					wealth = 100
+					prestige = 100
+					piety = 100
+					d_gwydion = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 16
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 18
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 18
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 20
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 25
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 26
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = no
+						age = 28
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = yes
+						age = 16
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = insular
+						culture = ROOT
+						female = yes
+						age = 17
+					}					
+				}
+			}
+			religion_authority = {
+				modifier = religious_order_formed
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	unite_gaels
+	{
+		only_independent = yes
+		is_high_prio = yes
+		potential =
+		{
+			OR =
+			{
+				is_gaelic_trigger = yes
+				AND =
+				{
+					is_brythonic_trigger = yes
+					has_brythonic_blood_trigger = yes
+				}
+			}
+			e_greater_scotia =
+			{
+				has_holder = no
+			}
+			OR = 
+			{
+				has_landed_title = k_ireland
+				has_landed_title = k_scotland
+			}
+			NOT =
+			{
+				has_global_flag = gaels_united
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_ireland
+			custom_tooltip =
+			{
+				text = tooltip_completely_controls_ireland
+				completely_controls_region = custom_ireland
+			}
+			has_landed_title = k_scotland
+			custom_tooltip =
+			{
+				text = tooltip_completely_controls_scotland
+				OR =
+				{
+					completely_controls_region = custom_scotland
+					AND =
+					{
+						completely_controls_region = custom_scotland_sans_iona
+						OR =
+						{
+							religion = insular
+							religion = pelagianism
+						}
+					}
+				}
+			}
+			piety = 200
+			prestige = 1000
+		}
+		effect =
+		{
+			set_global_flag = gaels_united
+			hidden_tooltip =
+			{
+				narrative_event = 
+				{
+					id = celt.16
+				}
+			}
+		}
+		ai_will_do = 
+		{
+			factor = 1
+		}
+	}
+	# declare_high_king
+	# {
+		# only_independent = yes
+		# is_high_prio = yes
+		
+		# potential =
+		# {
+			# NOT =
+			# {
+				# has_global_flag = ireland_united
+			# }
+			# culture_group = celtic
+			# primary_title =
+			# {
+				# de_jure_liege_or_above = k_ireland
+			# }
+			# d_high_kingdom_of_ireland =
+			# {
+				# has_holder = no
+			# }
+			# k_high_kingdom_of_ireland =
+			# {
+				# has_holder = no
+			# }
+			# k_ireland =
+			# {
+				# has_holder = no
+			# }
+		# }
+		# allow =
+		# {
+			# independent = yes
+			# OR =
+			# {
+				# has_landed_title = c_meath
+				# AND = 
+				# {
+					# has_landed_title = d_meath
+					# custom_tooltip =
+					# {
+						# text = tooltip_ulster_submits
+						# d_ulster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_connacht_submits
+						# d_connacht =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_leinster_submits
+						# d_leinster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_munster_submits
+						# d_munster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
+				# AND = 
+				# {
+					# has_landed_title = d_ulster
+					# custom_tooltip =
+					# {
+						# text = tooltip_meath_submits
+						# d_meath =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_connacht_submits
+						# d_connacht =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_leinster_submits
+						# d_leinster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_munster_submits
+						# d_munster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
+				# AND = 
+				# {
+					# has_landed_title = d_connacht
+					# custom_tooltip =
+					# {
+						# text = tooltip_ulster_submits
+						# d_ulster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_meath_submits
+						# d_meath =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_leinster_submits
+						# d_leinster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_munster_submits
+						# d_munster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
+				# AND = 
+				# {
+					# has_landed_title = d_leinster
+					# custom_tooltip =
+					# {
+						# text = tooltip_ulster_submits
+						# d_ulster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_connacht_submits
+						# d_connacht =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_meath_submits
+						# d_meath =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_munster_submits
+						# d_munster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
+				# AND = 
+				# {
+					# has_landed_title = d_munster
+					# custom_tooltip =
+					# {
+						# text = tooltip_ulster_submits
+						# d_ulster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_connacht_submits
+						# d_connacht =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_leinster_submits
+						# d_leinster =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+					# custom_tooltip =
+					# {
+						# text = tooltip_meath_submits
+						# d_meath =
+						# {
+							# NOT =
+							# {
+								# any_de_jure_vassal_title = 
+								# {
+									# holder_scope =
+									# {
+										# top_liege =
+										# {
+											# NOT =
+											# {
+												# pays_tribute_to = ROOT
+											# }
+										# }
+									# }
+								# }
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+		# effect =
+		# {
+			# hidden_tooltip = 
+			# {
+				# narrative_event = 
+				# { 
+					# id = celt.17
+				# }
+			# }
+		# }
+	# }
+	
+	declare_high_king
+	{
+		#only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			culture_group = celtic
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			k_ireland =
+			{
+				has_holder = no
+			}
+			OR =
+			{
+				independent = yes
+				has_character_flag = flag_brian_boru
+			}
+			custom_tooltip =
+			{
+				text = tooltip_high_king_vaccant
+				d_king_of_tara =
+				{
+					has_holder = no
+				}
+				d_high_kingdom_of_ireland =
+				{
+					has_holder = no
+				}
+				k_high_kingdom_of_ireland =
+				{
+					has_holder = no
+				}
+			}			
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_instances_of_character_modifier =
+			{
+				name = high_king_authority
+				amount >= 4
+			}
+		}
+		effect =
+		{
+			hidden_tooltip = 
+			{
+				remove_character_modifier = high_king_authority
+				primary_title =
+				{
+					save_event_target_as = old_primary_title
+				}
+				narrative_event = 
+				{ 
+					id = celt.17
+				}
+			}
+		}
+	}
+	claim_high_king
+	{
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			culture_group = celtic
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			custom_tooltip =
+			{
+				text = tooltip_high_king_occupied
+				NOT =
+				{
+					has_landed_title = d_king_of_tara
+				}
+				NOT =
+				{
+					has_landed_title = d_high_kingdom_of_ireland
+				}
+				NOT =
+				{
+					has_landed_title = k_high_kingdom_of_ireland
+				}
+				OR =
+				{
+					d_king_of_tara =
+					{
+						has_holder = yes
+					}
+					d_high_kingdom_of_ireland =
+					{
+						has_holder = yes
+					}
+					k_high_kingdom_of_ireland =
+					{
+						has_holder = yes
+					}
+				}
+			}
+		OR =
+		{
+			AND =
+			{
+				NOT =
+				{
+					has_claim = k_high_kingdom_of_ireland
+				}
+				has_global_flag = high_king_authority_strengthened
+			}
+			AND =
+			{
+				NOT =
+				{
+					has_claim = d_high_kingdom_of_ireland
+				}
+				NOT =
+				{
+					has_global_flag = high_king_authority_strengthened
+				}
+				has_global_flag = high_king_succession_controlled
+			}
+			AND =
+			{
+				NOT =
+				{
+					has_claim = d_king_of_tara
+				}
+				NOT =
+				{
+					has_global_flag = high_king_succession_controlled
+				}
+			}
+		}
+		}
+		allow =
+		{
+			is_incapable = no
+			is_adult = yes
+			OR =
+			{
+				has_instances_of_character_modifier =
+				{
+					name = high_king_authority
+					amount >= 4
+				}
+				AND =
+				{
+					has_instances_of_character_modifier =
+					{
+						name = high_king_authority
+						amount >= 1
+					}
+					custom_tooltip =
+					{
+						text = tooltip_high_king_previous_claim
+						OR =
+						{
+							has_claim = d_king_of_tara
+							has_claim = d_high_kingdom_of_ireland
+						}
+					}
+				}
+				hidden_tooltip =
+				{
+					AND =
+					{
+						has_character_flag = flag_brian_boru
+						has_character_flag = flag_brian_munster_united
+					}
+				}
+				# custom_tooltip =
+				# {
+					# text = tooltip_high_king_bloodline
+					# any_owned_bloodline =
+					# {
+						# has_bloodline_flag = bloodline_high_king
+					# }
+				# }
+			}
+		}
+		effect =
+		{
+			remove_character_modifier = high_king_authority
+			hidden_tooltip =
+			{
+				remove_claim = d_king_of_tara
+				remove_claim = d_high_kingdom_of_ireland
+				remove_claim = k_high_kingdom_of_ireland
+			}
+			if =
+			{
+				limit =
+				{
+					has_global_flag = high_king_authority_strengthened
+				}
+				add_claim = k_high_kingdom_of_ireland
+			}
+			else_if =
+			{
+				limit =
+				{
+					has_global_flag = high_king_succession_controlled
+				}
+				add_claim = d_high_kingdom_of_ireland
+			}
+			else =
+			{
+				add_claim = d_king_of_tara
+			}
+		}
+	}
+	submit_to_high_king
+	{
+		only_independent = yes
+		ai_check_interval = 2
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			culture_group = celtic
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			independent = yes
+			is_tributary = no
+			custom_tooltip =
+			{
+				text = tooltip_high_king_occupied
+				NOT =
+				{
+					has_landed_title = d_king_of_tara
+				}
+				NOT =
+				{
+					has_landed_title = d_high_king_of_ireland
+				}
+				NOT =
+				{
+					has_landed_title = k_high_king_of_ireland
+				}
+				OR =
+				{
+					d_king_of_tara =
+					{
+						has_holder = yes
+					}
+					d_high_kingdom_of_ireland =
+					{
+						has_holder = yes
+					}
+					k_high_kingdom_of_ireland =
+					{
+						has_holder = yes
+					}
+				}
+			}
+			war = no
+		}
+		allow =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_high_king_occupied
+				NOT =
+				{
+					has_landed_title = d_king_of_tara
+				}
+				NOT =
+				{
+					has_landed_title = d_high_king_of_ireland
+				}
+				NOT =
+				{
+					has_landed_title = k_high_king_of_ireland
+				}
+				OR =
+				{
+					d_king_of_tara =
+					{
+						has_holder = yes
+					}
+					d_high_kingdom_of_ireland =
+					{
+						has_holder = yes
+					}
+					k_high_kingdom_of_ireland =
+					{
+						has_holder = yes
+					}
+				}
+			}
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_submit_to_high_king
+				if =
+				{
+					limit =
+					{
+						has_global_flag = high_king_authority_strengthened
+					}
+					k_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							make_tributary = 
+							{
+								who = FROM
+								percentage = 0.20
+								tributary_type = high_king_tributary
+							}
+						}
+					}
+				}
+				else_if =
+				{
+					limit =
+					{
+						has_global_flag = high_king_tribute_formalized
+					}
+					d_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							make_tributary = 
+							{
+								who = FROM
+								percentage = 0.20
+								tributary_type = high_king_tributary
+							}
+						}
+					}
+				}
+				else_if =
+				{
+					limit =
+					{
+						has_global_flag = high_king_succession_controlled
+					}
+					d_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							make_tributary = 
+							{
+								who = FROM
+								percentage = 0.40
+								tributary_type = default
+							}
+						}
+					}
+				}
+				else =
+				{
+					d_king_of_tara =
+					{
+						holder_scope =
+						{
+							make_tributary = 
+							{
+								who = FROM
+								percentage = 0.40
+								tributary_type = default
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+			
+			modifier =
+			{
+				factor = 0.01
+			}
+			modifier =
+			{
+				factor = 0
+				
+				OR =
+				{
+					higher_real_tier_than = COUNT
+					trait = lunatic
+					trait = possessed
+					trait = proud
+					trait = stubborn
+					is_tributary = yes
+					has_claim = d_king_of_tara
+					has_claim = d_high_kingdom_of_ireland
+					has_claim = k_high_kingdom_of_ireland
+					AND =
+					{
+						NOT = { has_global_flag = high_king_succession_controlled }
+						d_king_of_tara =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power >= 1.5
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_succession_controlled
+						NOT = { has_global_flag = high_king_authority_strengthened }
+						d_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power >= 1.5
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power >= 1.5
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier =
+			{
+				factor = 2
+				
+				OR =
+				{
+					trait = craven
+					trait = content
+				}
+			}
+			modifier =
+			{
+				factor = 1.5
+				
+				OR =
+				{
+					AND =
+					{
+						NOT = { has_global_flag = high_king_succession_controlled }
+						d_king_of_tara =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.25
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_succession_controlled
+						NOT = { has_global_flag = high_king_authority_strengthened }
+						d_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.25
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.25
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier =
+			{
+				factor = 1.5
+				
+				OR =
+				{
+					AND =
+					{
+						NOT = { has_global_flag = high_king_succession_controlled }
+						d_king_of_tara =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.25
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_succession_controlled
+						NOT = { has_global_flag = high_king_authority_strengthened }
+						d_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.25
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.25
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier =
+			{
+				factor = 1.5
+				
+				OR =
+				{
+					AND =
+					{
+						NOT = { has_global_flag = high_king_succession_controlled }
+						d_king_of_tara =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.50
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_succession_controlled
+						NOT = { has_global_flag = high_king_authority_strengthened }
+						d_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.50
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.50
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier =
+			{
+				factor = 1.5
+				
+				OR =
+				{
+					AND =
+					{
+						NOT = { has_global_flag = high_king_succession_controlled }
+						d_king_of_tara =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.75
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_succession_controlled
+						NOT = { has_global_flag = high_king_authority_strengthened }
+						d_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.75
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.75
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier =
+			{
+				factor = 1.5
+				
+				OR =
+				{
+					AND =
+					{
+						NOT = { has_global_flag = high_king_succession_controlled }
+						d_king_of_tara =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.9
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_succession_controlled
+						NOT = { has_global_flag = high_king_authority_strengthened }
+						d_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.9
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							ROOT =
+							{
+								relative_power_including_allies_defender = 
+								{
+									who = PREV
+									power < 0.9
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# submit_to_high_king_war
+	# {
+		# only_independent = yes
+		# is_high_prio = yes
+		# ai_check_interval = 1
+		
+		# potential =
+		# {
+			# NOT =
+			# {
+				# has_global_flag = ireland_united
+			# }
+			# culture_group = celtic
+			# primary_title =
+			# {
+				# de_jure_liege_or_above = k_ireland
+			# }
+			# independent = yes
+			# is_tributary = no
+			# NOT =
+			# {
+				# k_high_kingdom_of_ireland =
+				# {
+					# holder_scope =
+					# {
+						# OR =
+						# {
+							# has_character_flag = high_king_lose_tributary_war
+							# has_character_flag = flag_brian_boru
+						# }
+					# }
+				# }
+			# }
+			# NOT = 
+			# {
+				# any_war = 
+				# {
+					# using_cb = bid_for_independence
+				# }
+			# }
+			# NOT = 
+			# {
+				# any_war = 
+				# {
+					# using_cb = cb_faction_independence
+				# }
+			# }
+			# custom_tooltip =
+			# {
+				# text = tooltip_high_king_occupied
+				# NOT =
+				# {
+					# has_landed_title = d_king_of_tara
+				# }
+				# NOT =
+				# {
+					# has_landed_title = d_high_king_of_ireland
+				# }
+				# NOT =
+				# {
+					# has_landed_title = k_high_king_of_ireland
+				# }
+				# OR =
+				# {
+					# d_king_of_tara =
+					# {
+						# has_holder = yes
+					# }
+					# d_high_kingdom_of_ireland =
+					# {
+						# has_holder = yes
+					# }
+					# k_high_kingdom_of_ireland =
+					# {
+						# has_holder = yes
+					# }
+				# }
+			# }
+			# OR =
+			# {
+				# d_king_of_tara =
+				# {
+					# holder_scope =
+					# {
+						# war_with = ROOT
+					# }
+				# }
+				# d_high_kingdom_of_ireland =
+				# {
+					# holder_scope =
+					# {
+						# war_with = ROOT
+					# }
+				# }
+				# k_high_kingdom_of_ireland =
+				# {
+					# holder_scope =
+					# {
+						# war_with = ROOT
+					# }
+				# }
+			# }
+		# }
+		# allow =
+		# {
+			# custom_tooltip =
+			# {
+				# text = tooltip_high_king_occupied
+				# NOT =
+				# {
+					# has_landed_title = d_king_of_tara
+				# }
+				# NOT =
+				# {
+					# has_landed_title = d_high_king_of_ireland
+				# }
+				# NOT =
+				# {
+					# has_landed_title = k_high_king_of_ireland
+				# }
+				# OR =
+				# {
+					# d_king_of_tara =
+					# {
+						# has_holder = yes
+					# }
+					# d_high_kingdom_of_ireland =
+					# {
+						# has_holder = yes
+					# }
+					# k_high_kingdom_of_ireland =
+					# {
+						# has_holder = yes
+					# }
+				# }
+			# }
+			# # custom_tooltip = 
+			# # {
+				# # text = tooltip_war_with_high_king
+				# # OR =
+				# # {
+					# # d_king_of_tara =
+					# # {
+						# # holder_scope =
+						# # {
+							# # war_with = ROOT
+						# # }
+					# # }
+					# # d_high_kingdom_of_ireland =
+					# # {
+						# # holder_scope =
+						# # {
+							# # war_with = ROOT
+						# # }
+					# # }
+					# # k_high_kingdom_of_ireland =
+					# # {
+						# # holder_scope =
+						# # {
+							# # war_with = ROOT
+						# # }
+					# # }
+				# # }
+			# # }
+		# }
+		# effect =
+		# {
+			# custom_tooltip =
+			# {
+				# text = tooltip_submit_to_high_king
+				# any_war =
+				# {
+					# end_war = invalid
+				# }
+				# if =
+				# {
+					# limit =
+					# {
+						# has_global_flag = high_king_authority_strengthened
+					# }
+					# k_high_kingdom_of_ireland =
+					# {
+						# holder_scope =
+						# {
+							# make_tributary = 
+							# {
+								# who = FROM
+								# percentage = 0.20
+								# tributary_type = high_king_tributary
+							# }
+						# }
+					# }
+				# }
+				# else_if =
+				# {
+					# limit =
+					# {
+						# has_global_flag = high_king_tribute_formalized
+					# }
+					# d_high_kingdom_of_ireland =
+					# {
+						# holder_scope =
+						# {
+							# make_tributary = 
+							# {
+								# who = FROM
+								# percentage = 0.20
+								# tributary_type = high_king_tributary
+							# }
+						# }
+					# }
+				# }
+				# else_if =
+				# {
+					# limit =
+					# {
+						# has_global_flag = high_king_succession_controlled
+					# }
+					# d_high_kingdom_of_ireland =
+					# {
+						# holder_scope =
+						# {
+							# make_tributary = 
+							# {
+								# who = FROM
+								# percentage = 0.40
+								# tributary_type = default
+							# }
+						# }
+					# }
+				# }
+				# else =
+				# {
+					# d_king_of_tara =
+					# {
+						# holder_scope =
+						# {
+							# make_tributary = 
+							# {
+								# who = FROM
+								# percentage = 0.40
+								# tributary_type = default
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+		# ai_will_do =
+		# {
+			# factor = 1
+			# modifier =
+			# {
+				# factor = 0.5
+			# }
+			# modifier =
+			# {
+				# factor = 0
+				
+				# OR =
+				# {
+					# higher_real_tier_than = COUNT
+					# trait = lunatic
+					# trait = possessed
+					# trait = proud
+					# trait = stubborn
+					# is_tributary = yes
+					# has_claim = d_king_of_tara
+					# has_claim = d_high_kingdom_of_ireland
+					# has_claim = k_high_kingdom_of_ireland
+				# }
+				# any_war =
+				# {
+					# defender = { character = ROOT }
+					# attacker =
+					# {
+						# OR =
+						# {
+							# has_landed_title = d_king_of_tara
+							# has_landed_title = d_high_kingdom_of_ireland
+							# has_landed_title = k_high_kingdom_of_ireland
+						# }
+					# }
+					# war_score < 90
+				# }
+			# }
+			# modifier = 
+			# {
+				# factor = 2
+				# any_war = 
+				# {
+					# defender = { character = ROOT }
+					# attacker = 
+					# {
+						# OR =
+						# {
+							# has_landed_title = d_king_of_tara
+							# has_landed_title = d_high_kingdom_of_ireland
+							# has_landed_title = k_high_kingdom_of_ireland
+						# }
+					# }
+					# war_score >= 75
+				# }
+			# }
+			# modifier = 
+			# {
+				# factor = 1.5
+				# OR = 
+				# {
+					# trait = craven
+					# trait = content
+				# }
+			# }
+		# }
+	# }
+	accept_formal_tribute
+	{
+		only_independent = yes
+		ai_check_interval = 12
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_tribute_formalized
+			culture_group = celtic
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			independent = yes
+			NOT =
+			{
+				is_tributary = 
+				{
+					type = high_king_tributary
+				}
+			}
+			OR =
+			{
+				AND =
+				{
+					NOT =
+					{
+						has_global_flag = high_king_authority_strengthened
+					}
+					d_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							ROOT =
+							{
+								is_tributary = 
+								{
+									suzerain = PREV
+								}
+							}
+						}
+					}
+				}
+				AND =
+				{
+					has_global_flag = high_king_authority_strengthened
+					k_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							ROOT =
+							{
+								is_tributary = 
+								{
+									suzerain = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		allow =
+		{
+			war = no
+			custom_tooltip =
+			{
+				text = tooltip_high_king_tributary
+				
+				OR =
+				{
+					AND =
+					{
+						NOT =
+						{
+							has_global_flag = high_king_authority_strengthened
+						}
+						d_high_kingdom_of_ireland =
+						{
+							holder_scope =
+							{
+								ROOT =
+								{
+									is_tributary = 
+									{
+										suzerain = PREV
+									}
+								}
+							}
+						}
+					}
+					AND =
+					{
+						has_global_flag = high_king_authority_strengthened
+						k_high_kingdom_of_ireland =
+						{
+							holder_scope =
+							{
+								ROOT =
+								{
+									is_tributary = 
+									{
+										suzerain = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip =
+			{
+				text = tooltip_no_formal_tribute
+				
+				NOT =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+					}
+				}
+			}
+			war = no
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_submit_to_high_king
+				if =
+				{
+					limit =
+					{
+						has_global_flag = high_king_authority_strengthened
+					}
+					k_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							make_tributary = 
+							{
+								who = FROM
+								percentage = 0.20
+								tributary_type = high_king_tributary
+							}
+						}
+					}
+				}
+				else =
+				{
+					d_high_kingdom_of_ireland =
+					{
+						holder_scope =
+						{
+							make_tributary = 
+							{
+								who = FROM
+								percentage = 0.20
+								tributary_type = high_king_tributary
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+		}
+	}
+	dynastic_dominance
+	{
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+				has_global_flag = high_king_dynastic_dominance
+				has_global_flag = high_king_succession_controlled
+			}
+			culture_group = celtic
+			has_landed_title = d_king_of_tara			
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			OR =
+			{
+				has_instances_of_character_modifier =
+				{
+					name = high_king_authority
+					amount >= 4
+				}
+				custom_tooltip =
+				{
+					text = tooltip_high_king_bloodline
+					any_owned_bloodline =
+					{
+						has_bloodline_flag = bloodline_high_king
+					}
+				}
+				hidden_tooltip =
+				{
+					AND =
+					{
+						has_character_flag = flag_brian_boru
+						has_character_flag = flag_brian_munster_united
+					}
+				}
+			}
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_dynastic_dominance
+				set_global_flag = high_king_dynastic_dominance
+				remove_character_modifier = high_king_authority
+				narrative_event = 
+				{ 
+					id = celt.19
+				}
+			}
+		}
+	}
+	control_succession
+	{
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+				has_global_flag = high_king_succession_controlled
+			}
+			has_global_flag = high_king_dynastic_dominance
+			culture_group = celtic
+			has_landed_title = d_king_of_tara		
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			OR =
+			{
+				AND =
+				{
+					has_instances_of_character_modifier =
+					{
+						name = high_king_authority
+						amount >= 5
+					}
+					custom_tooltip =
+					{
+						text = tooltip_subjugated_claimants
+						k_ireland =
+						{
+							NOT =
+							{
+								any_de_jure_vassal_title =
+								{
+									holder_scope =
+									{
+										NOT =
+										{
+											is_tributary =
+											{
+												suzerain = ROOT
+											}
+										}
+										independent = yes
+										has_claim = d_king_of_tara
+									}
+								}
+							}
+						}
+					}
+				}
+				hidden_tooltip =
+				{
+					AND =
+					{
+						has_character_flag = flag_brian_boru
+						has_character_flag = flag_brian_munster_united
+					}
+				}
+			}
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_succession_controlled
+				clr_global_flag = high_king_dynastic_dominance
+				set_global_flag = high_king_succession_controlled
+				primary_title = 
+				{
+					d_high_kingdom_of_ireland = 
+					{
+						grant_title = ROOT
+						copy_title_laws = PREV
+						copy_title_history = d_king_of_tara
+						succession = tanistry
+						make_primary_title = yes
+					}
+		
+				}
+				destroy_landed_title = d_king_of_tara
+				remove_character_modifier = high_king_authority
+				narrative_event = 
+				{ 
+					id = celt.20
+				}
+			}
+		}
+	}
+	formalize_tribute
+	{
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+				has_global_flag = high_king_tribute_formalized
+			}
+			has_global_flag = high_king_succession_controlled
+			culture_group = celtic
+			has_landed_title = d_high_kingdom_of_ireland	
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			OR =
+			{
+				AND =
+				{
+					has_instances_of_character_modifier =
+					{
+						name = high_king_authority
+						amount >= 6
+					}
+					custom_tooltip =
+					{
+						text = tooltip_four_tributaries
+						any_tributary =
+						{
+							# limit =
+							# {
+								# primary_title =
+								# {
+									# de_jure_liege_or_above = k_ireland
+								# }
+							# }
+							count >= 4
+						}
+					}
+					NOT =
+					{
+						any_tributary =
+						{
+							opinion =
+							{
+								who = ROOT
+								value < 0
+							}
+						}
+					}
+				}
+				hidden_tooltip =
+				{
+					AND =
+					{
+						has_character_flag = flag_brian_boru
+						has_character_flag = flag_brian_munster_united
+					}
+				}
+			}
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_tribute_formalized
+				set_global_flag = high_king_tribute_formalized
+				any_tributary =
+				{
+					if =
+					{
+						limit =
+						{
+							primary_title =
+							{
+								de_jure_liege_or_above = k_ireland
+							}
+						}
+						ROOT =
+						{
+							make_tributary = 
+							{
+								who = PREV
+								percentage = 0.20
+								tributary_type = high_king_tributary
+							}
+						}
+					}
+				}
+				remove_character_modifier = high_king_authority
+				narrative_event = 
+				{ 
+					id = celt.21
+				}
+			}
+		}
+	}
+	strengthen_authority
+	{
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+				has_global_flag = high_king_authority_strengthened
+			}
+			has_global_flag = high_king_tribute_formalized
+			culture_group = celtic
+			has_landed_title = d_high_kingdom_of_ireland	
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			OR =
+			{
+				AND =
+				{
+					has_instances_of_character_modifier =
+					{
+						name = high_king_authority
+						amount >= 7
+					}
+					d_meath =
+					{
+						OR =
+						{
+							holder = ROOT
+							has_holder = no
+							holder_scope =
+							{
+								pays_tribute_to = ROOT
+							}
+						}
+					}
+					d_ulster =
+					{
+						OR =
+						{
+							holder = ROOT
+							has_holder = no
+							holder_scope =
+							{
+								pays_tribute_to = ROOT
+							}
+						}
+					}
+					d_leinster =
+					{
+						OR =
+						{
+							holder = ROOT
+							has_holder = no
+							holder_scope =
+							{
+								pays_tribute_to = ROOT
+							}
+						}
+					}
+					d_munster =
+					{
+						OR =
+						{
+							holder = ROOT
+							has_holder = no
+							holder_scope =
+							{
+								pays_tribute_to = ROOT
+							}
+						}
+					}
+					d_connacht =
+					{
+						OR =
+						{
+							holder = ROOT
+							has_holder = no
+							holder_scope =
+							{
+								pays_tribute_to = ROOT
+							}
+						}
+					}
+				}
+				hidden_tooltip =
+				{
+					AND =
+					{
+						has_character_flag = flag_brian_boru
+						has_character_flag = flag_brian_munster_united
+					}
+				}
+			}
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_authority_strengthened
+				set_global_flag = high_king_authority_strengthened
+				primary_title = 
+				{
+					k_high_kingdom_of_ireland = 
+					{
+						grant_title = ROOT
+						copy_title_laws = PREV
+						copy_title_history = d_high_kingdom_of_ireland
+						succession = tanistry
+					}
+		
+				}
+				destroy_landed_title = d_high_kingdom_of_ireland
+				remove_character_modifier = high_king_authority
+				set_character_flag = rule_at_peace
+				narrative_event = 
+				{ 
+					id = celt.22
+				}
+			}
+		}
+	}
+	demand_meath_submission
+	{
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_authority_strengthened
+			culture_group = celtic
+			has_landed_title = k_high_kingdom_of_ireland
+			d_meath =
+			{
+				has_holder = yes
+				NOT =
+				{
+					holder = ROOT
+				}
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_high_kingdom_of_ireland
+			d_meath =
+			{
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+			war = no
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_meath_ultimatum
+				d_meath =
+				{
+					holder_scope =
+					{
+						character_event = 
+						{
+							id = celt.24
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+			
+			modifier =
+			{
+				factor = 0.5
+			}
+			modifier = 
+			{
+				factor = 1.25
+				is_strong_trigger = yes
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = brave
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = proud
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = envious
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = 
+			{
+				factor = 0.75
+				d_meath =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 1.5
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_meath =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 2.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_meath =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 3.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_meath =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 4.0
+						}
+					}
+				}
+			}
+		}
+	}
+	demand_ulster_submission
+	{
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_authority_strengthened
+			culture_group = celtic
+			has_landed_title = k_high_kingdom_of_ireland
+			d_ulster =
+			{
+				has_holder = yes
+				NOT =
+				{
+					holder = ROOT
+				}
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_high_kingdom_of_ireland
+			d_ulster =
+			{
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+			war = no
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_ulster_ultimatum
+				d_ulster =
+				{
+					holder_scope =
+					{
+						character_event = 
+						{
+							id = celt.24
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+			
+			modifier =
+			{
+				factor = 0.5
+			}
+			modifier = 
+			{
+				factor = 1.25
+				is_strong_trigger = yes
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = brave
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = proud
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = envious
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = 
+			{
+				factor = 0.75
+				d_ulster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 1.5
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_ulster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 2.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_ulster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 3.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_ulster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 4.0
+						}
+					}
+				}
+			}
+		}
+	}
+	demand_leinster_submission
+	{
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_authority_strengthened
+			culture_group = celtic
+			has_landed_title = k_high_kingdom_of_ireland
+			d_leinster =
+			{
+				has_holder = yes
+				NOT =
+				{
+					holder = ROOT
+				}
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_high_kingdom_of_ireland
+			d_leinster =
+			{
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+			war = no
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_leinster_ultimatum
+				d_leinster =
+				{
+					holder_scope =
+					{
+						character_event = 
+						{
+							id = celt.24
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+			
+			modifier =
+			{
+				factor = 0.5
+			}
+			modifier = 
+			{
+				factor = 1.25
+				is_strong_trigger = yes
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = brave
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = proud
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = envious
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = 
+			{
+				factor = 0.75
+				d_leinster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 1.5
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_leinster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 2.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_leinster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 3.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_leinster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 4.0
+						}
+					}
+				}
+			}
+		}
+	}
+	demand_munster_submission
+	{
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_authority_strengthened
+			culture_group = celtic
+			has_landed_title = k_high_kingdom_of_ireland
+			d_munster =
+			{
+				has_holder = yes
+				NOT =
+				{
+					holder = ROOT
+				}
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_high_kingdom_of_ireland
+			d_munster =
+			{
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+			war = no
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_munster_ultimatum
+				d_munster =
+				{
+					holder_scope =
+					{
+						character_event = 
+						{
+							id = celt.24
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+			
+			modifier =
+			{
+				factor = 0.5
+			}
+			modifier = 
+			{
+				factor = 1.25
+				is_strong_trigger = yes
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = brave
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = proud
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = envious
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = 
+			{
+				factor = 0.75
+				d_munster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 1.5
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_munster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 2.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_munster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 3.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_munster =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 4.0
+						}
+					}
+				}
+			}
+		}
+	}
+	demand_connacht_submission
+	{
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_authority_strengthened
+			culture_group = celtic
+			has_landed_title = k_high_kingdom_of_ireland
+			d_connacht =
+			{
+				has_holder = yes
+				NOT =
+				{
+					holder = ROOT
+				}
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_high_kingdom_of_ireland
+			d_connacht =
+			{
+				holder_scope =
+				{
+					is_tributary = 
+					{
+						type = high_king_tributary
+						suzerain = ROOT
+					}
+				}
+			}
+			war = no
+		}
+		effect =
+		{
+			custom_tooltip =
+			{
+				text = tooltip_connacht_ultimatum
+				d_connacht =
+				{
+					holder_scope =
+					{
+						character_event = 
+						{
+							id = celt.24
+						}
+					}
+				}
+			}
+		}
+		ai_will_do =
+		{
+			factor = 1
+			
+			modifier =
+			{
+				factor = 0.5
+			}
+			modifier = 
+			{
+				factor = 1.25
+				is_strong_trigger = yes
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = brave
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = proud
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = envious
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = 
+			{
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = 
+			{
+				factor = 0.75
+				d_connacht =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 1.5
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_connacht =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 2.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_connacht =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 3.0
+						}
+					}
+				}
+			}
+			modifier = 
+			{
+				factor = 0.5
+				d_connacht =
+				{
+					holder_scope =
+					{
+						relative_power_including_allies_defender =
+						{
+							who = ROOT
+							power >= 4.0
+						}
+					}
+				}
+			}
+		}
+	}
+	unite_ireland =
+	{
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = ireland_united
+			}
+			has_global_flag = high_king_authority_strengthened
+			culture_group = celtic
+			has_landed_title = k_high_kingdom_of_ireland
+			hidden_tooltip =
+			{
+				OR =
+				{
+					NOT =
+					{
+						has_character_flag = flag_brian_boru
+					}
+					has_character_flag = flag_brian_survived_clontarf
+				}
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			has_landed_title = k_high_kingdom_of_ireland
+			completely_controls = k_ireland
+			OR =
+			{
+				custom_tooltip =
+				{
+					text = tooltip_rule_at_peace
+					had_character_flag = 
+					{
+						flag = rule_at_peace
+						years >= 10
+					}
+				}
+				hidden_tooltip =
+				{
+					has_character_flag = flag_brian_survived_clontarf
+				}
+			}
+		}
+		effect =
+		{
+			clr_character_flag = rule_at_peace
+			hidden_tooltip =
+			{
+				if =
+				{
+					limit =
+					{
+						has_character_flag = flag_brian_boru
+						NOT =
+						{
+							has_character_flag = flag_brian_survived_clontarf
+						}
+					}
+					set_character_flag = flag_brian_survived_clontarf
+				}
+			}
+			prestige = 500
+			give_nickname = nick_boruma
+			custom_tooltip =
+			{
+				text = tooltip_unite_ireland
+				
+				narrative_event = 
+				{ 
+					id = celt.23
+				}
+			}
+		}
+	}
+	augustus_of_northwestern_europe =
+	{
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = augustus_of_northwestern_europe
+			}
+			culture_group = celtic 
+			OR =
+			{
+				primary_title =
+				{
+					title = e_greater_scotia
+				}
+				primary_title =
+				{
+					title = e_britannia
+				}
+				primary_title =
+				{
+					title = e_uther_britannia
+				}
+				primary_title =
+				{
+					title = e_celtic
+				}
+			}
+			completely_controls_region = world_europe_west_brittania
+			any_realm_province =
+			{
+				# limit =
+				# {
+					# duchy =
+					# {
+						# NOT =
+						# {
+							# title = d_iceland
+						# }
+						# NOT =
+						# {
+							# title = d_orkney
+						# }
+					# }
+				# }
+				region = world_europe_north
+			}
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			completely_controls = d_gotland
+			completely_controls = d_uppland
+			completely_controls = d_ostergotland
+			completely_controls = d_vastergotland
+			completely_controls = d_norrland
+			completely_controls = d_bergslagen
+			completely_controls = d_smaland
+			completely_controls = d_tioharad
+			completely_controls = d_skane
+			completely_controls = d_sjaelland
+			completely_controls = d_slesvig
+			completely_controls = d_holstein
+			completely_controls = d_iceland
+			completely_controls = d_orkney
+			completely_controls = d_agder
+			completely_controls = d_vestlandet
+			completely_controls = d_oppland
+			completely_controls = d_ostlandet
+			completely_controls = d_trondelag
+			completely_controls = d_jamtland
+		}
+		effect =
+		{
+			set_global_flag = augustus_of_northwestern_europe
+			prestige = 1000
+			narrative_event =
+			{
+				id = celt.2040
+			}
+		}
+	}
+	kingdom_of_mann =
+	{
+		#only_independent = yes
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential =
+		{
+			NOT =
+			{
+				has_global_flag = kingdom_of_mann
+			}
+			culture_group = celtic 
+			primary_title =
+			{
+				title = d_the_isles
+			}
+			is_capital = c_isle_of_man
+			lower_real_tier_than = KING
+		}
+		allow =
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			war = no
+			completely_controls = c_isle_of_man
+			num_of_duke_titles >= 2
+			wealth >= 500
+			prestige >= 500
+			OR =
+			{
+				independent = yes
+				AND =
+				{
+					is_republic = yes
+					top_liege =
+					{
+						tier = EMPEROR
+					}
+				}
+			}
+		}
+		effect =
+		{
+			narrative_event =
+			{
+				id = celt.49
+			}
+		}
+	}
+	
+	support_papars = 
+	{
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = 
+		{
+			is_alternate_start = no
+			age = 16
+			prisoner = no
+			rebel = no
+			is_landed = yes
+			independent = yes
+			has_global_flag = viking_age_started
+			religion_group = christian
+			OR = 
+			{
+				culture = irish
+				culture = scottish
+				AND =
+				{
+					culture_group = celtic
+					tier = emperor
+				}
+			}
+			higher_real_tier_than = COUNT
+			NOR = 
+			{
+				has_global_flag = iceland_settled
+				has_alternate_start_parameter = { key = religion_names value = random }
+				has_landed_title = e_pirates
+				has_landed_title = e_rebels
+			}
+			d_iceland = 
+			{
+				any_direct_de_jure_vassal_title = 
+				{
+					holder_scope = 
+					{
+						independent = yes
+						is_theocracy = yes
+					}
+				}
+			}
+		}
+		allow = 
+		{
+			prisoner = no
+			war = no
+			custom_tooltip = 
+			{
+				text = viking_age_tt
+				hidden_tooltip = 
+				{
+					has_global_flag = viking_age_started
+				}
+			}
+			capital_holding = 
+			{
+				OR =
+				{
+					has_building = tb_shipyard_1
+					has_building = ca_shipyard_1
+					has_building = ct_shipyard_1
+					has_building = tp_shipyard_1
+				}
+			}
+			piety = 200
+			wealth = 100
+		}
+		effect = 
+		{
+			wealth = -100
+			custom_tooltip = 
+			{
+				text = tooltip_support_papars
+			}
+			# if = 
+			# {
+				# limit = 
+				# {
+					# has_nickname = no
+				# }
+				# give_nickname = nick_the_explorer
+			# }
+			hidden_tooltip = 
+			{
+				save_event_target_as = supporter_of_papars_target
+				set_global_flag = iceland_settled
+				d_iceland = 
+				{
+					any_direct_de_jure_vassal_title = 
+					{
+						limit = 
+						{
+							tier = COUNT
+							holder_scope = 
+							{
+								top_liege = 
+								{
+									independent = yes
+									is_theocracy = yes
+								}
+							}
+						}
+						holder_scope = 
+						{
+							save_event_target_as = papar_leader_target
+							set_defacto_liege = ROOT
+						}
+						location = 
+						{
+							if =
+							{
+								limit =
+								{
+									num_of_max_settlements = 1
+								}
+								add_holding_slot = 1
+							}
+							if =
+							{
+								limit =
+								{
+									num_of_empty_holdings > 0
+								}
+								build_holding = 
+								{
+									type = tribal
+								}
+							}
+							remove_province_modifier = incredibly_poor
+						}
+					}
+				}
+				narrative_event = { id = celt.51 }
+			}
+		}
+		revoke_allowed = 
+		{
+			always = no
+		}
+		ai_will_do = 
+		{
+			factor = 1
+			trigger = 
+			{
+				had_global_flag = { flag = viking_age_started years = 2 }
+			}
+		}
+	}
+	
+	create_rheged = 
+	{
+		only_independent = yes
+		is_high_prio = yes
+		potential = 
+		{
+			OR = 
+			{
+				culture = cumbric
+				culture = welsh
+			}
+			k_rheged = 
+			{
+				has_holder = no
+			}
+			NOT = { has_global_flag = flag_rheged_restored }
+			NOT = { tier = king }
+			NOT = { tier = emperor }
+		}
+		allow = 
+		{
+			AND = 
+			{
+				completely_controls = d_cumbria
+				completely_controls = d_lancaster
+			}
+			piety = 100
+			prestige = 200
+		}
+		effect = {
+			set_global_flag = flag_rheged_restored
+			hidden_tooltip = {
+				character_event = { 
+					id = celt.54
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_gaul = 
+	{
+		only_independent = yes
+		is_high_prio = yes
+		potential = 
+		{
+			culture_group = celtic
+			e_gaul = 
+			{
+				has_holder = no
+			}
+			NOT = { has_global_flag = flag_gaul_restored }
+			OR =
+			{
+				tier = EMPEROR
+				capital_scope = 
+				{
+					region = world_europe_west_francia
+				}
+			}
+		}
+		allow = 
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			completely_controls_region = world_europe_west_francia
+			prestige = 2000
+		}
+		effect = {
+			set_global_flag = flag_gaul_restored
+			hidden_tooltip = {
+				character_event = { 
+					id = celt.59
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	unite_celts = 
+	{
+		only_independent = yes
+		only_playable = yes
+		is_high_prio = yes
+		potential = 
+		{
+			culture_group = celtic
+			e_celtic = 
+			{
+				has_holder = no
+			}
+			e_celtic = 
+			{
+				is_titular = yes
+			}
+			NOT = { has_global_flag = flag_celts_united }
+			has_landed_title = e_greater_scotia
+			OR =
+			{
+				has_landed_title = e_britannia
+				has_landed_title = e_uther_britannia
+			}
+			has_landed_title = e_gaul
+		}
+		allow = 
+		{
+			is_incapable = no
+			prisoner = no
+			is_adult = yes
+			independent = yes
+			war = no
+			completely_controls_region = world_europe_west_brittania
+			completely_controls_region = world_europe_west_francia
+			completely_controls = d_galicia
+			completely_controls = d_asturias
+			prestige = 2000
+		}
+		effect = {
+			set_global_flag = flag_celts_united
+			hidden_tooltip = {
+				character_event = { 
+					id = celt.61
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# gain_authority
+	# {
+		# only_independent = yes
+		
+		# potential =
+		# {
+			# any_owned_bloodline = {
+				# has_bloodline_flag = bloodline_heroes
+				# bloodline_is_active_for = PREV
+				# founder = {
+					# NOT = {
+						# character = ROOT
+					# }
+					# religion = ROOT
+				# }
+			# }
+		# }
+		# allow =
+		# {
+			# any_owned_bloodline = {
+				# has_bloodline_flag = bloodline_heroes
+				# bloodline_is_active_for = PREV
+				# founder = {
+					# NOT = {
+						# character = ROOT
+					# }
+					# religion = ROOT
+				# }
+			# }
+		# }
+		# effect =
+		# {
+			# add_character_modifier =
+			# {
+				# name = high_king_authority
+				# years = 50
+				# stacking = yes
+			# }
+		# }
+	# }
+	
+	# gain_authority
+	# {
+		# only_independent = yes
+		
+		# potential =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# allow =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# effect =
+		# {
+			# add_character_modifier =
+			# {
+				# name = high_king_authority
+				# years = 50
+				# stacking = yes
+			# }
+		# }
+	# }
+	# smugglers_more_like_sugglers
+	# {
+		# only_independent = yes
+		
+		# potential =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# allow =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# effect =
+		# {
+			# c_dublin =
+			# {
+				# location =
+				# {
+					# remove_province_modifier = smugglers_ring
+				# }
+			# }
+		# }
+	# }
+	# no_more_secrets
+	# {
+		# only_independent = yes
+		
+		# potential =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# allow =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# effect =
+		# {
+			# any_character =
+			# {
+				# limit =
+				# {
+					# secret_religion = catholic
+				# }
+				# clear_secret_religion
+			# }
+		# }
+	# }
+	
+	# fix_culture
+	# {
+		
+		# potential =
+		# {
+			# ai = no
+		# }
+		# allow =
+		# {
+			# ai = no
+		# }
+		# effect =
+		# {
+			# any_demesne_province =
+			# {
+				# conquest_culture = none
+				# culture = ROOT
+				# any_province_lord =
+				# {
+					# limit =
+					# {
+						# tier = BARON
+						# NOT =
+						# {
+							# culture = ROOT
+						# }
+					# }
+					# abdicate_to = ROOT
+				# }
+			# }
+		# }
+	# }
+	
+	# no_black_death_for_you
+	# {
+		
+		# potential =
+		# {
+			# ai = no
+		# }
+		# allow =
+		# {
+			# ai = no
+		# }
+		# effect =
+		# {
+			# d_ulster =
+			# {
+				# any_direct_de_jure_vassal_title =
+				# {
+					# location = 
+					# {
+						# reduce_disease = -1
+					# }
+				# }
+			# }
+			# d_connacht =
+			# {
+				# any_direct_de_jure_vassal_title =
+				# {
+					# location = 
+					# {
+						# reduce_disease = -1
+					# }
+				# }
+			# }
+			# d_munster =
+			# {
+				# any_direct_de_jure_vassal_title =
+				# {
+					# location = 
+					# {
+						# reduce_disease = -1
+					# }
+				# }
+			# }
+			# d_leinster =
+			# {
+				# any_direct_de_jure_vassal_title =
+				# {
+					# location = 
+					# {
+						# reduce_disease = -1
+					# }
+				# }
+			# }
+			# d_meath =
+			# {
+				# any_direct_de_jure_vassal_title =
+				# {
+					# location = 
+					# {
+						# reduce_disease = -1
+					# }
+				# }
+			# }
+		# }
+	# }
+	
+	# fix_hre
+	# {
+		# only_independent = yes
+		
+		# potential =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# allow =
+		# {
+			# ai = no
+			# culture = irish
+		# }
+		# effect =
+		# {
+			# # e_germany =
+			# # {
+				# # any_direct_de_jure_vassal_title =
+				# # {
+					# # de_jure_liege = e_hre
+				# # }
+			# # }
+			# # e_hre =
+			# # {
+				# # set_coa = e_germany
+			# # }
+			# # e_germany = { destroy_landed_title = THIS }
+			# # activate_title =
+			# # {
+				# # title = e_germany
+				# # status = no
+			# # }
+			# # k_mauretania =
+			# # {
+				# # de_jure_liege = e_maghreb
+			# # }
+			# # k_africa =
+			# # {
+				# # de_jure_liege = e_maghreb
+			# # }
+			# # ROOT =
+			# # {
+				# # hidden_effect = { set_variable = { which = relic_score value = 0 } }
+			# # }
+			# k_hungary = 
+			# {
+				# set_coa = k_hungary
+			# }
+		# }
+	# }
+}

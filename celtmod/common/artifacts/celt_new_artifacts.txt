@@ -1,0 +1,145 @@
+excalibur =
+{
+	quality = 5
+	martial = 10
+	command_modifier =
+	{
+		morale_offence = 0.2
+		morale_defence = 0.2	
+	}
+	castle_vassal_max_levy = 0.05
+	temple_vassal_max_levy = 0.05
+	city_vassal_max_levy = 0.05
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.5
+	active =
+	{
+		OR =
+		{
+			trait = like_king_arthur
+			any_owned_bloodline = { has_bloodline_flag = bloodline_arthur }
+		}
+	}
+	
+	flags = { sword unique unique troops_morale fantasy is_excalibur }
+	slot = weapon
+	stacking = no
+	picture = "GFX_sword_of_heroes"
+}
+book_of_kells =
+{
+	quality = 5
+	tech_growth_modifier = 0.10
+	diplomacy = 3
+	learning = 2
+	stewardship = 2
+	christian_opinion = 10
+	church_opinion = 15
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.1
+	active = { religion_group = christian }
+	flags = { religious christian unique }
+	indestructible = yes
+	stacking = no
+	picture = "GFX_book_of_kells"
+}
+bachal_isu =
+{
+	quality = 5
+	defensive_plot_power_modifier = 0.1
+	learning = 4
+	christian_opinion = 5
+	insular_opinion = 5
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	active =
+	{
+		OR =
+		{
+			religion = insular
+			religion = pelagianism
+			AND =
+			{
+				culture_group = celtic
+				religion_group = christian
+			}
+		}
+	}
+	stacking = no
+	flags = { religious christian unique jewelry crown_jewel scepter jesus saint }
+	slot = scepter
+	picture = "GFX_bachal_isu"
+}
+cathach =
+{
+	quality = 4
+	monthly_character_piety = 1
+	insular_opinion = 10
+	command_modifier =
+	{
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+	active =
+	{
+		OR =
+		{
+			religion = insular
+			religion = pelagianism
+			AND =
+			{
+				culture_group = celtic
+				religion_group = christian
+			}
+		}
+	}
+	stacking = no
+	
+	flags = { religious christian saint rare troops_morale cumdach }
+	picture = "GFX_cathach"
+}
+stone_of_scone = {
+	short_reign_length = -5
+	monthly_character_prestige = 1.5
+	vassal_opinion = 10
+	martial = 1
+	active = 
+	{
+		OR =
+		{ 
+			culture_group = celtic 
+			culture_group = north_germanic
+			culture = saxon
+			culture = english
+		}
+	}
+	allowed_gift = 
+	{
+		OR =
+		{ 
+			culture_group = celtic 
+			culture_group = north_germanic
+			culture = saxon
+			culture = english
+		}
+	}
+	quality = 4
+	indestructible = yes
+	flags = { unique }
+	stacking = no
+	picture = "GFX_stone_of_scone"
+}
+cross_of_cong =
+{
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	stewardship = 2
+	active = { religion_group = christian }
+	allowed_gift = {
+		religion_group = christian
+	}
+	quality = 3
+	flags = { religious christian rare crucifixion }
+	stacking = no
+	picture = "GFX_cross_of_cong"
+}

@@ -1,0 +1,12 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;x,,,
+###### Mercenaries, Cassus Belli, retinue, tactics...;;;;;;;;;;;;x
+###### Tactics;;;;;;;;;;;;x,,,
+woad_raid_tactic;Woad Raid;Raid guède;;;;;;;;;;x,,,
+bait_and_harass;Bait and Swarm;Appâter et déferler;;;Cebo y Espada;;;;;;;x,,,
+saxon_charge_tactic;Mægenellenáflygennes;Mægenellenáflygennes;;;;;;;;;;x,,,
+rapid_advance_tactic;Rapid Advance;Avance rapide;;;;;;;;;;x,,,
+###### Retinue;;;;;;;;;;;;x,,,
+RETTYPE_CUL_BRIT;Marchogion;Marchogion;;;;;;;;;;x,,,
+RETTYPE_CUL_ARM;Isbeilor;Isbeilor;;;;;;;;;;x,,,
+RETTYPE_CUL_GALA;Hurrfiwor;Hurrfiwor;;;;;;;;;;x,,,
+RETTYPE_CUL_RBT;Brito Bellatorum;Brito Bellatorum;;;;;;;;;;;;x,,,

@@ -1,0 +1,4375 @@
+#Events for creating historical characters as well as events relating to them
+#celt.2000-celt.2999
+
+namespace = celt
+
+#2000-2040 Brian Boru event chain
+character_event =
+{
+	id = celt.2000
+	desc = celt.2000.desc
+	picture = GFX_evt_warriors_hills_mist
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_global_flag = brian_spawned
+		}
+		year = 920
+		NOT = { year = 1014 }
+		has_landed_title = c_thomond
+	}
+	
+	mean_time_to_happen = 
+	{
+		months = 24
+	}
+	
+	immediate =
+	{
+		create_character = 
+		{
+			random_traits = yes
+			name = "Cennétig"
+			dynasty = 100009
+			religion = ROOT
+			culture = irish
+			female = no
+			age = 77
+			health = 5
+			fertility = 0
+			historical = yes
+    
+			attributes = 
+			{
+				martial = 5
+				diplomacy = 5
+				stewardship = 7
+				intrigue = 6
+			}
+		}
+		new_character =
+		{	
+			save_event_target_as = target_brian_dad
+			set_character_flag = flag_brian_dad
+			set_character_flag = is_special_character
+			set_defacto_liege = event_target:target_brian_dad
+			add_claim = c_thomond
+			c_thomond =
+			{
+				holder_scope =
+				{
+						event_target:target_brian_dad =
+						{
+							13 =
+							{
+								build_holding = 
+								{
+									title = b_dalcassians
+									type = castle
+									holder = event_target:target_brian_dad
+								}
+							}
+							capital_holding =
+							{
+								add_building = ca_culture_irish_4
+							}
+							spawn_unit = 
+							{
+								province = 13
+								home = 13
+								owner = THIS
+								match_character = PREV
+								match_mult = 0.33
+								match_min = 500
+								match_max = 10000
+								attrition = 0.25
+								earmark = brian_event_troops
+							}
+							spawn_unit = 
+							{
+								province = 13
+								home = 13
+								owner = THIS
+								match_character = PREV
+								match_mult = 0.33
+								match_min = 500
+								match_max = 10000
+								attrition = 0.25
+								earmark = brian_event_troops
+							}
+							spawn_unit = 
+							{
+								province = 13
+								home = 13
+								owner = THIS
+								match_character = PREV
+								match_mult = 0.33
+								match_min = 500
+								match_max = 10000
+								attrition = 0.25
+								earmark = brian_event_troops
+							}
+							spawn_unit = 
+							{
+								province = 13
+								home = 13
+								owner = THIS
+								match_character = PREV
+								match_mult = 0.33
+								match_min = 500
+								match_max = 10000
+								attrition = 0.25
+								earmark = brian_event_troops
+							}
+							spawn_unit = 
+							{
+								province = 13
+								home = 13
+								owner = THIS
+								match_character = PREV
+								match_mult = 0.33
+								match_min = 500
+								match_max = 10000
+								attrition = 0.25
+								earmark = brian_event_troops
+							}
+							spawn_unit = 
+							{
+								province = 13
+								home = 13
+								owner = THIS
+								match_character = PREV
+								match_mult = 0.33
+								match_min = 500
+								match_max = 10000
+								attrition = 0.25
+								earmark = brian_event_troops
+							}
+							set_defacto_liege = PREV
+						}
+				}
+			}
+		}
+		event_target:target_brian_dad =
+		{
+			create_character = 
+			{
+				random_traits = yes
+				name = "Mathgamain"
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = no
+				age = 33
+				health = 7
+				fertility = 0
+				historical = yes
+    
+				attributes = 
+				{
+					martial = 6
+					diplomacy = 5
+					stewardship = 4
+					intrigue = 4
+				}
+			}
+			new_character =
+			{
+				set_father = PREV
+				save_event_target_as = target_brian_bro
+				set_character_flag = flag_brian_bro
+				set_character_flag = is_special_character
+			}
+		}
+		event_target:target_brian_dad =
+		{
+			create_character = 
+			{
+				random_traits = no
+				name = "Brian"
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = no
+				age = 16
+				health = 7
+				fertility = 0.8
+				historical = yes
+    
+				attributes = 
+				{
+					martial = 9
+					diplomacy = 5
+					stewardship = 7
+					intrigue = 7
+					learning = 12
+				}
+				add_trait = martial_cleric
+				add_trait = wroth
+				add_trait = brave
+				add_trait = ambitious
+				add_trait = quick
+				add_trait = flanker
+			}
+			new_character =
+			{
+				set_father = PREV
+				save_event_target_as = target_brian_boru
+				set_character_flag = flag_brian_boru
+				set_character_flag = is_special_character
+				create_bloodline =
+				{
+					type = brian_boru
+				}
+			}
+			create_random_soldier = 
+			{
+				random_traits = yes
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = no
+				age = 30
+			}
+			create_random_soldier = 
+			{
+				random_traits = yes
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = no
+				age = 25
+			}
+			create_random_soldier = 
+			{
+				random_traits = yes
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = no
+				age = 22
+			}
+			create_character = 
+			{
+				random_traits = yes
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = yes
+				age = 16
+			}
+			create_character = 
+			{
+				random_traits = yes
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = yes
+				age = 17
+			}
+			create_character = 
+			{
+				random_traits = yes
+				dynasty = 100009
+				religion = ROOT
+				culture = irish
+				female = yes
+				age = 18
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2000.a
+		
+		set_global_flag = brian_spawned
+		
+		c_thomond = 
+		{
+			holder_scope =
+			{
+				# top_leige =
+				# {
+					event_target:target_brian_dad =
+					{
+						war = 
+						{
+							target = PREV
+							casus_belli = claim
+							thirdparty_title = c_thomond
+							tier = COUNT
+						}
+					}
+				# }
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2000.b
+		
+		set_global_flag = brian_spawned
+		event_target:target_brian_dad =
+		{
+			c_thomond = 
+			{
+				grant_title = PREV
+			}
+			character_event =
+			{
+				id = celt.2001
+			}
+		}
+	}
+}
+#Brian's dad becomes king of Thomond (surrender version)
+character_event =
+{
+	id = celt.2001
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_global_flag = dalcassians_rise
+		}
+		has_character_flag = flag_brian_dad
+		has_landed_title = c_thomond
+	}
+	immediate =
+	{
+		set_global_flag = dalcassians_rise
+		any_demesne_title =
+		{
+			if =
+			{
+				limit =
+				{
+					lower_real_tier_than = BARON
+				}
+				make_capital_holding = yes
+			}
+		}
+		b_dalcassians =
+		{
+			destroy_settlement = THIS
+		}
+		if =
+		{
+			limit =
+			{
+				capital_holding =
+				{
+					holding_type = tribal
+				}
+			}
+			set_government_type = tribal_government
+			capital_holding =
+			{
+				add_building = tb_hillfort_4
+				add_building = tb_market_town_2
+				add_building = tb_shipyard_2
+				add_building = tb_training_grounds_4
+				add_building = tb_war_camp_4
+				add_building = tb_practice_range_4
+				add_building = tb_arsenal_4
+				add_building = tb_culture_irish_4
+			}
+		}
+		else_if =
+		{
+			limit =
+			{
+				capital_holding =
+				{
+					holding_type = castle
+				}
+			}
+			capital_holding =
+			{
+				add_building = ca_shipyard_2
+				add_building = ca_culture_irish_4
+			}
+		}
+		if =
+		{
+			limit =
+			{
+				13 =
+				{
+					NOT =
+					{
+						culture = irish
+					}
+				}
+			}
+			13 =
+			{
+				culture = irish
+			}
+		}
+		capital_holding =
+		{
+			refill_holding_levy = yes
+		}
+	}
+}
+#Brian's dad becomes king of Thomond (war version)
+character_event =
+{
+	id = celt.2002
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_global_flag = dalcassians_rise
+		}
+		FROM =
+		{
+			OR = #Just in case its Mathgamain or Brian who actually wins the war
+			{
+				has_character_flag = flag_brian_dad
+				has_character_flag = flag_brian_bro
+				has_character_flag = flag_brian_boru
+			}
+			has_landed_title = c_thomond
+		}
+	}
+	immediate =
+	{
+		set_global_flag = dalcassians_rise
+		FROM =
+		{
+			any_demesne_title =
+			{
+				if =
+				{
+					limit =
+					{
+						lower_real_tier_than = BARON
+					}
+					make_capital_holding = yes
+				}
+			}
+			b_dalcassians =
+			{
+				destroy_settlement = THIS
+			}
+			if =
+			{
+				limit =
+				{
+					capital_holding =
+					{
+						holding_type = tribal
+					}
+				}
+				set_government_type = tribal_government
+				capital_holding =
+				{
+					add_building = tb_hillfort_4
+					add_building = tb_market_town_2
+					add_building = tb_shipyard_2
+					add_building = tb_training_grounds_4
+					add_building = tb_war_camp_4
+					add_building = tb_practice_range_4
+					add_building = tb_arsenal_4
+					add_building = tb_culture_irish_4
+				}
+			}
+			else_if =
+			{
+				limit =
+				{
+					capital_holding =
+					{
+						holding_type = castle
+					}
+				}
+				capital_holding =
+				{
+					add_building = ca_shipyard_2
+					add_building = ca_culture_irish_4
+				}
+			}
+			if =
+			{
+				limit =
+				{
+					13 =
+					{
+						NOT =
+						{
+							culture = irish
+						}
+					}
+				}
+				13 =
+				{
+					culture = irish
+				}
+			}
+			capital_holding =
+			{
+				refill_holding_levy = yes
+			}
+		}
+	}
+}
+
+#Brian's dad fails
+character_event =
+{
+	id = celt.2003
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		FROM =
+		{
+			OR = #Just in case its Mathgamain or Brian who actually loses the war
+			{
+				has_character_flag = flag_brian_dad
+				has_character_flag = flag_brian_bro
+				has_character_flag = flag_brian_boru
+			}
+			NOT =
+			{
+				has_landed_title = c_thomond
+			}
+		}
+	}
+	immediate =
+	{
+		set_character_flag = garry_was_here
+		b_dalcassians =
+		{
+			destroy_settlement = THIS
+		}
+	}
+}
+
+#Brian's dad dies if Vikings siege his province. Triggers celt.2005 which actually kills him
+character_event =
+{
+	id = celt.2004
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		ROOT =
+		{
+			culture_group = north_germanic
+		}
+		FROM =
+		{
+			county =
+			{
+				title = c_thomond
+			}
+			holder_scope = 
+			{
+				has_character_flag = flag_brian_dad
+			}
+		}
+	}
+	immediate =
+	{	
+		FROM =
+		{
+			holder_scope =
+			{
+				character_event =
+				{
+					id = celt.2005
+				}
+			}
+		}
+	}
+}
+#Brian's dad dies
+character_event =
+{
+	id = celt.2005
+	desc = celt.2005.desc
+	picture = GFX_evt_vikings_arriving_oldgods
+	is_triggered_only = yes
+	
+	option =
+	{
+		name = celt.2005.a
+		
+		death =
+		{
+			death_reason = death_battle
+			killer = FROM
+		}
+	}
+}
+#Dad dies, Mathgamain or Brian inherits title and gains a claim on Munster
+character_event =
+{
+	id = celt.2006
+	desc = celt.2006.desc
+	picture = GFX_evt_warriors_hills_mist
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		ROOT =
+		{
+			has_character_flag = flag_brian_dad
+			is_landed = yes
+			current_heir =
+			{
+				OR =
+				{
+					has_character_flag = flag_brian_bro
+					has_character_flag = flag_brian_boru
+				}
+			}
+		}
+	}
+	
+	immediate =
+	{
+		ROOT =
+		{
+			current_heir =
+			{
+				save_event_target_as = target_brian_dad_heir
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2006.a
+		
+		if =
+		{
+			limit =
+			{
+				ROOT =
+				{
+					NOT =
+					{
+						has_landed_title = d_munster
+					}
+				}
+			}
+			event_target:target_brian_dad_heir =
+			{
+				add_claim = d_munster
+				piety = 300
+				wealth = 200
+			}
+		}
+		if =
+		{
+			limit =
+			{
+				event_target:target_brian_dad_heir =
+				{
+					has_character_flag = flag_brian_bro
+				}
+			}
+			event_target:target_brian_dad_heir =
+			{
+				add_character_modifier =
+				{
+					name = occupied_with_war
+					years = -1
+				}
+			}
+		}
+		13 =
+		{
+			capital_holding = 
+			{
+				refill_holding_levy = yes
+			}
+		}
+	}
+}
+
+#Mathgamain dies without being king of Munster, Brian gains claim
+character_event =
+{
+	id = celt.2007
+	desc = celt.2007.desc
+	picture = GFX_evt_warriors_hills_mist
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		ROOT =
+		{
+			has_character_flag = flag_brian_bro
+			is_landed = yes
+			NOT =
+			{
+				has_landed_title = d_munster
+			}
+			current_heir =
+			{
+				has_character_flag = flag_brian_boru
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2007.a
+		
+		event_target:target_brian_boru =
+		{
+			add_claim = d_munster
+			piety = 400
+			wealth = 300
+		}
+		if =
+		{
+			limit =
+			{
+				d_munster =
+				{
+					has_holder = yes
+				}
+			}
+			d_munster =
+			{
+				holder_scope =
+				{
+					event_target:target_brian_boru =
+					{
+						capital_scope =
+						{
+							event_target:target_brian_boru =
+							{
+								spawn_unit = 
+								{
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+									earmark = brian_event_troops
+								}
+								spawn_unit = 
+								{
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+									earmark = brian_event_troops
+								}
+								spawn_unit = 
+								{
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+									earmark = brian_event_troops
+								}
+								spawn_unit = 
+								{
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+									earmark = brian_event_troops
+								}
+								spawn_unit = 
+								{
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+									earmark = brian_event_troops
+								}
+								spawn_unit = 
+								{
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+									earmark = brian_event_troops
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		13 =
+		{
+			capital_holding = 
+			{
+				refill_holding_levy = yes
+			}
+		}
+	}
+}
+
+#Mathgamain becomes king of Munster. Pick someone to plan his death
+character_event =
+{
+	id = celt.2008
+	desc = celt.2008.desc
+	picture = GFX_evt_warriors_hills_mist
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		ROOT =
+		{
+			has_character_flag = flag_brian_bro
+			has_landed_title = d_munster
+			NOT =
+			{
+				has_character_flag = flag_brian_bro_munster
+			}
+		}
+	}
+	
+	immediate =
+	{
+		ROOT =
+		{
+			set_character_flag = flag_brian_bro_munster
+		}
+		if =
+		{
+			limit =
+			{
+				FROMFROM =
+				{
+					is_alive = yes
+				}
+			}
+			FROMFROM =
+			{
+				set_character_flag = flag_brian_brother_killer
+				save_event_target_as = target_brian_brother_killer
+				add_rival = ROOT
+				add_trait = ambitious
+				imprison = no
+			}
+		}
+		else_if =
+		{
+			limit =
+			{
+				FROMFROM =
+				{
+					any_close_relative =
+					{
+						is_landed = yes
+						primary_title =
+						{
+							de_jure_liege_or_above = k_ireland
+						}
+					}
+				}
+			}
+			FROMFROM =
+			{
+				random_close_relative =
+				{
+					limit =
+					{
+						is_landed = yes
+						primary_title =
+						{
+							de_jure_liege_or_above = k_ireland
+						}
+					}
+					add_pressed_claim = d_munster
+					set_character_flag = flag_brian_brother_killer
+					save_event_target_as = target_brian_brother_killer
+					add_rival = ROOT
+					add_trait = ambitious
+				}
+			}
+		}
+		else_if =
+		{
+			limit =
+			{
+				d_munster =
+				{
+					any_direct_de_jure_vassal_title =
+					{
+						NOT =
+						{
+							holder = ROOT
+						}
+					}
+				}
+			}
+			d_munster =
+			{
+				random_realm_lord =
+				{
+					limit =
+					{
+						NOT =
+						{
+							has_character_flag = flag_brian_bro
+						}
+						NOT =
+						{
+							has_character_flag = flag_brian_boru
+						}
+					}
+					preferred_limit =
+					{
+						tier = count
+					}
+					add_pressed_claim = d_munster
+					set_character_flag = flag_brian_brother_killer
+					save_event_target_as = target_brian_brother_killer
+					add_rival = ROOT
+					add_trait = ambitious
+				}
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2008.a
+	}
+}
+
+#Mathgamain becomes king of Munster (created the title). Pick someone to plan his death
+character_event =
+{
+	id = celt.2009
+	desc = celt.2009.desc
+	picture = GFX_evt_warriors_hills_mist
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		ROOT =
+		{
+			has_character_flag = flag_brian_bro
+			has_landed_title = d_munster
+			NOT =
+			{
+				has_character_flag = flag_brian_bro_munster
+			}
+		}
+	}
+	
+	immediate =
+	{
+		ROOT =
+		{
+			set_character_flag = flag_brian_bro_munster
+		}
+		if =
+		{
+			limit =
+			{
+				d_munster =
+				{
+					any_direct_de_jure_vassal_title =
+					{
+						NOT =
+						{
+							holder = ROOT
+						}
+					}
+				}
+			}
+			d_munster =
+			{
+				random_realm_lord =
+				{
+					limit =
+					{
+						NOT =
+						{
+							has_character_flag = flag_brian_bro
+						}
+						NOT =
+						{
+							has_character_flag = flag_brian_boru
+						}
+					}
+					preferred_limit =
+					{
+						tier = count
+					}
+					add_pressed_claim = d_munster
+					set_character_flag = flag_brian_brother_killer
+					save_event_target_as = target_brian_brother_killer
+					add_rival = ROOT
+					add_trait = ambitious
+				}
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2009.a
+	}
+}
+
+#Mathgamain's selected killer dies before doing the deed, pick another one
+character_event =
+{
+	id = celt.2010
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		ROOT =
+		{
+			has_character_flag = flag_brian_brother_killer
+		}
+		event_target:target_brian_bro =
+		{
+			is_alive = yes
+			is_landed = yes
+		}
+	}
+	
+	immediate =
+	{
+		if =
+		{
+			limit =
+			{
+				ROOT =
+				{
+					is_landed = yes
+				}
+			}
+			ROOT =
+			{
+				current_heir =
+				{
+					add_pressed_claim = d_munster
+					set_character_flag = flag_brian_brother_killer
+					save_event_target_as = target_brian_brother_killer
+					add_rival = event_target:target_brian_bro
+					add_trait = ambitious
+				}
+			}
+		}
+		else_if =
+		{
+			limit =
+			{
+				d_munster =
+				{
+					any_direct_de_jure_vassal_title =
+					{
+						holder_scope =
+						{
+							NOT =
+							{
+								has_character_flag = flag_brian_bro
+							}
+							NOT =
+							{
+								has_character_flag = flag_brian_boru
+							}
+						}
+					}
+				}
+			}
+			d_munster =
+			{
+				random_realm_lord =
+				{
+					limit =
+					{
+						NOT =
+						{
+							has_character_flag = flag_brian_bro
+						}
+						NOT =
+						{
+							has_character_flag = flag_brian_boru
+						}
+					}
+					preferred_limit =
+					{
+						tier = count
+					}
+					add_pressed_claim = d_munster
+					set_character_flag = flag_brian_brother_killer
+					save_event_target_as = target_brian_brother_killer
+					add_rival = event_target:target_brian_bro
+					add_trait = ambitious
+				}
+			}
+		}
+	}
+}
+
+### Plot to kill Mathgamain
+# The plotter sees an opportunity
+character_event = 
+{
+	id = celt.2011
+	desc = celt.2011.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	capable_only = yes
+	prisoner = no
+	is_part_of_plot = yes
+	
+	trigger = 
+	{
+		has_plot = plot_kill_mathgamain
+		plot_target_char = 
+		{
+			NOT = { is_murder_quest_target_of_root_trigger = yes }
+			age = 16
+			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
+			NOT = { trait = incapable }
+			NOT = { is_inaccessible_trigger = yes }
+			prisoner = no
+		}
+		OR = 
+		{
+			NOT = { has_character_flag = murder_in_motion }
+			had_character_flag = { flag = murder_in_motion days = 100 }
+		}
+		plot_power_contribution = 
+		{
+			plotter = ROOT
+			power = 0.025
+		}
+	}
+	
+	mean_time_to_happen = 
+	{
+		months = 8400
+		
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.10
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.20
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.30
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.40
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.50
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.60
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.70
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.80
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.90
+			}
+		}
+		modifier = 
+		{
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 1.5
+			}
+		}
+		
+		modifier = 
+		{
+			factor = 0.33
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 1.0
+			}
+		}
+		modifier = 
+		{
+			factor = 0.33
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 1.5
+			}
+		}
+		modifier = 
+		{
+			factor = 0.33
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 2.0
+			}
+		}
+	}
+	
+	immediate = 
+	{
+		plot_target_char = { save_event_target_as = plot_target }
+	}
+	
+	option = 
+	{
+		name = celt.2011.a
+		
+		hidden_tooltip = 
+		{
+			any_plot_backer = 
+			{
+					character_event = { id = celt.2017 days = 1 }
+			}
+		}
+		
+		set_character_flag = murder_in_motion
+		event_target:plot_target = { character_event = { id = celt.2013 days = 30 tooltip = celt.2011.a.tooltip } }
+	}
+}
+
+# A plot backer sees an opportunity
+character_event = 
+{
+	id = celt.2012
+	desc = celt.2012.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	capable_only = yes
+	prisoner = no
+	is_part_of_plot = yes
+	
+	trigger = 
+	{
+		any_backed_character = 
+		{
+			has_plot = plot_kill_mathgamain
+			plot_power = 0.5
+			plot_target_char = 
+			{
+				NOT = { is_murder_quest_target_of_root_trigger = yes }
+				age = 16
+				prisoner = no
+				NOT = { trait = incapable }
+				NOT = { is_inaccessible_trigger = yes }
+			}
+			OR = 
+			{
+				NOT = { has_character_flag = murder_in_motion }
+				had_character_flag = { flag = murder_in_motion days = 100 }
+			}
+			ROOT = 
+			{
+				plot_power_contribution = 
+				{
+					plotter = PREV
+					power = 0.025
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = 
+	{
+		months = 8400
+		
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.10
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.20
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.30
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.40
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.50
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.60
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.70
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.80
+					}
+				}
+			}
+		}
+		modifier = 
+		{
+			factor = 0.6
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.90
+					}
+				}
+			}
+		}
+		
+		modifier = 
+		{
+			factor = 0.33
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 1.0
+			}
+		}
+		modifier = 
+		{
+			factor = 0.33
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 1.5
+			}
+		}
+		modifier = 
+		{
+			factor = 0.33
+			any_backed_character = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 2.0
+			}
+		}
+	}
+
+	immediate = 
+	{
+		random_backed_character = 
+		{
+			limit = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_power = 0.5
+				plot_target_char = 
+				{
+					NOT = { is_murder_quest_target_of_root_trigger = yes }
+					age = 16
+					prisoner = no
+					NOT = { trait = incapable }
+					NOT = { is_inaccessible_trigger = yes }
+				}
+				OR = 
+				{
+					NOT = { has_character_flag = murder_in_motion }
+					had_character_flag = { flag = murder_in_motion days = 100 }
+				}
+				ROOT = 
+				{
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.025
+					}
+				}
+			}
+			save_event_target_as = plot_leader
+		}
+	}
+	
+	option = 
+	{
+		name = celt.2012.a
+
+		event_target:plot_leader = 
+		{
+			character_event = { id = celt.2015 days = 3 tooltip = celt.2012.a.tooltip }
+			set_character_flag = murder_in_motion
+		}
+	}
+}
+
+# Kill Mathgamain - the murder attempt
+character_event = 
+{
+	id = celt.2013
+	desc = celt.2013.desc
+	picture = GFX_evt_mathgamain
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = 
+	{
+		save_event_target_as = target_victim
+	}
+	
+	trigger = 
+	{
+		# Is the plot still in motion?
+		OR = 
+		{
+			FROM = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_target_char = 
+				{
+					character = ROOT
+				}
+			}
+			FROMFROM = 
+			{
+				has_plot = plot_kill_mathgamain
+				plot_target_char = 
+				{
+					character = ROOT
+				}
+			}
+		}
+	}
+	
+	option = 
+	{
+		name = celt.2013.a # Captured
+
+		hidden_tooltip = 
+		{
+			hidden_tooltip = 
+			{
+				FROM = { character_event = { id = celt.2018 days = 1 } }
+				FROMFROM = { character_event = { id = celt.2018 days = 1 } }
+			}
+			character_event = { id = celt.2014 days = 1 } # Dies, murderer discovered
+		}
+	}
+}
+
+# Mathgamain Dies: Mathgamain's side
+character_event = 
+{
+	id = celt.2014
+	desc = celt.2014.desc
+	picture = GFX_evt_mathgamain
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = 
+	{
+		name = celt.2014.a
+		if = 
+		{
+			limit = 
+			{
+				FROMFROMFROM = 
+				{
+					has_plot = plot_kill_mathgamain
+					plot_target_char = 
+					{
+						character = ROOT
+					}
+				}
+			}
+			d_munster =
+			{
+				gain_title = FROMFROMFROM
+			}
+			death = 
+			{
+				death_reason = death_murder
+				killer = FROMFROMFROM
+			}
+			if =
+			{
+				limit =
+				{
+					current_heir =
+					{
+						has_character_flag = flag_brian_boru
+					}
+				}
+				current_heir =
+				{
+					character_event =
+					{
+						id = celt.2019
+						days = 2
+					}
+				}
+			}
+			break = yes
+		}
+		if = 
+		{
+			limit = 
+			{
+				is_alive = yes
+			}
+			death = 
+			{
+				death_reason = death_murder
+				killer = FROMFROM
+			}
+		}
+	}
+}
+
+# Kill Mathgamain - Backer informs Plotter of plan
+character_event = 
+{
+	id = celt.2015
+	desc = celt.2015.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	trigger = 
+	{
+		plot_target_char = 
+		{
+			is_alive = yes
+		}
+	}
+	
+	immediate = 
+	{
+		plot_target_char = { save_event_target_as = plot_target }
+	}
+	
+	option = 
+	{
+		name = celt.2015.a
+		set_character_flag = murder_in_motion
+		FROM = { character_event = { id = celt.2016 tooltip = "EVTTOOLTIP8161" } }
+		hidden_tooltip = {
+			any_plot_backer = {
+				limit = {
+					NOT = { character = FROM }
+				}
+				character_event = { id = celt.2017 days = 1 }
+			}
+		}
+	}
+}
+
+# Kill Mathgamain - Plotter tells backer to go ahead
+character_event = 
+{
+	id = celt.2016
+	desc = celt.2016.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = 
+	{
+		name = celt.2016.a
+		event_target:plot_target = { character_event = { id = celt.2013 days = 27 tooltip = "EVTTOOLTIP7725" } }
+	}
+}
+
+# Kill Mathgamain - Initiator informs other plotter
+character_event = 
+{
+	id = celt.2017
+	desc = celt.2017.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = 
+	{
+		name = celt.2017.a
+	}
+}
+
+# Mathgamain dies: consperators' side
+character_event = 
+{
+	id = celt.2018
+	desc = celt.2018.desc
+	picture = GFX_evt_mathgamain
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = 
+	{
+		character_event = { id = 10 } # Consequences of discovery
+		clear_event_target = target_victim
+	}
+	
+	option = 
+	{
+		name = celt.2018.a
+	}
+}
+
+#Brian learns of his brother's death
+character_event =
+{
+	id = celt.2019
+	desc = celt.2019.desc
+	picture = GFX_evt_mathgamain
+	is_triggered_only = yes
+	
+	option =
+	{
+		name = celt.2019.a
+		
+		add_claim = d_munster
+		piety = 400
+		wealth = 300
+		13 =
+		{
+			capital_holding = 
+			{
+				refill_holding_levy = yes
+			}
+		}
+	}
+}
+
+#Brian becomes king of Munster
+character_event =
+{
+	id = celt.2020
+	desc = celt.2020.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_character_flag = flag_brian_munster
+		}
+		has_character_flag = flag_brian_boru
+		has_landed_title = d_munster
+	}
+	immediate =
+	{
+		set_character_flag = flag_brian_munster
+	}
+	option =
+	{
+		name = celt.2020.a
+		
+		prestige = 250
+		dynasty = 695
+		any_owned_bloodline =
+		{
+			limit =
+			{
+				bloodline = brian_boru
+			}
+			any_bloodline_member_including_dead =
+			{
+				limit =
+				{
+					dynasty = 100009
+				}
+				dynasty = 695
+			}
+		}
+	}
+}
+
+#Brian unites Munster
+character_event =
+{
+	id = celt.2021
+	desc = celt.2021.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_character_flag = flag_brian_munster_united
+		}
+		has_character_flag = flag_brian_boru
+		has_landed_title = d_munster
+		completely_controls = d_munster
+		NOT =
+		{
+			has_landed_title = k_ireland
+		}
+	}
+	immediate =
+	{
+		set_character_flag = flag_brian_munster_united
+	}
+	option =
+	{
+		name = celt.2021.a
+		
+		capital_scope = 
+		{
+			ROOT = 
+			{
+				spawn_unit = 
+				{
+					province = PREV
+					home = PREV
+					owner = THIS
+					earmark = brian_event_troops
+					troops = 
+					{
+						light_infantry = { 2250 2250 }
+						heavy_infantry = { 2050 2050 }
+						light_cavalry = { 1500 1500 }
+					}
+				}
+				spawn_unit = 
+				{
+					province = PREV
+					home = PREV
+					owner = THIS
+					earmark = brian_event_troops
+					troops = 
+					{
+						light_infantry = { 2250 2250 }
+						heavy_infantry = { 2050 2050 }
+						light_cavalry = { 1500 1500 }
+					}
+				}
+				spawn_unit = 
+				{
+					province = PREV
+					home = PREV
+					owner = THIS
+					earmark = brian_event_troops
+					troops = 
+					{
+						light_infantry = { 2250 2250 }
+						heavy_infantry = { 2050 2050 }
+						light_cavalry = { 1500 1500 }
+					}
+				}
+				spawn_unit = 
+				{
+					province = PREV
+					home = PREV
+					owner = THIS
+					earmark = brian_event_troops
+					troops = 
+					{
+						light_infantry = { 2250 2250 }
+						heavy_infantry = { 2050 2050 }
+						light_cavalry = { 1500 1500 }
+					}
+				}
+				spawn_unit = 
+				{
+					province = PREV
+					home = PREV
+					owner = THIS
+					earmark = brian_event_troops
+					troops = 
+					{
+						light_infantry = { 2250 2250 }
+						heavy_infantry = { 2050 2050 }
+						light_cavalry = { 1500 1500 }
+					}
+				}
+				spawn_unit = 
+				{
+					province = PREV
+					home = PREV
+					owner = THIS
+					earmark = brian_event_troops
+					troops = 
+					{
+						light_infantry = { 2250 2250 }
+						heavy_infantry = { 2050 2050 }
+						light_cavalry = { 1500 1500 }
+					}
+				}
+			}
+		}
+		
+		if =
+		{
+			limit =
+			{
+				d_king_of_tara =
+				{
+					has_holder = yes
+				}
+				NOT =
+				{
+					has_landed_title = d_king_of_tara
+				}
+			}
+			add_claim = d_king_of_tara
+		}
+		else_if =
+		{
+			limit =
+			{
+				d_high_kingdom_of_ireland =
+				{
+					has_holder = yes
+				}
+				NOT =
+				{
+					has_landed_title = d_high_kingdom_of_ireland
+				}
+			}
+			add_claim = d_high_kindgom_of_ireland
+		}
+		else_if =
+		{
+			limit -
+			{
+				k_high_kingdom_of_ireland =
+				{
+					has_holder = yes
+				}
+				NOT =
+				{
+					has_landed_title = k_high_kingdom_of_ireland
+				}
+			}
+			add_claim = k_high_kingdom_of_ireland
+		}
+		else_if =
+		{
+			limit =
+			{
+				k_ireland =
+				{
+					has_holder = yes
+				}
+				NOT =
+				{
+					has_landed_title = k_high_kingdom_of_ireland
+				}
+			}
+			add_claim = k_ireland
+			add_ambition = obj_unite_ireland
+		}
+		# else_if =
+		# {
+			# limit =
+			# {
+				# OR =
+				# {
+					# has_landed_title = d_king_of_tara
+					# has_landed_title = d_high_kingdom_of_ireland
+					# has_landed_title = k_high_kingdom_of_ireland
+				# }
+			# }
+			# add_claim = k_ireland
+			# add_ambition = obj_unite_ireland
+		# }
+		else =
+		{
+			add_character_modifier =
+			{
+				name = high_king_authority
+				years = 50
+				stacking = yes
+			}
+			add_character_modifier =
+			{
+				name = high_king_authority
+				years = 50
+				stacking = yes
+			}
+			add_character_modifier =
+			{
+				name = high_king_authority
+				years = 50
+				stacking = yes
+			}
+			add_character_modifier =
+			{
+				name = high_king_authority
+				years = 50
+				stacking = yes
+			}
+		}
+	}
+}
+#Brian becomes High King
+character_event =
+{
+	id = celt.2022
+	title = celt.2022.title
+	desc = celt.2022.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_character_flag = flag_brian_high_king
+		}
+		has_character_flag = flag_brian_munster_united
+		has_character_flag = flag_brian_boru
+		OR =
+		{
+			has_landed_title = d_king_of_tara
+			has_landed_title = d_high_kingdom_of_ireland
+			has_landed_title = k_high_kingdom_of_ireland
+			has_landed_title = k_ireland
+		}
+	}
+	immediate =
+	{
+		set_character_flag = flag_brian_high_king
+	}
+	option =
+	{
+		name = celt.2022.a
+		
+		add_trait = head2
+		add_claim = k_ireland
+		add_ambition = obj_unite_ireland
+	}
+}
+#Brian unites Ireland but isn't independant (unless as part of a Gaelic Empire)
+character_event =
+{
+	id = celt.2023
+	title = celt.2023.title
+	desc = celt.2023.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_character_flag = flag_brian_ireland_united
+		}
+		#has_character_flag = flag_brian_high_king
+		has_character_flag = flag_brian_boru
+		OR =
+		{
+			has_landed_title = d_king_of_tara
+			has_landed_title = d_high_kingdom_of_ireland
+			has_landed_title = k_high_kingdom_of_ireland
+			has_landed_title = k_ireland
+		}
+		completely_controls = k_ireland
+		independent = no
+		top_liege =
+		{
+			NOT =
+			{
+				culture_group = celtic
+				has_landed_title = e_greater_scotia
+			}
+		}
+	}
+	immediate =
+	{
+		set_character_flag = flag_brian_ireland_united
+		top_liege =
+		{
+			set_defacto_vassal = ROOT
+		}
+	}
+	option =
+	{
+		name = celt.2023.a
+		
+		top_liege =
+		{
+			ROOT =
+			{
+				war = 
+				{
+					target = PREV
+					casus_belli = bid_for_independence
+				}
+			}
+		}
+	}
+}
+
+#Brian unites Ireland and is independant (or a part of a Gaelic Empire)
+narrative_event =
+{
+	id = celt.2024
+	title = celt.2024.title
+	desc = celt.2024.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		NOT =
+		{
+			has_character_flag = flag_brian_ireland_united
+		}
+		NOT =
+		{
+			has_character_flag = flag_brian_ireland_independant
+		}
+		has_character_flag = flag_brian_high_king
+		has_character_flag = flag_brian_boru
+		OR =
+		{
+			has_landed_title = d_king_of_tara
+			has_landed_title = d_high_kingdom_of_ireland
+			has_landed_title = k_high_kingdom_of_ireland
+			has_landed_title = k_ireland
+		}
+		completely_controls = k_ireland
+		OR =
+		{
+			independent = yes
+			top_liege =
+			{
+				AND =
+				{
+					culture_group = celtic
+					has_landed_title = e_greater_scotia
+				}
+			}
+		}
+	}
+	immediate =
+	{
+		set_character_flag = flag_brian_ireland_united
+		set_character_flag = flag_brian_ireland_independant
+		random_list =
+		{
+			90 =
+			{
+				set_character_flag = flag_brian_dies
+			}
+			10 =
+			{
+				set_character_flag = flag_brian_lives
+			}
+		}
+		random_vassal =
+		{
+			limit =
+			{
+				NOT =
+				{
+					dynasty = ROOT
+				}
+			}
+			preferred_limit =
+			{
+				culture_group = north_germanic
+			}
+			preferred_limit =
+			{
+				NOT =
+				{
+					culture_group = celtic
+				}
+			}
+			preferred_limit = 
+			{
+				is_powerful_vassal = yes
+			}
+			set_character_flag = flag_duke_onkled
+			character_event =
+			{
+				id = celt.2028
+				days = 10
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2024.a
+		
+		hidden_tooltip =
+		{
+			if =
+			{
+				limit =
+				{
+					has_landed_title = k_ireland
+				}
+				set_character_flag = brian_rule_at_peace
+			}
+		}
+	}
+}
+
+#Brian becomes independant after uniting Ireland
+narrative_event =
+{
+	id = celt.2025
+	title = celt.2025.title
+	desc = celt.2025.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		has_character_flag = flag_brian_ireland_united
+		NOT =
+		{
+			has_character_flag = flag_brian_ireland_independant
+		}
+		has_character_flag = flag_brian_high_king
+		has_character_flag = flag_brian_boru
+		OR =
+		{
+			has_landed_title = d_king_of_tara
+			has_landed_title = d_high_kingdom_of_ireland
+			has_landed_title = k_high_kingdom_of_ireland
+			has_landed_title = k_ireland
+		}
+		completely_controls = k_ireland
+		independent = yes
+	}
+	immediate =
+	{
+		set_character_flag = flag_brian_ireland_independant
+		random_list =
+		{
+			90 =
+			{
+				set_character_flag = flag_brian_dies
+			}
+			10 =
+			{
+				set_character_flag = flag_brian_lives
+			}
+		}
+		random_vassal =
+		{
+			limit =
+			{
+				NOT =
+				{
+					dynasty = ROOT
+				}
+			}
+			preferred_limit =
+			{
+				culture_group = north_germanic
+			}
+			preferred_limit =
+			{
+				NOT =
+				{
+					culture_group = celtic
+				}
+			}
+			preferred_limit = 
+			{
+				is_powerful_vassal = yes
+			}
+			set_character_flag = flag_duke_onkled
+			character_event =
+			{
+				id = celt.2028
+				days = 10
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2025.a
+		
+		hidden_tooltip =
+		{
+			if =
+			{
+				limit =
+				{
+					has_landed_title = k_ireland
+				}
+				set_character_flag = brian_rule_at_peace
+			}
+		}
+	}
+}
+
+##Events for keeping track of how long you've been at peace specifically for Brian when he already has k_ireland. 
+##Adaptations of celt.46 and celt.47 so I don't have to screw with the logic on those so much
+#remove peace flag when war is declared
+character_event =
+{
+	id = celt.2026
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		has_character_flag = flag_brian_boru
+		has_character_flag = flag_brian_ireland_united
+		has_character_flag = flag_brian_ireland_independant
+		NOT =
+		{
+			has_character_flag = flag_brian_survived_clontarf
+		}
+		culture_group = celtic
+		has_landed_title = k_ireland
+		has_character_flag = brian_rule_at_peace
+	}
+	immediate =
+	{
+		clr_character_flag = rule_at_peace
+	}
+}
+
+#return peace flag when war is finished
+character_event =
+{
+	id = celt.2027
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		war = no
+		has_character_flag = flag_brian_boru
+		has_character_flag = flag_brian_ireland_united
+		has_character_flag = flag_brian_ireland_independant
+		NOT =
+		{
+			has_character_flag = flag_brian_survived_clontarf
+		}
+		culture_group = celtic
+		has_landed_title = k_ireland
+		NOT =
+		{
+			has_character_flag = rule_at_peace
+		}
+	}
+	immediate =
+	{
+		set_character_flag = rule_at_peace
+	}
+}
+
+#Event for the traitor to start his traitoring
+character_event =
+{
+	id = celt.2028
+	desc = celt.2028.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option =
+	{
+		name = celt.2028.a
+		
+		custom_tooltip =
+		{
+			text = tooltip_duke_onkled_get_supporters
+			
+			
+			# liege =
+			# {
+				# random_vassal =
+				# {
+					# limit =
+					# {
+						# NOT =
+						# {
+							# character = ROOT
+						# }
+						# NOT =
+						# {
+							# dynasty = PREV
+						# }
+					# }
+					# preferred_limit =
+					# {
+						# culture_group = celtic
+					# }
+					# preferred_limit = 
+					# {
+						# is_powerful_vassal = yes
+					# }
+					# character_event =
+					# {
+						# id = celt.2029
+						# days = 5
+					# }
+				# }
+			# }
+			random_independent_ruler =
+			{
+				limit =
+				{
+					NOT =
+					{
+						has_character_flag = flag_brian_boru
+					}
+					NOT =
+					{
+						culture_group = celtic
+					}
+					higher_real_tier_than = COUNT
+				}
+				preferred_limit =
+				{
+					culture_group = north_germanic
+				}
+				character_event =
+				{
+					id = celt.2029
+					days = 5
+				}
+			}
+		}
+	}
+	
+	option = 
+	{
+		name = celt.2028.b
+		
+		trigger =
+		{
+			ai = no
+		}
+		
+		clr_character_flag = flag_duke_onkled
+		set_character_flag = flag_not_duke_onkled
+		liege =
+		{
+			random_vassal =
+			{
+				limit =
+				{
+					NOT =
+					{
+						character = ROOT
+					}
+					NOT =
+					{
+						dynasty = PREV
+					}
+					NOT =
+					{
+						has_character_flag = flag_not_duke_onkled
+					}
+				}
+				preferred_limit =
+				{
+					culture_group = north_germanic
+				}
+				preferred_limit =
+				{
+					NOT =
+					{
+						culture_group = celtic
+					}
+				}
+				preferred_limit = 
+				{
+					is_powerful_vassal = yes
+				}
+				set_character_flag = flag_duke_onkled
+				character_event =
+				{
+					id = celt.2028
+					days = 10
+				}
+			}
+		}
+	}
+}
+#Potential collaborators are asked if they want to join
+character_event =
+{
+	id = celt.2029
+	desc = celt.2029.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option =
+	{
+		name = celt.2029.a
+		
+		custom_tooltip =
+		{
+			text = tooltip_duke_onkled_agree_to_support
+			
+			set_character_flag = flag_duke_onkled_supporter
+			
+			FROM =
+			{
+				character_event =
+				{
+					id = celt.2030
+				}
+			}
+		}
+	}
+	
+	option = 
+	{
+		name = celt.2029.b
+		
+		trigger =
+		{
+			ai = no
+		}
+		
+		custom_tooltip =
+		{
+			text = tooltip_duke_onkled_agree_to_support
+			
+			set_character_flag = flag_duke_onkled_refused
+			FROM =
+			{
+				character_event =
+				{
+					id = celt.2031
+				}
+			}
+		}
+	}
+}
+#Traitor learns that someone will back his plot
+character_event =
+{
+	id = celt.2030
+	desc = celt.2030.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option =
+	{
+		name = celt.2030.a
+		
+		add_alliance = 
+		{
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Traitor learns that someone refuses to support his plot
+character_event =
+{
+	id = celt.2031
+	desc = celt.2031.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option =
+	{
+		name = celt.2031.a
+		
+		random_independent_ruler =
+		{
+			limit =
+			{
+				NOT =
+				{
+					has_character_flag = flag_brian_boru
+				}
+				NOT =
+				{
+					has_character_flag = flag_duke_onkled_refused
+				}
+				NOT =
+				{
+					culture_group = celtic
+				}
+				higher_real_tier_than = COUNT
+			}
+			preferred_limit =
+			{
+				culture_group = north_germanic
+			}
+			character_event =
+			{
+				id = celt.2029
+				days = 5
+			}
+		}
+	}
+}
+#Traitor decides to `tray
+character_event =
+{
+	id = celt.2032
+	desc = celt.2032.desc
+	picture = GFX_evt_battle_of_clontarf
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		had_character_flag =
+		{
+			flag = flag_duke_onkled
+			years >= 3
+		}
+		liege =
+		{
+			has_character_flag = flag_brian_boru
+		}
+	}
+	
+	option =
+	{
+		name = celt.2032.a
+		
+		liege =
+		{
+			reverse_war =
+			{
+				target = PREV
+				casus_belli = bid_for_independence
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2032.b
+		
+		trigger = 
+		{
+			ai = no
+		}
+	}
+}
+#Battle of Clontarf - commanding troops
+narrative_event =
+{
+	id = celt.2033
+	title = celt.2033.title
+	picture = GFX_evt_battle_of_clontarf
+	major = yes
+	is_triggered_only = yes
+	
+	desc = 
+	{
+		trigger =
+		{
+			has_character_flag = flag_brian_dies
+		}
+		text = celt.2033.desc.die
+	}
+	desc = 
+	{
+		trigger =
+		{
+			has_character_flag = flag_brian_lives
+		}
+		text = celt.2033.desc.live
+	}
+	
+	major_trigger =
+	{
+		OR =
+		{
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			has_character_flag = flag_duke_onkled_supporter
+		}
+	}
+	
+	trigger =
+	{
+		in_command = yes
+		has_character_flag = flag_brian_boru
+		NOT =
+		{
+			has_character_flag = flag_brian_survived_clontarf
+		}
+		any_war =
+		{
+			any_attacker =
+			{
+				has_character_flag = flag_duke_onkled
+			}
+		}
+	}
+	immediate =
+	{
+		any_war =
+		{
+			if =
+			{
+				limit =
+				{
+					any_attacker = 
+					{
+						has_character_flag = flag_duke_onkled
+					}
+				}
+				end_war = reverse_demand
+			}
+		}
+		any_vassal =
+		{
+			if =
+			{
+				limit =
+				{
+					has_character_flag = flag_duke_onkled
+					in_command = yes
+				}
+				death =
+				{
+					death_reason = death_battle 
+					killer = ROOT 
+				}
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2033.a
+		
+		trigger =
+		{
+			has_character_flag = flag_brian_boru
+			has_character_flag = flag_brian_dies
+		}
+		death =
+		{
+			death_reason = death_battle
+		}
+	}
+	
+	option =
+	{
+		name = celt.2033.b
+		
+		trigger = 
+		{
+			has_character_flag = flag_brian_boru
+			has_character_flag = flag_brian_lives
+		}
+		set_character_flag = flag_brian_survived_clontarf
+		add_trait = wounded
+		hidden_tooltip =
+		{
+			if =
+			{
+				has_landed_title = k_ireland
+			}
+			narrative_event =
+			{
+				id = celt.2038
+				days = 1
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2033.c
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			NOT =
+			{
+				has_character_flag = flag_duke_onkled
+			}
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_dies
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2033.d
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			NOT =
+			{
+				has_character_flag = flag_duke_onkled
+			}
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_lives
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2033.e
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			OR =
+			{
+				has_character_flag = flag_duke_onkled
+				has_character_flag = flag_duke_onkled_supporter
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_dies
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2033.f
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			OR =
+			{
+				has_character_flag = flag_duke_onkled
+				has_character_flag = flag_duke_onkled_supporter
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_lives
+			}
+		}
+	}
+}
+
+#Battle of Clontarf - not commanding troops
+narrative_event =
+{
+	id = celt.2034
+	title = celt.2033.title
+	picture = GFX_evt_battle_of_clontarf
+	is_triggered_only = yes
+	major = yes
+	
+	desc = 
+	{
+		trigger =
+		{
+			has_character_flag = flag_brian_dies
+		}
+		text = celt.2034.desc.die
+	}
+	desc = 
+	{
+		trigger =
+		{
+			has_character_flag = flag_brian_lives
+		}
+		text = celt.2034.desc.live
+	}
+	
+	major_trigger =
+	{
+		OR =
+		{
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			has_character_flag = flag_duke_onkled_supporter
+		}
+	}
+	
+	trigger =
+	{
+		in_command = no
+		has_character_flag = flag_brian_boru
+		NOT =
+		{
+			has_character_flag = flag_brian_survived_clontarf
+		}
+		any_war =
+		{
+			any_attacker =
+			{
+				has_character_flag = flag_duke_onkled
+			}
+		}
+	}
+	immediate =
+	{
+		any_war =
+		{
+			if =
+			{
+				limit =
+				{
+					any_attacker = 
+					{
+						has_character_flag = flag_duke_onkled
+					}
+				}
+				end_war = reverse_demand
+			}
+		}
+		any_vassal =
+		{
+			if =
+			{
+				limit =
+				{
+					has_character_flag = flag_duke_onkled
+					in_command = yes
+				}
+				death =
+				{
+					death_reason = death_battle 
+				}
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2034.a
+		
+		trigger =
+		{
+			has_character_flag = flag_brian_dies
+		}
+		death =
+		{
+			death_reason = death_battle
+		}
+	}
+	
+	option =
+	{
+		name = celt.2034.b
+		
+		trigger = 
+		{
+			has_character_flag = flag_brian_lives
+		}
+		set_character_flag = flag_brian_survived_clontarf
+		hidden_tooltip =
+		{
+			if =
+			{
+				has_landed_title = k_ireland
+			}
+			narrative_event =
+			{
+				id = celt.2038
+				days = 1
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2034.c
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			NOT =
+			{
+				has_character_flag = flag_duke_onkled
+			}
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_dies
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2034.d
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			NOT =
+			{
+				has_character_flag = flag_duke_onkled
+			}
+			primary_title =
+			{
+				de_jure_liege_or_above = k_ireland
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_lives
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2034.e
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			OR =
+			{
+				has_character_flag = flag_duke_onkled
+				has_character_flag = flag_duke_onkled_supporter
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_dies
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2034.f
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			OR =
+			{
+				has_character_flag = flag_duke_onkled
+				has_character_flag = flag_duke_onkled_supporter
+			}
+			ROOT =
+			{
+				has_character_flag = flag_brian_lives
+			}
+		}
+	}
+}
+
+#Brian dies without becoming High King
+character_event =
+{
+	id = celt.2035
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger =
+	{
+		has_character_flag = flag_brian_boru
+		NOT =
+		{
+			has_character_flag = flag_brian_high_king
+		}
+		NOT =
+		{
+			has_character_flag = flag_brian_survived_clontarf
+		}
+	}
+	immediate =
+	{
+		disband_event_forces = brian_event_troops
+	}
+}
+
+#Brian dies after becoming High King
+character_event =
+{
+	id = celt.2036
+	title = celt.2036.title
+	desc = celt.2036.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	major = yes
+	
+	trigger =
+	{
+		has_character_flag = flag_brian_boru
+		has_character_flag = flag_brian_high_king
+		NOT =
+		{
+			has_character_flag = flag_brian_survived_clontarf
+		}
+	}
+	immediate =
+	{
+		disband_event_forces = brian_event_troops
+		give_nickname = nick_boruma
+		if =
+		{
+			limit =
+			{
+				NOT =
+				{
+					has_global_flag = ireland_united
+				}
+				clr_global_flag = high_king_authority_strengthened
+				clr_global_flag = high_king_tribute_formalized
+				clr_global_flag = high_king_succession_controlled
+				clr_global_flag = high_king_dynastic_dominance
+			}
+		}
+		if =
+		{
+			limit = 
+			{
+				has_landed_title = k_ireland
+			}
+			destroy_landed_title = k_ireland
+		}
+		if =
+		{
+			limit = 
+			{
+				has_landed_title = k_high_kingdom_of_ireland
+			}
+			destroy_landed_title = k_high_kingdom_of_ireland
+		}
+		if =
+		{
+			limit = 
+			{
+				has_landed_title = d_high_kingdom_of_ireland
+			}
+			destroy_landed_title = d_high_kingdom_of_ireland
+		}
+		if =
+		{
+			limit = 
+			{
+				has_landed_title = d_king_of_tara
+			}
+			destroy_landed_title = d_king_of_tara
+		}
+		any_tributary =
+		{
+			suzerain = 
+			{
+				remove_tributary = PREV
+			}
+		}
+		any_independent_ruler =
+		{
+			if =
+			{
+				limit =
+				{
+					NOT =
+					{
+						has_global_flag = ireland_united
+					}
+					primary_title =
+					{
+						de_jure_liege_or_above = k_ireland
+					}
+					culture_group = celtic
+				}
+				add_claim = d_king_of_tara
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2036.a
+	}
+}
+#Brian dies after surviving Clontarf
+narrative_event =
+{
+	id = celt.2037
+	desc = celt.2037.desc
+	picture = GFX_evt_brian_boru
+	is_triggered_only = yes
+	major = yes
+	
+	trigger =
+	{
+		has_character_flag = flag_brian_boru
+		has_character_flag = flag_brian_high_king
+		has_character_flag = flag_brian_survived_clontarf
+	}
+	immediate =
+	{
+		disband_event_forces = brian_event_troops
+	}
+	option =
+	{
+		name = celt.2037.a
+	}
+}
+
+#Brian "unites" Ireland while already holding k_ireland
+narrative_event =
+{
+	id = celt.2038
+	
+	title = celt.2038.title
+	desc = celt.2038.desc
+	picture = GFX_evt_hill_tara
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		has_landed_title = k_ireland
+		has_character_flag = flag_brian_boru
+		has_character_flag = flag_brian_ireland_united
+		has_character_flag = flag_brian_ireland_independant
+		had_character_flag = 
+		{
+			flag = rule_at_peace
+			years >= 10
+		}
+	}
+	
+	major_trigger =
+	{
+		primary_title =
+		{
+			de_jure_liege_or_above = k_ireland
+		}
+		is_landed = yes
+	}
+	immediate =
+	{
+		if =
+		{
+			limit =
+			{
+				NOT =
+				{
+					has_global_flag = ireland_united
+				}
+			}
+			set_global_flag = ireland_united
+		}
+		if =
+		{
+			limit =
+			{
+				NOT =
+				{
+					has_character_flag = flag_brian_survived_clontarf
+				}
+			}
+			set_character_flag = flag_brian_survived_clontarf
+		}
+		clr_character_flag = rule_at_peace
+	}
+	
+	option =
+	{
+		name = celt.2038.a
+		
+		trigger =
+		{
+			has_character_flag = flag_brian_boru
+		}
+		hidden_tooltip =
+		{
+			if =
+			{
+				limit =
+				{
+					e_greater_scotia =
+					{
+						has_holder = yes
+					}
+				}
+				add_claim = e_greater_scotia
+			}
+			else =
+			{
+				add_claim = k_scotland
+			}
+			if =
+			{
+				limit =
+				{
+					liege =
+					{
+						has_landed_title = e_greater_scotia
+						has_landed_title = e_britannia
+					}
+				}
+				add_claim = e_britannia
+			}
+			if =
+			{
+				limit =
+				{
+					liege =
+					{
+						has_landed_title = e_greater_scotia
+						has_landed_title = e_uther_britannia
+					}
+				}
+				add_claim = e_uther_britannia
+			}
+			if =
+			{
+				limit =
+				{
+					liege =
+					{
+						has_landed_title = e_greater_scotia
+						has_landed_title = e_celtic
+					}
+				}
+				add_claim = e_celtic
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2038.b
+		
+		trigger =
+		{
+			NOT = 
+			{ 
+				has_character_flag = flag_brian_boru
+			}
+			culture_group = celtic
+			NOT =
+			{
+				has_landed_title = k_scotland
+			}
+			NOT =
+			{
+				has_landed_title = e_greater_scotia
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2038.c
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			OR =
+			{
+				has_landed_title = k_scotland
+				has_landed_title = e_greater_scotia
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2038.d
+		
+		trigger =
+		{
+			NOT =
+			{
+				has_character_flag = flag_brian_boru
+			}
+			NOT =
+			{
+				culture_group = celtic
+			}
+			NOT =
+			{
+				has_landed_title = k_scotland
+			}
+			NOT =
+			{
+				has_landed_title = e_greater_scotia
+			}
+		}
+	}
+}
+#Brian sets his sights on Scandinavia
+narrative_event =
+{
+	id = celt.2039
+	
+	title = celt.2039.title
+	desc = celt.2039.desc
+	picture = GFX_evt_vikings_arriving_oldgods
+	
+	is_triggered_only = yes
+	
+	trigger =
+	{
+		has_landed_title = e_greater_scotia
+		has_character_flag = flag_brian_boru
+		NOT =
+		{
+			has_character_flag = flag_brian_norse_invasion
+		}
+		k_norway =
+		{
+			any_realm_province =
+			{
+				is_island = no
+				OR =
+				{
+					religion = norse_pagan
+					religion = norse_pagan_reformed
+				}
+			}
+		}
+	}
+	
+	immediate =
+	{
+		set_character_flag = flag_brian_norse_invasion
+	}
+	
+	option =
+	{
+		name = celt.2039.a
+		
+		k_norway =
+		{
+			random_realm_province =
+			{
+				limit =
+				{
+					is_island = no
+					OR =
+					{
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				county =
+				{
+					ROOT =
+					{
+						add_claim = PREV
+					}
+				}
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2039.b
+	}
+}
+#Become Augustus of all of northwestern Europe
+narrative_event =
+{
+	id = celt.2040
+	
+	title = celt.2040.title
+	desc = celt.2040.desc
+	picture = GFX_evt_vikings_arriving_oldgods
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate =
+	{
+		d_gotland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_uppland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_ostergotland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_vastergotland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_norrland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_gotland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_bergslagen =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_smaland =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_tioharad =
+		{
+			de_jure_liege = k_sweden
+		}
+		d_skane =
+		{
+			de_jure_liege = k_denmark
+		}
+		d_sjaelland =
+		{
+			de_jure_liege = k_denmark
+		}
+		d_slesvig =
+		{
+			de_jure_liege = k_denmark
+		}
+		d_holstein =
+		{
+			de_jure_liege = k_denmark
+		}
+		d_agder =
+		{
+			de_jure_liege = k_norway
+		}
+		d_vestlandet =
+		{
+			de_jure_liege = k_norway
+		}
+		d_oppland =
+		{
+			de_jure_liege = k_norway
+		}
+		d_ostlandet =
+		{
+			de_jure_liege = k_norway
+		}
+		d_trondelag =
+		{
+			de_jure_liege = k_norway
+		}
+		d_jamtland =
+		{
+			de_jure_liege = k_norway
+		}
+		ROOT =
+		{
+			primary_title =
+			{
+				k_sweden =
+				{
+					de_jure_liege = PREV
+				}
+			}
+		}
+		ROOT =
+		{
+			primary_title =
+			{
+				k_denmark =
+				{
+					de_jure_liege = PREV
+				}
+			}
+		}
+		ROOT =
+		{
+			primary_title =
+			{
+				k_norway =
+				{
+					de_jure_liege = PREV
+				}
+			}
+		}
+	}
+	
+	option =
+	{
+		name = celt.2040.a
+		
+		trigger =
+		{
+			character = ROOT
+		}
+		#give_nickname = nick_august
+	}
+	option =
+	{
+		name = celt.2040.b
+		
+		trigger =
+		{
+			NOT = 
+			{ 
+				character = ROOT
+			}
+			culture_group = celtic
+		}
+	}
+	option =
+	{
+		name = celt.2040.c
+		
+		trigger =
+		{
+			NOT =
+			{
+				character = ROOT
+			}
+			NOT =
+			{
+				culture_group = celtic
+			}
+			NOT =
+			{
+				has_landed_title = k_papal_state
+			}
+			NOT =
+			{
+				has_landed_title = e_hre
+			}
+			NOT =
+			{
+				has_landed_title = e_byzantium
+			}
+			NOT =
+			{
+				has_landed_title = e_roman_empire
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2040.d
+		
+		trigger =
+		{
+			NOT =
+			{
+				character = ROOT
+			}
+			NOT =
+			{
+				culture_group = celtic
+			}
+			has_landed_title = k_papal_state
+		}
+		hidden_tooltip =
+		{
+			opinion = 
+			{
+				who = ROOT
+				modifier = opinion_unhappy
+				months = 1200
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2040.e
+		
+		trigger =
+		{
+			NOT =
+			{
+				character = ROOT
+			}
+			NOT =
+			{
+				culture_group = celtic
+			}
+			OR =
+			{
+				has_landed_title = e_hre
+				has_landed_title = e_byzantium
+				has_landed_title = e_roman_empire
+			}
+		}
+		hidden_tooltip =
+		{
+			opinion = 
+			{
+				who = ROOT
+				modifier = opinion_unhappy
+				months = 1200
+			}
+		}
+	}
+}
+
+#Willaim Wallace
+narrative_event = 
+{
+	id = celt.2041
+	title = celt.2041.title
+	desc = celt.2041.desc
+	picture = GFX_evt_warriors_hills_mist
+
+	only_playable = yes
+	prisoner = no
+	min_age = 16
+	culture_group = celtic
+	war = yes
+	
+	trigger = 
+	{
+		any_demesne_province =
+		{
+			culture = scottish
+		}
+		OR = 
+		{
+			has_landed_title = k_scotland
+			any_war =
+			{
+				war_title = k_scotland
+			}
+		}
+		is_republic = no
+		is_priest = no
+		any_war =
+		{
+			OR =
+			{
+				AND =
+				{
+					attacker =
+					{
+						NOT =
+						{
+							culture_group = celtic
+						}
+					}
+					defender = 
+					{
+						character = ROOT
+					}
+				}
+				AND =
+				{
+					attacker =
+					{
+						character = ROOT
+					}
+					defender = 
+					{
+						NOT =
+						{
+							culture_group = celtic
+						}
+					}
+				}
+			}
+		}
+		# NOT =
+		# {
+			# liege_before_war =
+			# {
+				# culture_group = celtic
+				# has_landed_title = k_scotland
+			# }
+		# }
+		NOT = { has_global_flag = william_wallace_spawned }
+	}
+	
+	mean_time_to_happen = 
+	{
+		months = 3000
+		modifier =
+		{
+			factor = 0.1
+			
+			culture = scottish
+		}
+		modifier =
+		{
+			factor = 0.2
+			
+			any_war =
+			{
+				OR =
+				{
+					AND =
+					{
+						attacker =
+						{
+							OR =
+							{
+								culture_group = north_germanic
+								culture = norman
+								culture = saxon
+								culture = english
+							}
+						}
+						defender = 
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						attacker =
+						{
+							character = ROOT
+						}
+						defender = 
+						{
+							OR =
+							{
+								culture_group = north_germanic
+								culture = norman
+								culture = saxon
+								culture = english
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier =
+		{
+			factor = 0.2
+			
+			any_war =
+			{
+				OR =
+				{
+					AND =
+					{
+						attacker =
+						{
+							has_landed_title = k_england
+						}
+						defender = 
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						attacker =
+						{
+							character = ROOT
+						}
+						defender = 
+						{
+							has_landed_title = k_england
+						}
+					}
+				}
+			}
+		}
+		modifier =
+		{
+			factor = 0.1
+			
+			any_war =
+			{
+				OR =
+				{
+					AND =
+					{
+						using_cb = claim
+						war_title = k_scotland
+						defender = 
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = other_claim
+						war_title = k_scotland
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = claim_all
+						war_title = k_scotland
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = invasion
+						war_title = k_scotland
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = tribal_invasion
+						war_title = k_scotland
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = tributary_cb
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = tributary_permanent_cb
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = force_vassalization
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = great_realm_conflict
+						war_title = k_scotland
+						defender =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = bid_for_independence
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = cb_faction_independence
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = free_tributary_cb
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = truebelievers_bid_for_independence
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = claim
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = other_claim
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = claim_on_liege
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = claim_on_liege_plot
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = other_claim_on_liege
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = claim_all
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = invasion
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+					AND =
+					{
+						using_cb = tribal_invasion
+						war_title = k_scotland
+						attacker =
+						{
+							character = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = 
+	{
+		random_current_enemy =
+		{
+			limit =
+			{
+				NOT =
+				{
+					culture_group = celtic
+				}
+				OR =
+				{
+					is_primary_war_attacker = yes
+					is_primary_war_defender = yes
+				}
+			}
+			preferred_limit =
+			{
+				has_landed_title = k_england
+				culture = english
+			}
+			preferred_limit =
+			{
+				has_landed_title = k_england
+				OR =
+				{
+					culture = saxon
+					culture = norman
+				}
+			}
+			preferred_limit =
+			{
+				culture = english
+			}
+			preferred_limit =
+			{
+				has_landed_title = k_england
+			}
+			preferred_limit =
+			{
+				OR =
+				{
+					culture = saxon
+					culture = norman
+				}
+			}
+			save_event_target_as = scottish_enemy
+		}
+		capital_scope = 
+		{
+			spawn_unit = 
+			{
+				province = THIS
+				home = THIS
+				owner = ROOT
+				match_character = ROOT
+				match_mult = 0.33
+				match_min = 500
+				match_max = 10000
+				attrition = 0.25
+				earmark = celtic_revolt_troops
+				disband_on_peace = yes
+			}
+			spawn_unit = 
+			{
+				province = THIS
+				home = THIS
+				owner = ROOT
+				match_character = ROOT
+				match_mult = 0.33
+				match_min = 500
+				match_max = 10000
+				attrition = 0.25
+				earmark = celtic_revolt_troops
+				disband_on_peace = yes
+			}
+			spawn_unit = 
+			{
+				province = THIS
+				home = THIS
+				owner = ROOT
+				match_character = ROOT
+				match_mult = 0.33
+				match_min = 500
+				match_max = 10000
+				attrition = 0.25
+				earmark = celtic_revolt_troops
+				disband_on_peace = yes
+			}
+			spawn_unit = 
+			{
+				province = THIS
+				home = THIS
+				owner = ROOT
+				match_character = ROOT
+				match_mult = 0.33
+				match_min = 500
+				match_max = 10000
+				attrition = 0.25
+				earmark = celtic_revolt_troops
+				disband_on_peace = yes
+			}
+			spawn_unit = 
+			{
+				province = THIS
+				home = THIS
+				owner = ROOT
+				match_character = ROOT
+				match_mult = 0.33
+				match_min = 500
+				match_max = 10000
+				attrition = 0.25
+				earmark = celtic_revolt_troops
+				disband_on_peace = yes
+			}
+			spawn_unit = 
+			{
+				province = THIS
+				home = THIS
+				owner = ROOT
+				match_character = ROOT
+				match_mult = 0.33
+				match_min = 500
+				match_max = 10000
+				attrition = 0.25
+				earmark = celtic_revolt_troops
+				disband_on_peace = yes
+			}
+		}
+		set_global_flag = william_wallace_spawned
+		create_character = 
+		{
+			random_traits = no
+			name = "William"
+			dynasty = 3133
+			religion = ROOT
+			culture = scottish
+			female = no
+			age = 27
+			trait = quick
+			trait = ambitious
+			trait = gregarious
+			trait = diligent
+			trait = brave
+			trait = brilliant_strategist
+			trait = narrow_flank_leader
+			trait = trickster
+			attributes = {
+				diplomacy = 15
+				martial = 20
+				stewardship = 5
+				intrigue = 3
+				learning = 3
+			}
+			historical = yes
+		}
+		new_character = 
+		{
+			set_character_flag = is_william_wallace
+			create_bloodline =
+			{
+				type = william_wallace
+			}
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+				years = 100
+			}
+		}
+	}
+	option =
+	{
+		name = celt.2041.a
+	}
+}

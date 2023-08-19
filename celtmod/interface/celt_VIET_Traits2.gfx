@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_wandering_hermit"
+		texturefile = "gfx/immersion_traits/wandering_hermit.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_knight_of_the_round_table"
+		texturefile = "gfx/immersion_traits/knight_of_the_round_table.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_like_king_arthur"
+		texturefile = "gfx/immersion_traits/pendragon.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

@@ -1,0 +1,71 @@
+obj_unite_ireland = 
+{
+	type = character
+	
+	can_cancel = no
+	
+	ai_capital_kingdom_focus = yes # AI characters with this ambition will actually focus on taking the kingdom
+	
+	potential = 
+	{
+		is_adult = yes
+		is_playable = yes
+		is_landed = yes
+		has_character_flag = flag_brian_boru
+		has_character_flag = flag_brian_munster_united
+	}
+	
+	allow = 
+	{
+		has_character_flag = flag_brian_munster_united
+	}
+	
+	chance = 
+	{
+		factor = 0
+	}
+	
+	success = 
+	{
+		custom_tooltip = 
+		{
+			text = obj_become_king_tip
+			hidden_tooltip = 
+			{
+				k_ireland = 
+				{
+					holder_scope = 
+					{
+						character = ROOT
+					}
+				}
+			}
+			completely_controls = k_ireland
+			independent = yes
+		}
+	}
+	
+	abort = 
+	{
+		OR = 
+		{
+			trait = incapable
+			is_playable = no
+			is_landed = no
+		}
+	}
+	
+	abort_effect = 
+	{
+	}
+	
+	effect = 
+	{
+		prestige = 500
+		hidden_tooltip = 
+		{
+			clr_character_flag = kingdom_claimed_with_ambition
+		}
+	}
+	
+}

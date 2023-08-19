@@ -1,0 +1,28 @@
+#Celtic
+
+title_knight_of_the_round_table = {
+	dignity = 0.1
+	grant_limit = 12
+	opinion_effect = 15
+	
+	monthly_prestige = 0.01
+	
+	allowed_to_hold = {
+		age = 16
+		martial = 8
+		NOT = {
+			trait = incapable
+		}
+	}
+	allowed_to_grant = {
+		has_landed_title = e_britannia
+		has_global_flag = VIET_knights_of_the_round_table_refounded
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}

@@ -1,0 +1,140 @@
+spriteTypes = {
+	# Traits
+	
+
+	# Event Pictures
+	spriteType = 
+	{
+		name = "GFX_evt_hill_tara"
+		texturefile = "gfx\\event_pictures\ACR\hill_tara.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = 
+	{
+		name = "GFX_evt_warriors_hills_mist"
+		texturefile = "gfx\\event_pictures\WtWSMS\warriors_hills_mist.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = 
+	{
+		name = "GFX_evt_battle_of_clontarf"
+		texturefile = "gfx\\event_pictures\celt\battle_of_clontarf.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = 
+	{
+		name = "GFX_evt_brian_boru"
+		texturefile = "gfx\\event_pictures\celt\brian_boru.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = 
+	{
+		name = "GFX_evt_mathgamain"
+		texturefile = "gfx\\event_pictures\celt\mathgamain.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = 
+	{
+		name = "GFX_evt_rainstorm"
+		texturefile = "gfx\\event_pictures\rainstorm.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = 
+	{
+		name = "GFX_evt_ys"
+		texturefile = "gfx\\event_pictures\columbus.tga"
+		allwaystransparent = yes
+	}
+	
+	# Decision icons
+	spriteType = {
+		name = "GFX_organize_gwydion_insular"
+		texturefile = "gfx\\interface\ACR\decision_icon_organize_fianna.dds" #Placeholder
+	}
+	spriteType = 
+	{
+		name = "GFX_unite_gaels"
+		texturefile = "gfx\\interface\ACR\decision_icon_hold_an_aonach_tailteann.dds"
+	}
+	spriteType = 
+	{
+		name = "GFX_create_monastic_order_insular"
+		texturefile = "gfx\\interface\\decision_icon_erect_celtic_high_cross.dds"
+	}
+	
+	#Objectives
+	spriteType = 
+	{
+		name = "GFX_obj_unite_ireland"
+		texturefile = "gfx/ambitions/obj_become_king.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = 
+	{
+		name = "GFX_plot_kill_mathgamain"
+		texturefile = "gfx/ambitions/plot_kidnap_character.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	# Artifact icons
+	spriteType =
+	{
+		name = "GFX_book_of_kells"
+		texturefile = "gfx\\interface\\artifacts\\book_of_kells.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_book_of_kells_small"
+		texturefile = "gfx\\interface\\artifacts\\book_of_kells_small.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_cathach"
+		texturefile = "gfx\\interface\\artifacts\\cathach.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_cathach_small"
+		texturefile = "gfx\\interface\\artifacts\\cathach_small.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_bachal_isu"
+		texturefile = "gfx\\interface\\artifacts\\bachal_isu.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_bachal_isu_small"
+		texturefile = "gfx\\interface\\artifacts\\bachal_isu_small.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_cross_of_cong"
+		texturefile = "gfx\\interface\\artifacts\\cross_of_cong.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_cross_of_cong_small"
+		texturefile = "gfx\\interface\\artifacts\\cross_of_cong_small.dds"
+	}
+	spriteType =
+	{
+		name = "GFX_stone_of_scone"
+		texturefile = "gfx\\interface\\artifacts\\stone_of_scone.dds"
+	}
+	spriteType = 
+	{
+		name = "GFX_stone_of_scone_small"
+		texturefile = "gfx\\interface\\artifacts\\stone_of_scone_small.dds"
+	}
+}
